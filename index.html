@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Literary Translation Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="site-name" onclick="showPage('home')">The <em>Literary</em> Translation Archive</div>
+  <div class="topbar-nav">
+    <a href="#" onclick="showPage('home')" id="nav-home">Home</a>
+    <a href="#" onclick="showPage('browse')" id="nav-browse">Browse</a>
+    <a href="#">About</a>
+    <div id="topbar-auth-wrap"><button class="login-btn" onclick="openLogin()">Sign in</button></div>
+  </div>
+</div>
+<div class="page active" id="page-home">
+  <div class="home-landing">
+    <div class="home-landing-text">
+      <h1>Translations,<br><em>compared.</em></h1>
+      <p>Every work arrives in English through a translator's choices. This archive brings those choices into view — passage by passage, version by version.</p>
+      <button class="home-browse-btn" onclick="showPage('browse')">Browse the archive →</button>
+    </div>
+    <div class="cover-strip-label">
+      <span class="cover-strip-label-text">From the archive</span>
+      <span class="cover-strip-count" id="cover-strip-count"></span>
+    </div>
+    <div class="cover-strip-outer">
+      <div class="cover-strip" id="cover-strip"></div>
+    </div>
+  </div>
+</div>
+<div class="page" id="page-browse">
+  <div class="browse-hero">
+    <h2>Browse the Archive</h2>
+  </div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Ancient &amp; Classical</span><div class="section-rule"></div></div><div class="author-grid" id="grid-ancient"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">French Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-french"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Russian Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-russian"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">German-Language Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-german"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Spanish &amp; Latin American</span><div class="section-rule"></div></div><div class="author-grid" id="grid-spanish"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Italian Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-italian"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">20th-Century European</span><div class="section-rule"></div></div><div class="author-grid" id="grid-euro20"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Asian Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-asian"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Sacred &amp; Religious Texts</span><div class="section-rule"></div></div><div class="author-grid" id="grid-sacred"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Scandinavian</span><div class="section-rule"></div></div><div class="author-grid" id="grid-nordic"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Portuguese</span><div class="section-rule"></div></div><div class="author-grid" id="grid-portuguese"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Classical Philosophy</span><div class="section-rule"></div></div><div class="author-grid" id="grid-philosophy"></div></div>
+</div>
+<div class="page" id="page-author">
+  <div style="padding:3.5rem 2rem 0"><button class="back-btn" id="author-back-btn">← All authors</button></div>
+  <div class="author-hero">
+    <h1 id="a-name"></h1>
+    <div class="author-hero-meta" id="a-meta"></div>
+    <div id="a-tonkin-badge"></div>
+    <div id="a-wiki-extract" class="author-wiki-extract" style="display:none"></div>
+  </div>
+  <div class="works-grid-wrap"><div class="works-grid" id="a-works-grid"></div></div>
+</div>
+<div class="page" id="page-compare">
+  <div class="compare-subnav">
+    <button class="nav-back-compare" id="compare-back-btn">← Back</button>
+    <span class="subnav-sep">|</span>
+    <span class="compare-work-title" id="compare-work-title"></span>
+    <span class="subnav-sep">|</span>
+    <div id="compare-pass-pills" style="display:flex"></div>
+  </div>
+  <div class="compare-stage" id="compare-stage"></div>
+  <div class="stage-arrows">
+    <button class="arr" onclick="stageScroll(-1)">&#8592;</button>
+    <button class="arr" onclick="stageScroll(1)">&#8594;</button>
+  </div>
+</div>
+<div class="modal-overlay" id="login-overlay">
+  <div class="modal-box">
+    <div class="modal-title" id="auth-title">Sign in</div>
+    <div class="modal-sub">Literary Translation Archive</div>
+    <div class="form-row" id="auth-name-row" style="display:none"><label>Display name</label><input type="text" id="auth-name" placeholder="Your name" autocomplete="name"></div>
+    <div class="form-row"><label>Email</label><input type="email" id="auth-email" placeholder="you@example.com" autocomplete="email"></div>
+    <div class="form-row"><label>Password</label><input type="password" id="auth-password" placeholder="••••••••" autocomplete="current-password"></div>
+    <div class="auth-error" id="auth-error" style="display:none"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeLogin()">Cancel</button>
+      <button class="btn-primary" id="auth-submit-btn" onclick="submitAuth()">Sign in</button>
+    </div>
+    <div class="modal-switch" id="auth-switch-text">No account? <a onclick="toggleAuthMode()">Create one</a></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="auth.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
