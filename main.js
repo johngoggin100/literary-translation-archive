@@ -39,7 +39,6 @@ async function renderCoverStrip() {
   for (const work of COVER_WORKS) {
     strip.appendChild(makeCoverItem(work, `https://covers.openlibrary.org/b/isbn/${work.isbn}-M.jpg`));
   }
-  // Duplicate for seamless CSS animation loop
   for (const work of COVER_WORKS) {
     strip.appendChild(makeCoverItem(work, `https://covers.openlibrary.org/b/isbn/${work.isbn}-M.jpg`));
   }
@@ -101,7 +100,6 @@ function showAuthor(id) {
       ${w.cover ? `<div class="work-card-cover"><img src="${w.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <div class="work-card-title">${w.title}</div>
       <div class="work-card-year">${w.year}</div>
-      <div class="work-card-meta">${w.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>
     </div>`).join('');
   showPage('author');
 }
@@ -134,31 +132,39 @@ function selectPass(i) {
   document.getElementById('compare-stage').scrollLeft = 0;
 }
 
-function renderColumns(work) {
+async function renderColumns(work) {
   const passage = work.passages[curPassIdx];
   const user    = LTA_Auth.currentUser();
+  const stage   = document.getElementById('compare-stage');
 
-  document.getElementById('compare-stage').innerHTML = passage.cols.map(c => {
-    // Ratings: merge seeded data ratings with user-submitted
+  // Fetch ratings + comments for all non-source columns in parallel
+  const fetches = await Promise.all(passage.cols.map(async c => {
+    if (c.src) return { ur: 0, submitted: [], userComs: [] };
+    const [submitted, ur, userComs] = await Promise.all([
+      LTA_Storage.getAllRatings(c.id),
+      LTA_Storage.getUserRating(c.id, user?.id),
+      LTA_Storage.getComments(c.id)
+    ]);
+    return { submitted, ur, userComs };
+  }));
+
+  stage.innerHTML = passage.cols.map((c, idx) => {
+    const { submitted, ur, userComs } = fetches[idx];
     const seeded     = c.ratings || [];
-    const submitted  = LTA_Storage.getAllRatings(c.id);
     const allRatings = [...seeded, ...submitted];
     const avg        = allRatings.length
       ? (allRatings.reduce((a, b) => a + b, 0) / allRatings.length).toFixed(1)
       : null;
-    const ur = LTA_Storage.getUserRating(c.id, user?.email);
     const stars = [1,2,3,4,5].map(n =>
       `<button class="star${n <= ur ? ' lit' : ''}" onclick="rateCol('${c.id}',${n},event)">&#9733;</button>`
     ).join('');
 
-    // Comments: merge seeded + user-submitted
     const seededComs = c.comments || [];
-    const userComs   = LTA_Storage.getComments(c.id);
     const allComs    = [...seededComs, ...userComs];
     const comsHtml   = allComs.length
       ? allComs.map(cm => `
           <div class="comment">
-            <div class="comment-meta">${_esc(cm.displayName || cm.user)}${cm.ts ? ' &middot; ' + _fmtDate(cm.ts) : ''}</div>
+            <div class="comment-meta">${_esc(cm.display_name || cm.user)}${(cm.created_at || cm.ts) ? ' &middot; ' + _fmtDate(cm.created_at || cm.ts) : ''}</div>
             <div class="comment-text">${_esc(cm.text)}</div>
           </div>`).join('')
       : `<div class="comments-empty">No comments yet.</div>`;
@@ -191,19 +197,6 @@ function renderColumns(work) {
   }).join('');
 }
 
-function _filterWikiExtract(text) {
-  return text
-    // Remove parentheticals containing IPA (slashes with phonetic content)
-    .replace(/\s*\([^)]*\/[^/)]+\/[^)]*\)/g, '')
-    // Remove parentheticals containing non-Latin scripts (Greek, Cyrillic, etc.)
-    .replace(/\s*\([^)]*[\u0370-\u03FF\u0400-\u04FF\u4E00-\u9FFF][^)]*\)/g, '')
-    // Remove parentheticals with "romanized:", "lit.", "also spelled", etc.
-    .replace(/\s*\([^)]*(?:romanized|lit\.|also spelled|born|died|fl\.)[^)]*\)/gi, '')
-    // Collapse any double spaces left behind
-    .replace(/  +/g, ' ')
-    .trim();
-}
-
 function _fmtDate(ts) {
   return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
@@ -212,21 +205,30 @@ function _esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function rateCol(colId, n, e) {
+function _filterWikiExtract(text) {
+  return text
+    .replace(/\s*\([^)]*\/[^/)]+\/[^)]*\)/g, '')
+    .replace(/\s*\([^)]*[\u0370-\u03FF\u0400-\u04FF\u4E00-\u9FFF][^)]*\)/g, '')
+    .replace(/\s*\([^)]*(?:romanized|lit\.|also spelled|born|died|fl\.)[^)]*\)/gi, '')
+    .replace(/  +/g, ' ')
+    .trim();
+}
+
+async function rateCol(colId, n, e) {
   e.stopPropagation();
   const user = LTA_Auth.currentUser();
   if (!user) { openLogin(); return; }
-  LTA_Storage.setRating(colId, user.email, n);
+  await LTA_Storage.setRating(colId, user.id, n);
   renderColumns(findWork(curAuthorId, curWorkId));
 }
 
-function submitComment(colId) {
+async function submitComment(colId) {
   const user = LTA_Auth.currentUser();
   if (!user) { openLogin(); return; }
   const ta   = document.getElementById('ci-' + colId);
   const text = ta ? ta.value.trim() : '';
   if (!text) return;
-  LTA_Storage.addComment(colId, user.email, user.displayName, text);
+  await LTA_Storage.addComment(colId, user.id, user.displayName, text);
   renderColumns(findWork(curAuthorId, curWorkId));
 }
 
@@ -269,8 +271,8 @@ function _syncAuthModal() {
 function _setAuthError(msg) {
   const el = document.getElementById('auth-error');
   if (!el) return;
-  el.textContent    = msg;
-  el.style.display  = msg ? '' : 'none';
+  el.textContent   = msg;
+  el.style.display = msg ? '' : 'none';
 }
 
 function _clearAuthForm() {
@@ -315,7 +317,6 @@ function _updateTopbar(user) {
   } else {
     wrap.innerHTML = `<button class="login-btn" onclick="openLogin()">Sign in</button>`;
   }
-  // If compare is active, refresh columns to update auth-gated UI
   if (curAuthorId && curWorkId) {
     const pg = document.getElementById('page-compare');
     if (pg && pg.classList.contains('active')) {

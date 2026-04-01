@@ -1,44 +1,52 @@
-// ── LTA AUTH & STORAGE ────────────────────────────────────────────────────────
+// ── SUPABASE CLIENT ───────────────────────────────────────────────────────────
+const _sb = supabase.createClient(
+  'https://hyfmubmkhorjoiitprua.supabase.co',
+  'sb_publishable_dXV63dlUP9h21EVSW5D41g_8byNDcNy'
+);
 
-async function _ltaHash(pw) {
-  const buf = await crypto.subtle.digest('SHA-256',
-    new TextEncoder().encode(pw + ':lta'));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
-}
-
+// ── LTA AUTH ──────────────────────────────────────────────────────────────────
 const LTA_Auth = (() => {
-  const USERS_KEY   = 'lta:users';
-  const SESSION_KEY = 'lta:session';
-  const listeners   = [];
+  let _session  = null;
+  let _ready    = false;
+  const listeners = [];
 
-  function getUsers()    { try { return JSON.parse(localStorage.getItem(USERS_KEY)   || '{}');  } catch { return {}; } }
-  function saveUsers(u)  { localStorage.setItem(USERS_KEY, JSON.stringify(u)); }
-  function getSession()  { try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; } }
-  function saveSession(s){ if (s) localStorage.setItem(SESSION_KEY, JSON.stringify(s)); else localStorage.removeItem(SESSION_KEY); }
-  function emit(user)    { listeners.forEach(fn => fn(user)); }
+  function userFromSession(s) {
+    if (!s) return null;
+    return {
+      id:          s.user.id,
+      email:       s.user.email,
+      displayName: s.user.user_metadata?.display_name || s.user.email.split('@')[0]
+    };
+  }
+
+  function emit() {
+    if (!_ready) return;
+    const user = userFromSession(_session);
+    listeners.forEach(fn => fn(user));
+  }
+
+  _sb.auth.onAuthStateChange((_event, session) => {
+    _session = session;
+    _ready   = true;
+    emit();
+  });
 
   return {
-    onAuthChange(fn) { listeners.push(fn); fn(getSession()); },
-    currentUser()    { return getSession(); },
+    onAuthChange(fn) { listeners.push(fn); if (_ready) fn(userFromSession(_session)); },
+    currentUser()    { return _ready ? userFromSession(_session) : null; },
 
     async register(email, displayName, password) {
       email       = email.trim().toLowerCase();
       displayName = displayName.trim();
       if (!email || !displayName || !password)
         return { ok: false, error: 'All fields are required.' };
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-        return { ok: false, error: 'Invalid email address.' };
       if (password.length < 6)
         return { ok: false, error: 'Password must be at least 6 characters.' };
-      const users = getUsers();
-      if (users[email])
-        return { ok: false, error: 'An account with that email already exists.' };
-      const hash = await _ltaHash(password);
-      users[email] = { hash, displayName };
-      saveUsers(users);
-      const session = { email, displayName };
-      saveSession(session);
-      emit(session);
+      const { error } = await _sb.auth.signUp({
+        email, password,
+        options: { data: { display_name: displayName } }
+      });
+      if (error) return { ok: false, error: error.message };
       return { ok: true };
     },
 
@@ -46,67 +54,42 @@ const LTA_Auth = (() => {
       email = email.trim().toLowerCase();
       if (!email || !password)
         return { ok: false, error: 'Email and password are required.' };
-      const users = getUsers();
-      const user  = users[email];
-      if (!user)
-        return { ok: false, error: 'No account found with that email.' };
-      const hash = await _ltaHash(password);
-      if (hash !== user.hash)
-        return { ok: false, error: 'Incorrect password.' };
-      const session = { email, displayName: user.displayName };
-      saveSession(session);
-      emit(session);
+      const { error } = await _sb.auth.signInWithPassword({ email, password });
+      if (error) return { ok: false, error: error.message };
       return { ok: true };
     },
 
-    signout() {
-      saveSession(null);
-      emit(null);
-    }
+    async signout() { await _sb.auth.signOut(); }
   };
 })();
 
-// ── STORAGE (ratings + comments) ──────────────────────────────────────────────
+// ── LTA STORAGE ───────────────────────────────────────────────────────────────
+const LTA_Storage = {
+  async getUserRating(colId, userId) {
+    if (!userId) return 0;
+    const { data } = await _sb.from('ratings')
+      .select('rating').eq('col_id', colId).eq('user_id', userId).maybeSingle();
+    return data?.rating || 0;
+  },
 
-const LTA_Storage = (() => {
-  const RATINGS_KEY  = 'lta:ratings';
-  const COMMENTS_KEY = 'lta:comments';
+  async getAllRatings(colId) {
+    const { data } = await _sb.from('ratings').select('rating').eq('col_id', colId);
+    return (data || []).map(r => r.rating);
+  },
 
-  function getRatings()    { try { return JSON.parse(localStorage.getItem(RATINGS_KEY)  || '{}'); } catch { return {}; } }
-  function saveRatings(r)  { localStorage.setItem(RATINGS_KEY,  JSON.stringify(r)); }
-  function getComments()   { try { return JSON.parse(localStorage.getItem(COMMENTS_KEY) || '[]'); } catch { return []; } }
-  function saveComments(c) { localStorage.setItem(COMMENTS_KEY, JSON.stringify(c)); }
+  async setRating(colId, userId, n) {
+    await _sb.from('ratings')
+      .upsert({ col_id: colId, user_id: userId, rating: n }, { onConflict: 'col_id,user_id' });
+  },
 
-  return {
-    getUserRating(colId, email) {
-      if (!email) return 0;
-      const r = getRatings();
-      return (r[colId] && r[colId][email]) || 0;
-    },
+  async getComments(colId) {
+    const { data } = await _sb.from('comments')
+      .select('*').eq('col_id', colId).order('created_at', { ascending: true });
+    return data || [];
+  },
 
-    getAllRatings(colId) {
-      return Object.values(getRatings()[colId] || {});
-    },
-
-    setRating(colId, email, n) {
-      const r = getRatings();
-      if (!r[colId]) r[colId] = {};
-      r[colId][email] = n;
-      saveRatings(r);
-    },
-
-    getComments(colId) {
-      return getComments().filter(c => c.colId === colId);
-    },
-
-    addComment(colId, email, displayName, text) {
-      const all = getComments();
-      all.push({
-        id: Date.now().toString(36) + Math.random().toString(36).slice(2),
-        colId, email, displayName, text,
-        ts: Date.now()
-      });
-      saveComments(all);
-    }
-  };
-})();
+  async addComment(colId, userId, displayName, text) {
+    await _sb.from('comments')
+      .insert({ col_id: colId, user_id: userId, display_name: displayName, text });
+  }
+};
