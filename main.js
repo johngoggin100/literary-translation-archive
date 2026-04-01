@@ -388,6 +388,28 @@ function stageScroll(d) {
   document.getElementById('compare-stage').scrollBy({ left: d * 390, behavior: 'smooth' });
 }
 
+// ── RELATED WORKS ─────────────────────────────────────────────────────────────
+function toggleRelated() {
+  const panel = document.getElementById('related-panel');
+  const isOpen = panel.classList.toggle('open');
+  if (isOpen) _renderRelatedWorks();
+}
+
+function _renderRelatedWorks() {
+  const a = findAuthor(curAuthorId);
+  if (!a) return;
+  document.getElementById('related-author-name').textContent = a.name;
+  const others = a.works.filter(w => w.id !== curWorkId);
+  document.getElementById('related-works-row').innerHTML = others.length
+    ? others.map(w => `
+        <div class="related-card" onclick="showCompare('${a.id}','${w.id}');document.getElementById('related-panel').classList.remove('open')">
+          <div class="related-card-title">${w.title}</div>
+          <div class="related-card-year">${w.year}</div>
+          <div class="related-card-count">${w.passages.length} passage${w.passages.length !== 1 ? 's' : ''}</div>
+        </div>`).join('')
+    : `<div class="related-empty">No other works in the archive yet.</div>`;
+}
+
 
 
 

@@ -4570,7 +4570,7 @@ const COVER_WORKS = [
   {title:'Les Misérables', author:'Hugo', aId:'hugo', wId:'miserables', isbn:'9780451419439'},
   {title:'Anna Karenina', author:'Tolstoy', aId:'tolstoy', wId:'anna', isbn:'9780143035008'},
   {title:'War and Peace', author:'Tolstoy', aId:'tolstoy', wId:'war-peace', isbn:'9781400079988'},
-  {title:'Crime and Punishment', author:'Dostoevsky', aId:'dostoevsky', wId:'crime', isbn:'9780143058175'},
+  {title:'Crime and Punishment', author:'Dostoevsky', aId:'dostoevsky', wId:'crime', isbn:'9780140449136'},
   {title:'The Brothers Karamazov', author:'Dostoevsky', aId:'dostoevsky', wId:'brothers', isbn:'9780374528379'},
   {title:'Dead Souls', author:'Gogol', aId:'gogol', wId:'dead-souls', isbn:'9780300060607'},
   {title:'The Trial', author:'Kafka', aId:'kafka', wId:'trial', isbn:'9780805209990'},

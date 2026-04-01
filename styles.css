@@ -52,7 +52,7 @@ button{cursor:pointer;font-family:inherit}
 .work-card-desc{font-size:.85rem;color:var(--muted);line-height:1.5}
 .work-card-meta{margin-top:.7rem;display:flex;gap:.35rem;flex-wrap:wrap}
 .chip{font-family:'Courier Prime',monospace;font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;padding:.1rem .35rem;border:1px solid var(--rule);color:var(--muted)}
-#page-compare{display:none;flex-direction:column;height:100vh;overflow:hidden}
+#page-compare{display:none;flex-direction:column;height:100vh;overflow:hidden;position:relative}
 #page-compare.active{display:flex}
 .compare-subnav{flex-shrink:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 1.5rem;display:flex;align-items:center;gap:.8rem;height:40px;margin-top:var(--top-h);overflow-x:auto}
 .compare-subnav::-webkit-scrollbar{height:0}
@@ -193,6 +193,24 @@ button{cursor:pointer;font-family:inherit}
 /* — RATING PULSE ————————————————————————————————————————————————————————————— */
 @keyframes starsPulse{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
 .stars-pulse{animation:starsPulse .35s ease}
+
+/* — RELATED WORKS PANEL —————————————————————————————————————————————————————— */
+.related-btn{font-family:'Courier Prime',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:none;border:none;transition:color .15s;flex-shrink:0;cursor:pointer}
+.related-btn:hover{color:var(--ink)}
+.related-panel{position:absolute;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--rule);transform:translateY(100%);transition:transform .25s ease;z-index:40;padding:1.2rem 2rem 1.5rem}
+.related-panel.open{transform:translateY(0)}
+.related-panel-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted)}
+.related-panel-head em{color:var(--ink);font-style:italic}
+.related-close{background:none;border:none;color:var(--muted);font-size:.85rem;cursor:pointer;transition:color .15s}
+.related-close:hover{color:var(--ink)}
+.related-works-row{display:flex;gap:1px;background:var(--rule);border:1px solid var(--rule);overflow-x:auto}
+.related-works-row::-webkit-scrollbar{height:0}
+.related-card{background:var(--paper);padding:.8rem 1rem;cursor:pointer;transition:background .15s;min-width:160px;flex-shrink:0}
+.related-card:hover{background:var(--warm)}
+.related-card-title{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;margin-bottom:.1rem}
+.related-card-year{font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.related-card-count{font-size:.78rem;font-style:italic;color:var(--muted)}
+.related-empty{font-size:.85rem;font-style:italic;color:var(--muted);padding:.5rem 0}
 
 /* — MOBILE ——————————————————————————————————————————————————————————————————— */
 @media(max-width:680px){

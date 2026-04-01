@@ -72,11 +72,20 @@
     <span class="compare-work-title" id="compare-work-title"></span>
     <span class="subnav-sep">|</span>
     <div id="compare-pass-pills" style="display:flex"></div>
+    <span class="subnav-sep">|</span>
+    <button class="related-btn" id="related-btn" onclick="toggleRelated()">Related works</button>
   </div>
   <div class="compare-stage" id="compare-stage"></div>
   <div class="stage-arrows">
     <button class="arr" onclick="stageScroll(-1)">&#8592;</button>
     <button class="arr" onclick="stageScroll(1)">&#8594;</button>
+  </div>
+  <div class="related-panel" id="related-panel">
+    <div class="related-panel-head">
+      <span>More by <em id="related-author-name"></em></span>
+      <button class="related-close" onclick="toggleRelated()">&#x2715;</button>
+    </div>
+    <div class="related-works-row" id="related-works-row"></div>
   </div>
 </div>
 <div class="modal-overlay" id="login-overlay">
