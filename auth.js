@@ -91,5 +91,9 @@ const LTA_Storage = {
   async addComment(colId, userId, displayName, text) {
     await _sb.from('comments')
       .insert({ col_id: colId, user_id: userId, display_name: displayName, text });
+  },
+
+  async deleteComment(id) {
+    await _sb.from('comments').delete().eq('id', id);
   }
 };

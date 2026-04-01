@@ -60,9 +60,15 @@ function renderBrowse() {
     'grid-philosophy': AUTHORS.philosophy || [],
   };
   for (const [id, list] of Object.entries(map)) {
-    const el = document.getElementById(id);
+    const el      = document.getElementById(id);
+    const section = el?.closest('.browse-section');
     if (!el) continue;
-    el.innerHTML = list.filter(a => a.works && a.works.length > 0).map((a, i) => `
+    const filtered = list.filter(a => a.works && a.works.length > 0);
+    if (!filtered.length) {
+      if (section) section.style.display = 'none';
+      continue;
+    }
+    el.innerHTML = filtered.map((a, i) => `
       <div class="author-card" data-author-id="${a.id}" style="--card-acc:${a.acc};animation-delay:${i * 0.04}s" onclick="showAuthor('${a.id}')">
         <div class="author-name">${a.name}</div>
         <div class="author-dates">${a.dates} · ${a.lang}</div>
@@ -83,15 +89,14 @@ async function fetchWorkDesc(workId, title, authorName) {
       `https://openlibrary.org/search.json?title=${encodeURIComponent(title)}&author=${encodeURIComponent(authorName)}&limit=1&fields=key`
     );
     if (!r.ok) return;
-    const d = await r.json();
+    const d   = await r.json();
     const key = d.docs?.[0]?.key;
     if (!key) return;
 
     const wr = await fetch(`https://openlibrary.org${key}.json`);
     if (!wr.ok) return;
-    const wd = await wr.json();
-
-    let desc = wd.description
+    const wd  = await wr.json();
+    let desc  = wd.description
       ? (typeof wd.description === 'string' ? wd.description : wd.description.value)
       : null;
     if (desc) {
@@ -196,7 +201,6 @@ function showAuthor(id) {
     requestAnimationFrame(() => window.scrollTo(0, _browseScrollY));
   };
 
-  // Render work cards with description placeholders
   document.getElementById('a-works-grid').innerHTML = a.works.map((w, i) => `
     <div class="work-card" style="animation-delay:${i * 0.06}s" onclick="showCompare('${id}','${w.id}')">
       ${w.cover ? `<div class="work-card-cover"><img src="${w.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>` : ''}
@@ -207,7 +211,6 @@ function showAuthor(id) {
 
   showPage('author');
 
-  // Fetch descriptions asynchronously and fill in placeholders
   for (const w of a.works) {
     if (_workDescCache[w.id] !== undefined) {
       const el = document.getElementById('wc-desc-' + w.id);
@@ -255,6 +258,10 @@ async function renderColumns(work) {
   const user    = LTA_Auth.currentUser();
   const stage   = document.getElementById('compare-stage');
 
+  // Fade while loading
+  stage.style.opacity        = '0.4';
+  stage.style.pointerEvents  = 'none';
+
   const fetches = await Promise.all(passage.cols.map(async c => {
     if (c.src) return { ur: 0, submitted: [], userComs: [] };
     const [submitted, ur, userComs] = await Promise.all([
@@ -279,11 +286,16 @@ async function renderColumns(work) {
     const seededComs = c.comments || [];
     const allComs    = [...seededComs, ...userComs];
     const comsHtml   = allComs.length
-      ? allComs.map(cm => `
-          <div class="comment">
-            <div class="comment-meta">${_esc(cm.display_name || cm.user)}${(cm.created_at || cm.ts) ? ' &middot; ' + _fmtDate(cm.created_at || cm.ts) : ''}</div>
+      ? allComs.map(cm => {
+          const isOwn = user && cm.user_id === user.id;
+          return `<div class="comment">
+            <div class="comment-meta">
+              ${_esc(cm.display_name || cm.user)}${(cm.created_at || cm.ts) ? ' &middot; ' + _fmtDate(cm.created_at || cm.ts) : ''}
+              ${isOwn ? `<button class="comment-delete" onclick="deleteComment('${cm.id}','${c.id}')" title="Delete">&#x2715;</button>` : ''}
+            </div>
             <div class="comment-text">${_esc(cm.text)}</div>
-          </div>`).join('')
+          </div>`;
+        }).join('')
       : `<div class="comments-empty">No comments yet.</div>`;
 
     const commentInput = user
@@ -299,7 +311,7 @@ async function renderColumns(work) {
         <div class="t-translator">${c.tr}</div>
         <div class="t-year">${c.yr}</div>
         <div class="t-note">${c.note}</div>
-        ${!c.src ? `<div class="t-rating"><div class="stars">${stars}</div><span class="rating-count">${avg ? avg + ' &middot; ' + allRatings.length + ' rating' + (allRatings.length !== 1 ? 's' : '') : 'Not yet rated'}</span></div>` : ''}
+        ${!c.src ? `<div class="t-rating"><div class="stars" id="stars-${c.id}">${stars}</div><span class="rating-count">${avg ? avg + ' &middot; ' + allRatings.length + ' rating' + (allRatings.length !== 1 ? 's' : '') : 'Not yet rated'}</span></div>` : ''}
       </div>
       <div class="t-col-body">
         <div class="passage-text">${c.text}</div>
@@ -312,6 +324,9 @@ async function renderColumns(work) {
       <div class="t-col-foot">${c.badges.map(b => `<span class="badge">${b}</span>`).join('')}</div>
     </div>`;
   }).join('');
+
+  stage.style.opacity       = '';
+  stage.style.pointerEvents = '';
 }
 
 function _fmtDate(ts) {
@@ -335,6 +350,17 @@ async function rateCol(colId, n, e) {
   e.stopPropagation();
   const user = LTA_Auth.currentUser();
   if (!user) { openLogin(); return; }
+
+  // Optimistic star update
+  const starsEl = document.getElementById('stars-' + colId);
+  if (starsEl) {
+    starsEl.querySelectorAll('.star').forEach((s, i) => {
+      s.classList.toggle('lit', i < n);
+    });
+    starsEl.classList.add('stars-pulse');
+    setTimeout(() => starsEl.classList.remove('stars-pulse'), 400);
+  }
+
   await LTA_Storage.setRating(colId, user.id, n);
   renderColumns(findWork(curAuthorId, curWorkId));
 }
@@ -345,7 +371,14 @@ async function submitComment(colId) {
   const ta   = document.getElementById('ci-' + colId);
   const text = ta ? ta.value.trim() : '';
   if (!text) return;
+  const btn  = ta.nextElementSibling;
+  if (btn) { btn.disabled = true; btn.textContent = '…'; }
   await LTA_Storage.addComment(colId, user.id, user.displayName, text);
+  renderColumns(findWork(curAuthorId, curWorkId));
+}
+
+async function deleteComment(commentId, colId) {
+  await LTA_Storage.deleteComment(commentId);
   renderColumns(findWork(curAuthorId, curWorkId));
 }
 
@@ -355,14 +388,12 @@ function stageScroll(d) {
 
 
 // ── PAGE NAV (with scroll save) ───────────────────────────────────────────────
-const _origShowPage = showPage;
-// Wrap showPage to save browse scroll position before leaving
-const _showPageOrig = showPage;
+const _showPageBase = showPage;
 function showPage(p) {
   if (document.getElementById('page-browse')?.classList.contains('active')) {
     _browseScrollY = window.scrollY;
   }
-  _showPageOrig(p);
+  _showPageBase(p);
 }
 
 
@@ -461,12 +492,10 @@ document.getElementById('login-overlay').addEventListener('click', e => {
 });
 
 document.addEventListener('keydown', e => {
-  // Auth modal: Enter to submit
   if (e.key === 'Enter' && document.getElementById('login-overlay').classList.contains('open')) {
     submitAuth();
     return;
   }
-  // Compare page: arrow keys scroll columns
   const comparePage = document.getElementById('page-compare');
   if (comparePage?.classList.contains('active')) {
     if (e.key === 'ArrowLeft')  stageScroll(-1);

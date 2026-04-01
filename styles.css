@@ -185,6 +185,34 @@ button{cursor:pointer;font-family:inherit}
 .signout-btn{font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border:1px solid #3a3528;background:transparent;color:#7a7060;transition:border-color .15s,color .15s;cursor:pointer}
 .signout-btn:hover{border-color:var(--gold);color:#e8e2d6}
 
+/* — COMMENT DELETE ——————————————————————————————————————————————————————————— */
+.comment-delete{background:none;border:none;color:var(--muted);font-size:.7rem;padding:0 0 0 .4rem;opacity:0;transition:opacity .15s,color .15s;cursor:pointer;float:right}
+.comment:hover .comment-delete{opacity:1}
+.comment-delete:hover{color:var(--rust)}
+
+/* — RATING PULSE ————————————————————————————————————————————————————————————— */
+@keyframes starsPulse{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+.stars-pulse{animation:starsPulse .35s ease}
+
+/* — MOBILE ——————————————————————————————————————————————————————————————————— */
+@media(max-width:680px){
+  .search-wrap{display:none}
+  .topbar-nav{gap:.9rem}
+  .topbar-username{display:none}
+  .t-col{width:calc(100vw - 1.5rem);min-width:calc(100vw - 1.5rem)}
+  .compare-subnav{gap:.4rem;padding:0 .6rem}
+  .compare-work-title{display:none}
+  .subnav-sep:first-of-type{display:none}
+  .home-landing-text{padding:2.5rem 1.2rem 1.5rem}
+  .home-landing-text h1{font-size:clamp(2.2rem,10vw,3.5rem)}
+  .author-hero{padding:2rem 1.2rem 1.5rem}
+  .works-grid-wrap{padding:1rem}
+  .works-grid{grid-template-columns:1fr}
+  .browse-section{padding:1.5rem 1rem}
+  .author-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .stage-arrows{bottom:.5rem;right:.5rem}
+}
+
 /* — COMMENT AUTH PROMPT + EMPTY STATE ————————————————————————————————————————*/
 .comment-signin-prompt{font-size:.82rem;font-style:italic;color:var(--muted);margin-top:.8rem}
 .comment-signin-prompt a{color:var(--rust);text-decoration:underline;cursor:pointer}
