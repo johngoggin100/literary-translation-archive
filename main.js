@@ -209,6 +209,7 @@ function showAuthor(id) {
       <div class="work-card-desc" id="wc-desc-${w.id}"></div>
     </div>`).join('');
 
+  _browseScrollY = window.scrollY;
   showPage('author');
 
   for (const w of a.works) {
@@ -234,6 +235,7 @@ function showCompare(aId, wId) {
   document.getElementById('compare-back-btn').onclick = () => showAuthor(aId);
   renderPassPills(work);
   renderColumns(work);
+  _browseScrollY = window.scrollY;
   showPage('compare');
   document.getElementById('compare-stage').scrollLeft = 0;
 }
@@ -387,14 +389,6 @@ function stageScroll(d) {
 }
 
 
-// ── PAGE NAV (with scroll save) ───────────────────────────────────────────────
-const _showPageBase = showPage;
-function showPage(p) {
-  if (document.getElementById('page-browse')?.classList.contains('active')) {
-    _browseScrollY = window.scrollY;
-  }
-  _showPageBase(p);
-}
 
 
 // ── AUTH UI ───────────────────────────────────────────────────────────────────
