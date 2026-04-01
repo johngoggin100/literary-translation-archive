@@ -72,7 +72,104 @@ function renderBrowse() {
 }
 
 
+// ── WORK DESCRIPTIONS (Open Library) ─────────────────────────────────────────
+const _workDescCache = {};
+
+async function fetchWorkDesc(workId, title, authorName) {
+  if (workId in _workDescCache) return;
+  _workDescCache[workId] = null;
+  try {
+    const r = await fetch(
+      `https://openlibrary.org/search.json?title=${encodeURIComponent(title)}&author=${encodeURIComponent(authorName)}&limit=1&fields=key`
+    );
+    if (!r.ok) return;
+    const d = await r.json();
+    const key = d.docs?.[0]?.key;
+    if (!key) return;
+
+    const wr = await fetch(`https://openlibrary.org${key}.json`);
+    if (!wr.ok) return;
+    const wd = await wr.json();
+
+    let desc = wd.description
+      ? (typeof wd.description === 'string' ? wd.description : wd.description.value)
+      : null;
+    if (desc) {
+      desc = desc.split(/\n+/)[0].trim();
+      if (desc.length > 240) desc = desc.slice(0, desc.lastIndexOf(' ', 240)) + '\u2026';
+    }
+    _workDescCache[workId] = desc;
+  } catch(e) { _workDescCache[workId] = null; }
+}
+
+
+// ── SEARCH ────────────────────────────────────────────────────────────────────
+let _searchTimer = null;
+
+function onSearchInput(val) {
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => _renderSearchDrop(val.trim()), 120);
+}
+
+function _searchAuthors(query) {
+  query = query.toLowerCase();
+  const results = [];
+  for (const list of Object.values(AUTHORS)) {
+    for (const a of list) {
+      if (a.name.toLowerCase().includes(query)) {
+        results.push({ type: 'author', a });
+      }
+      for (const w of (a.works || [])) {
+        if (w.title.toLowerCase().includes(query)) {
+          results.push({ type: 'work', a, w });
+        }
+      }
+    }
+  }
+  return results.slice(0, 9);
+}
+
+function _renderSearchDrop(query) {
+  const drop = document.getElementById('search-drop');
+  if (!drop) return;
+  if (!query) { drop.style.display = 'none'; return; }
+
+  const results = _searchAuthors(query);
+  if (!results.length) {
+    drop.innerHTML = `<div class="search-empty">No results</div>`;
+  } else {
+    drop.innerHTML = results.map(r => r.type === 'author'
+      ? `<div class="search-result" onmousedown="showAuthor('${r.a.id}');closeSearch()">
+           <div class="sr-title">${r.a.name}</div>
+           <div class="sr-sub">${r.a.dates} · ${r.a.lang}</div>
+         </div>`
+      : `<div class="search-result" onmousedown="showCompare('${r.a.id}','${r.w.id}');closeSearch()">
+           <div class="sr-title">${r.w.title}</div>
+           <div class="sr-sub">${r.a.name} · ${r.w.year}</div>
+         </div>`
+    ).join('');
+  }
+  drop.style.display = 'block';
+}
+
+function closeSearch() {
+  const inp  = document.getElementById('search-input');
+  const drop = document.getElementById('search-drop');
+  if (inp)  inp.value = '';
+  if (drop) drop.style.display = 'none';
+}
+
+function hideSearchDrop() {
+  setTimeout(() => {
+    const drop = document.getElementById('search-drop');
+    if (drop) drop.style.display = 'none';
+  }, 150);
+}
+
+
 // ── AUTHOR ────────────────────────────────────────────────────────────────────
+let _browseScrollY = 0;
+
 function showAuthor(id) {
   const a = findAuthor(id);
   if (!a) return;
@@ -94,15 +191,36 @@ function showAuthor(id) {
     }
   }
   const _tb = document.getElementById('a-tonkin-badge'); if (_tb) _tb.innerHTML = '';
-  document.getElementById('author-back-btn').onclick = () => showPage('browse');
+  document.getElementById('author-back-btn').onclick = () => {
+    showPage('browse');
+    requestAnimationFrame(() => window.scrollTo(0, _browseScrollY));
+  };
+
+  // Render work cards with description placeholders
   document.getElementById('a-works-grid').innerHTML = a.works.map((w, i) => `
     <div class="work-card" style="animation-delay:${i * 0.06}s" onclick="showCompare('${id}','${w.id}')">
       ${w.cover ? `<div class="work-card-cover"><img src="${w.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <div class="work-card-title">${w.title}</div>
       <div class="work-card-year">${w.year}</div>
+      <div class="work-card-desc" id="wc-desc-${w.id}"></div>
     </div>`).join('');
+
   showPage('author');
+
+  // Fetch descriptions asynchronously and fill in placeholders
+  for (const w of a.works) {
+    if (_workDescCache[w.id] !== undefined) {
+      const el = document.getElementById('wc-desc-' + w.id);
+      if (el && _workDescCache[w.id]) el.textContent = _workDescCache[w.id];
+    } else {
+      fetchWorkDesc(w.id, w.title, a.name).then(() => {
+        const el = document.getElementById('wc-desc-' + w.id);
+        if (el && _workDescCache[w.id]) el.textContent = _workDescCache[w.id];
+      });
+    }
+  }
 }
+
 
 // ── COMPARE ───────────────────────────────────────────────────────────────────
 function showCompare(aId, wId) {
@@ -137,7 +255,6 @@ async function renderColumns(work) {
   const user    = LTA_Auth.currentUser();
   const stage   = document.getElementById('compare-stage');
 
-  // Fetch ratings + comments for all non-source columns in parallel
   const fetches = await Promise.all(passage.cols.map(async c => {
     if (c.src) return { ur: 0, submitted: [], userComs: [] };
     const [submitted, ur, userComs] = await Promise.all([
@@ -237,6 +354,18 @@ function stageScroll(d) {
 }
 
 
+// ── PAGE NAV (with scroll save) ───────────────────────────────────────────────
+const _origShowPage = showPage;
+// Wrap showPage to save browse scroll position before leaving
+const _showPageOrig = showPage;
+function showPage(p) {
+  if (document.getElementById('page-browse')?.classList.contains('active')) {
+    _browseScrollY = window.scrollY;
+  }
+  _showPageOrig(p);
+}
+
+
 // ── AUTH UI ───────────────────────────────────────────────────────────────────
 let _authMode = 'signin';
 
@@ -332,8 +461,16 @@ document.getElementById('login-overlay').addEventListener('click', e => {
 });
 
 document.addEventListener('keydown', e => {
+  // Auth modal: Enter to submit
   if (e.key === 'Enter' && document.getElementById('login-overlay').classList.contains('open')) {
     submitAuth();
+    return;
+  }
+  // Compare page: arrow keys scroll columns
+  const comparePage = document.getElementById('page-compare');
+  if (comparePage?.classList.contains('active')) {
+    if (e.key === 'ArrowLeft')  stageScroll(-1);
+    if (e.key === 'ArrowRight') stageScroll(1);
   }
 });
 

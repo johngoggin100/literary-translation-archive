@@ -15,6 +15,10 @@
     <a href="#" onclick="showPage('home')" id="nav-home">Home</a>
     <a href="#" onclick="showPage('browse')" id="nav-browse">Browse</a>
     <a href="#">About</a>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="search-input" placeholder="Search authors &amp; works…" oninput="onSearchInput(this.value)" onblur="hideSearchDrop()" autocomplete="off" spellcheck="false">
+      <div class="search-drop" id="search-drop" style="display:none"></div>
+    </div>
     <div id="topbar-auth-wrap"><button class="login-btn" onclick="openLogin()">Sign in</button></div>
   </div>
 </div>
