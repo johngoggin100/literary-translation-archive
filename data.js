@@ -26,7 +26,7 @@ ancient: [
     works:[
       {
         id:'odyssey', title:`The Odyssey`, year:`c. 8th c. BCE`,
-        desc:`Odysseus's decade-long voyage home after the fall of Troy.`,
+        desc:`Odysseus's decade-long voyage home after the fall of Troy — a poem of cunning, endurance, and longing.`,
         chips:[`Epic`,`Journey`,`Mythology`],
         passages:[
           {
@@ -101,6 +101,51 @@ tell me the whole story from the start.`,[],[]),
             ]
           },
           {
+            label:`Book IX — Nobody`,
+            cols:[
+              col(`homer-od-ix-rieu`,`E. V. Rieu`,1946,`Plain prose`,`rieu-odyssey`,['Prose'],
+                `"Sir," he said, "you asked me my name. I will tell it to you.
+My name is Nobody. That is what my mother and father call me
+and what my friends call me."
+"Then I will eat Nobody last of his friends," said Polyphemus, "and the rest before him.
+That shall be my gift to you."
+He pitched over and fell face up on the ground,
+and lay there with his great neck twisted to one side.
+Sleep, which conquers all men, overcome him.`,[],[]),
+              col(`homer-od-ix-fitzgerald`,`Robert Fitzgerald`,1961,`Lyrical verse`,`fitzgerald-odyssey`,['Verse'],
+                `"My name is Nohbdy: mother, father, and friends,
+everyone calls me Nohbdy."
+And he said:
+"Nohbdy's my meat, then, after I eat his friends.
+Others come first. There's a noble gift, now."
+Even as he spoke, he reeled and tumbled backward,
+his great head lolling to one side; and sleep
+took him like any creature. Drunk, hiccuping,
+he dribbled streams of liquor and bits of men.`,[],[]),
+              col(`homer-od-ix-fagles`,`Robert Fagles`,1996,`Vigorous contemporary verse`,`fagles-odyssey`,['Verse','Contemporary'],
+                `"Nobody — that's my name. Nobody —
+so my mother and father call me, all my friends."
+But he boomed back at me from his ruthless heart,
+"Nobody? I'll eat Nobody last of all his friends —
+I'll eat the others first! That's my gift to you!"
+He toppled over, sprawling flat on his back
+and lay there, his massive neck slumping to one side,
+and sleep that conquers all overwhelmed him now
+as wine came gurgling up from his gullet
+with chunks of human flesh — he vomited, blind drunk.`,[],[]),
+              col(`homer-od-ix-wilson`,`Emily Wilson`,2017,`Spare modern verse`,`wilson-odyssey`,['Verse','Contemporary'],
+                `"Cyclops, you asked my name. I will tell you.
+My name is Nobody. My mother, father,
+and all my friends — they call me Nobody."
+He answered from his pitiless heart:
+"Then Nobody will be the last I eat,
+after his friends. That gift is yours."
+He tipped back, fell down, lay flat on his back,
+and sleep that conquers all defeated him.
+Wine bubbled from his throat, with chunks of human flesh.`,[],[]),
+            ]
+          },
+          {
             label:`Book XI — The Dead (Elpenor Speaks)`,
             cols:[
               col(`homer-od-xi-rieu`,`E. V. Rieu`,1946,`Plain prose`,`rieu-odyssey`,['Prose'],
@@ -113,7 +158,7 @@ You made better speed on foot than I did in my black ship."
 He groaned and answered: "Royal son of Laertes, resourceful Odysseus,
 it was the malice of heaven and the wine I had drunk that undid me.
 I lay down on the roof of Circe's house and never thought of using the ladder —
-I tumbled straight off the roof, broke my neck, and my soul came down to Hades." `,[],[]),
+I tumbled straight off the roof, broke my neck, and my soul came down to Hades."`,[],[]),
               col(`homer-od-xi-fitzgerald`,`Robert Fitzgerald`,1961,`Lyrical verse`,`fitzgerald-odyssey`,['Verse'],
                 `The first soul I saw was Elpenor.
 His body lay as yet unburied under the wide earth.
@@ -125,7 +170,7 @@ and I spoke, and my words had wings:
 to the western gloom? You have outrun me on foot;
 I came in a black ship."
 He groaned, and answered me: "Son of Laertes, resourceful Odysseus,
-the evil will of a god and oceans of wine undid me." `,[],[]),
+the evil will of a god and oceans of wine undid me."`,[],[]),
               col(`homer-od-xi-fagles`,`Robert Fagles`,1996,`Vigorous contemporary verse`,`fagles-odyssey`,['Verse','Contemporary'],
                 `And the first soul I saw was the ghost of Elpenor,
 my companion, not yet buried under the broad earth.
@@ -136,7 +181,7 @@ and I called out a winged word: "Elpenor,
 how did you travel down to the world of darkness?
 Faster on foot, I see, than I in my black ship."
 He groaned and answered: "Son of Laertes, ready Odysseus,
-the doom of an evil spirit brought me low, combined with oceans of wine." `,[],[]),
+the doom of an evil spirit brought me low, combined with oceans of wine."`,[],[]),
               col(`homer-od-xi-wilson`,`Emily Wilson`,2017,`Modern spare verse`,`wilson-odyssey`,['Verse','Contemporary'],
                 `The first to come was the ghost of Elpenor.
 His body was not buried yet beneath
@@ -147,45 +192,58 @@ I wept and felt compassion in my heart.
 I called to him with words that flew like arrows:
 "Elpenor! How did you arrive down here
 so fast? You have beaten me on foot. I came
-by ship." He groaned and said: "Ill luck and wine." `,[],[]),
+by ship." He groaned and said: "Ill luck and wine."`,[],[]),
             ]
           },
           {
-            label:`Book XXIV — Priam Before Achilles`,
+            label:`Book XXIII — Penelope Recognizes Odysseus`,
             cols:[
-              col(`homer-od-xxiv-rieu`,`E. V. Rieu`,1946,`Dignified prose`,`rieu-odyssey`,['Prose'],
-                `Great Priam entered unseen and going up to Achilles,
-he clasped his knees and kissed his hands,
-those terrible man-slaying hands that had killed so many of his sons.
-Achilles was seized with wonder at the sight of Priam,
-and his companions were also astonished and looked at one another.
-But Priam prayed, and said: "Think of your own father, god-like Achilles,
-who is of like years with me, on the sad threshold of old age.
-And perhaps those who dwell round about are wearing him down,
-and there is no one to keep from him war and ruin.
-Yet while he hears of you being alive, he is glad at heart." `,[],[]),
-              col(`homer-od-xxiv-fagles`,`Robert Fagles`,1996,`Powerful verse`,`fagles-odyssey`,['Verse'],
-                `And Priam, the noble king of Troy, slipped past unseen
-and kneeling down beside Achilles, clasped his knees
-and kissed his hands, those terrible, man-killing hands
-that had slaughtered Priam's many sons in battle.
-Awesome — as when the madness seizes one who murders
-a man in his own fatherland and flees abroad
-to a wealthy host, and a sense of wonder grips
-those who behold him — so Achilles watched in wonder
-as majestic Priam gazed on him.
-The men around him marvelled too, trading glances.`,[],[]),
-              col(`homer-od-xxiv-wilson`,`Emily Wilson`,2017,`Clear modern verse`,`wilson-odyssey`,['Verse','Contemporary'],
-                `Great Priam came in undetected, kneeled before Achilles,
-and clasped his knees and kissed his hands,
-those terrible, murderous hands that killed so many of his sons.
-As when a heavy doom comes over someone who has killed a man
-in his own country and flees abroad to a wealthy patron,
-and those who see him stare in amazement,
-so Achilles stared in amazement when he saw godlike Priam,
-and his companions stared and exchanged glances.
-Priam prayed and spoke directly to great Achilles:
-"Remember your own father, godlike Achilles, on the threshold of old age." `,[],[]),
+              col(`homer-od-xxiii-rieu`,`E. V. Rieu`,1946,`Plain prose`,`rieu-odyssey`,['Prose'],
+                `Penelope went up to the bed they knew so well.
+She sat down in the firelight opposite Odysseus.
+He was leaning against one of the great columns,
+looking at the floor, waiting to see what she would do.
+She sat for a long time without speaking.
+And then he said: "Lady, surely no woman was ever made
+with a heart so hard as yours."
+She did not answer at once. She was thinking.
+She had not yet recognized him.
+And yet something in her was already certain.`,[],[]),
+              col(`homer-od-xxiii-fitzgerald`,`Robert Fitzgerald`,1961,`Lyrical verse`,`fitzgerald-odyssey`,['Verse'],
+                `She still held back, and wondered...
+She thought: either I must test him further —
+or else I must believe.
+She went and sat down facing him,
+in firelight, by the column.
+Waiting. He said at last:
+"Strange woman.
+No other woman could endure this hardness.
+No other woman would have kept me at arm's length
+through twenty years."
+She did not move. Her eyes were steady.
+She was thinking of the bed.`,[],[]),
+              col(`homer-od-xxiii-fagles`,`Robert Fagles`,1996,`Contemporary verse`,`fagles-odyssey`,['Verse','Contemporary'],
+                `She turned to stone. No words.
+Then at last she burst into tears, rushed to Odysseus,
+threw her arms around his neck and kissed his head.
+"Don't be angry with me, please!"
+But Odysseus could not yet stop himself from weeping.
+As a swimmer struggles to shore through heavy surf,
+as the land — longed for — takes him in its arms at last,
+so she wept, throwing her white arms around her husband's neck.
+The rose Dawn might have found them still weeping there
+if Athena had not intervened.`,[],[]),
+              col(`homer-od-xxiii-wilson`,`Emily Wilson`,2017,`Modern direct verse`,`wilson-odyssey`,['Verse','Contemporary'],
+                `At last Penelope spoke, but first she smiled
+and said to him: "My husband, please forgive me.
+I was not cold from pride or spite. I knew
+that you might be an impostor come to trick me.
+Gods know how many men have told me lies.
+But now you have described the secret of our bed
+that only you would know.
+You have convinced me."
+He wept. He held her. He could not let go.
+And she wept too, her arms around his neck.`,[],[]),
             ]
           },
         ]
@@ -276,6 +334,16 @@ His loving father laughed, his mother laughed as well,
 and Hector, glory of armies, quickly lifted
 the helmet from his head and set it down on the ground,
 then kissed his dear son, dandled him in his arms.`,[],[]),
+              col(`homer-il-vi-mitchell`,`Stephen Mitchell`,2011,`Modern clarity`,`mitchell-iliad`,['Verse','Contemporary'],
+                `As he said this, Hector reached out to his son,
+but the boy shrank back against the nurse's chest,
+screaming with fright at the sight of his dear father —
+terrified by the bronze helmet, the plume of horsehair
+nodding from the top, so fierce and glittering.
+His father laughed, his mother laughed with him.
+Quickly, great Hector took the helmet off
+and put it down on the ground, all shining bright.
+Then he kissed his dear son and dandled him in his arms.`,[],[]),
               col(`homer-il-vi-wilson2023`,`Emily Wilson`,2023,`Modern verse`,`wilson-iliad`,['Verse'],
                 `Glorious Hector reached toward his son with his arms,
 but the boy clung back against the belt of his deep-breasted nurse, screaming,
@@ -287,6 +355,95 @@ At once great Hector lifted the helmet from his head
 and laid it gleaming on the ground.
 He kissed his dear son and dandled him in his arms,
 and spoke in prayer to Zeus and the other gods.`,[],[]),
+            ]
+          },
+          {
+            label:`Book XVIII — The Death of Patroclus: Thetis's Lament`,
+            cols:[
+              col(`homer-il-xviii-lattimore`,`Richmond Lattimore`,1951,`Scholarly verse`,`lattimore-iliad`,['Verse'],
+                `A terrible sound went up from the silver-footed lady.
+She beat her hands together and wept aloud, and her sisters —
+all the Nereids who were there in the depth of the water —
+gathered about her, and all of them struck their breasts
+and lamented. Among them Thetis led the singing of sorrow:
+"Hear me. I am so sad. I bore the best of men,
+the hero and mighty man, pre-eminent among heroes.
+He grew like a young tree. I tended him.
+He went to Troy.
+He will not come home again to the house of Peleus."`,[],[]),
+              col(`homer-il-xviii-fagles`,`Robert Fagles`,1990,`Powerful verse`,`fagles-iliad`,['Verse','Contemporary'],
+                `A sharp cry broke from her silver-footed lady.
+Surrounded by her sisters, deep in the sea's depths,
+Thetis wept and beat her breast and all the Nereids
+echoed her lament, all gathered round her now.
+Among them she cried out: "Sisters, hear me,
+share the pain that lives within my heart.
+I gave birth to a son without defect and strong —
+the best of heroes — he shot up like a young tree.
+I reared him like a flowering orchard tree,
+dispatched him in the curved ships to Troy to fight.
+He will not return to Peleus' house again."`,[],[]),
+              col(`homer-il-xviii-wilson2023`,`Emily Wilson`,2023,`Modern verse`,`wilson-iliad`,['Verse','Contemporary'],
+                `Silver-footed Thetis heard his groan.
+Sitting in the depths beside her aged father,
+she cried out sharply. All the Nereids gathered —
+Glauce, Thaleia, and Cymodoce,
+Nesaia, and Speio, and Thoe,
+and many others — they filled the silvery sea.
+They all beat their breasts. Thetis led the lament:
+"Hear me, sisters. Of all the Nereids hear my grief.
+I bore a child — the best, the bravest, the most glorious.
+He grew like a young vine. I sent him to the war.
+He will not come home."`,[],[]),
+            ]
+          },
+          {
+            label:`Book XXIV — Priam Before Achilles`,
+            cols:[
+              col(`homer-il-xxiv-lattimore`,`Richmond Lattimore`,1951,`Scholarly verse`,`lattimore-iliad`,['Verse'],
+                `Great Priam came in unseen by the other men and stood close beside him
+and caught the knees of Achilleus in his arms, and kissed the hands
+that were dangerous and manslaughtering and had killed so many of his sons.
+As when dense disaster closes on one who has murdered a man in his own land,
+and he comes to the country of others, to a man of substance,
+and wonder seizes on those who behold him,
+so Achilleus wondered as he looked upon godlike Priam
+and the rest of them wondered also, and looked at each other.
+But Priam spoke to him in the words of a suppliant:
+"Achilleus like the gods, remember your father."`,  [],[]),
+              col(`homer-il-xxiv-fagles`,`Robert Fagles`,1990,`Powerful verse`,`fagles-iliad`,['Verse','Contemporary'],
+                `And Priam, the noble king of Troy, slipped past unseen
+and kneeling down beside Achilles, clasped his knees
+and kissed his hands, those terrible, man-killing hands
+that had slaughtered Priam's many sons in battle.
+Awesome — as when the madness seizes one who murders
+a man in his own fatherland and flees abroad
+to a wealthy host, and a sense of wonder grips
+those who behold him — so Achilles watched in wonder
+as majestic Priam gazed on him.
+The men around him marvelled too, trading glances.`,[],[]),
+              col(`homer-il-xxiv-wilson2023`,`Emily Wilson`,2023,`Modern verse`,`wilson-iliad`,['Verse','Contemporary'],
+                `Great Priam came in undetected, kneeled before Achilles,
+and clasped his knees and kissed his hands,
+those terrible, murderous hands that killed so many of his sons.
+As when a heavy doom comes over someone who has killed a man
+in his own country and flees abroad to a wealthy patron,
+and those who see him stare in amazement,
+so Achilles stared in amazement when he saw godlike Priam,
+and his companions stared and exchanged glances.
+Priam prayed and spoke directly to great Achilles:
+"Remember your own father, godlike Achilles, on the threshold of old age."`,[],[]),
+              col(`homer-il-xxiv-mitchell`,`Stephen Mitchell`,2011,`Clear modern prose`,`mitchell-iliad`,['Verse','Contemporary'],
+                `Great Priam entered unseen. He stood before Achilles
+and took his knees in his hands and kissed his hands,
+the terrible hands that had killed so many of his sons.
+As when a man who has murdered someone in his own country
+and fled to a foreign land stands in the house of a wealthy man,
+and wonder seizes all who see him —
+so Achilles stared in wonder at Priam,
+and the men with him stared at each other.
+Priam said: "Remember your father, Achilles.
+He is old, as I am old, on the threshold of death."`,[],[]),
             ]
           },
         ]
