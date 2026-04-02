@@ -2163,21 +2163,13 @@ and would not change back.`,[],[]),
     works:[
       {
         id:'brothers', title:`The Brothers Karamazov`, year:1880,
+        desc:`Three brothers, a murdered father, and the burning questions of God, freedom, and moral responsibility.`,
         chips:[`Novel`,`Philosophy`,`Crime`],
         passages:[
           {
             label:`Book V — The Grand Inquisitor`,
             cols:[
               col(`dost-bk-garnett`,`Constance Garnett`,1912,`The foundational English version`,`garnett-brothers`,['Prose','Classic'],
-                `"So you are the defendant?" the priest asked.
-"Yes," said K.
-"I was warned about you," said the priest.
-"You are held to be guilty."
-"But I am not guilty," said K.; "it's a mistake.
-And, if it comes to that, how can any man be called guilty?
-We are all simply men here, one as much as the other."
-"That is true," said the priest, "but that's how all guilty men talk."`,[],[]),
-              col(`dost-bk-pvk`,`Pevear & Volokhonsky`,1990,`Major 20th-century retranslation`,`pvk-brothers`,['Prose','Contemporary'],
                 `"Go, and come no more... come not at all, never, never!"
 And he let him out into the dark streets of the city. The prisoner went away.
 "And the old man?"
@@ -2186,19 +2178,32 @@ And he let him out into the dark streets of the city. The prisoner went away.
 Ivan laughed. "It's all nonsense, Alyosha.
 It's just a muddled poem of a muddled student who never wrote two lines of verse.
 Why are you taking it so seriously?"`,[],[]),
-              col(`dost-bk-mcdonough`,`Susan McReynolds`,2011,`Recent scholarly translation`,`pvk-brothers`,['Prose','Contemporary'],
-                `Do you love children? Do you love our Creator's little ones?
-I love them above all things. Tell me, young man — do you weep?
-Do you weep and are you not ashamed?
-Let your heart not be troubled. Do not be afraid of anything,
-and do not grieve. Only let repentance not slacken in you,
-and God will forgive everything. And there is no sin, and there can be no sin on all the earth,
-which God will not forgive to the truly repentant.
-Man cannot commit a sin so great as to exhaust the infinite love of God.`,[],[]),
+              col(`dost-bk-pvk`,`Pevear & Volokhonsky`,1990,`Major contemporary retranslation`,`pvk-brothers`,['Prose','Contemporary'],
+                `"Go, and come no more... do not come at all... never, never!"
+And he released him into the dark streets of the city.
+The prisoner left.
+"And the old man?"
+"The kiss burns in his heart, but the old man holds to his idea."
+"And you are with him, you too?" Alyosha asked mournfully.
+Ivan laughed.
+"Alyosha, it's nonsense. It's the incoherent poem of an incoherent student
+who never wrote two lines of verse. Why take it so seriously?"`,[],[]),
+              col(`dost-bk-mcduff`,`David McDuff`,2003,`Penguin version`,`mcduff-brothers`,['Prose','Contemporary'],
+                `"Go, and come no more... come never again... never, never!"
+He released him and let him out into the dark alleys of the city.
+The prisoner left.
+"And the Inquisitor?"
+"The kiss burns in his heart, but he stays with his old idea."
+"And you — are you with him?" Alyosha asked sadly.
+Ivan laughed.
+"It's all nonsense, Alyosha.
+It's only the senseless poem of a senseless student
+who never in his life wrote two lines of verse.
+Why take it so seriously?"`,[],[]),
             ]
           },
           {
-            label:`Book II — The Rebellion`,
+            label:`Book V — The Rebellion`,
             cols:[
               col(`dost-bk-rebel-garnett`,`Constance Garnett`,1912,`Victorian prose`,`garnett-brothers`,['Prose','Classic'],
                 `Imagine that you are creating a fabric of human destiny
@@ -2221,12 +2226,84 @@ and raise your edifice on the foundation of her unrequited tears:
 would you agree to be the architect?
 Tell me the truth.
 "No, I would not agree," said Alyosha softly.`,[],[]),
+              col(`dost-bk-rebel-mcduff`,`David McDuff`,2003,`Penguin version`,`mcduff-brothers`,['Prose','Contemporary'],
+                `Imagine that you yourself are erecting the edifice of human destiny
+with the aim of making people happy in the finale,
+of giving them peace and tranquillity at last —
+but for that you would have to torture to death
+just one tiny little creature, that same child
+who beat her breast with her little fist,
+and erect your edifice on the foundation of her unavenged tears.
+Would you agree to be the architect on such conditions?
+Tell me the truth.
+"No, I would not agree," Alyosha said quietly.`,[],[]),
+            ]
+          },
+          {
+            label:`Book XI — Ivan and the Devil`,
+            cols:[
+              col(`dost-bk-devil-garnett`,`Constance Garnett`,1912,`Classic rendering`,`garnett-brothers`,['Prose','Classic'],
+                `"You are lying! You are my hallucination. You are not existing.
+You are my imagination and nothing more."
+"No, I am not existing perhaps, but that is beside the point.
+I am the embodiment of your doubts, of your negations —
+the part of you that has always desired to believe and cannot.
+Look at me, Ivan: I am all that is left of your faith,
+turned inside out."
+Ivan closed his eyes. The figure did not go away.`,[],[]),
+              col(`dost-bk-devil-pvk`,`Pevear & Volokhonsky`,1990,`Contemporary version`,`pvk-brothers`,['Prose','Contemporary'],
+                `"You are a lie! You are my illness, a hallucination.
+You do not exist!"
+"No, I am not, perhaps, but that is beside the point.
+I am your mirror, Ivan Fyodorovich — just one side of you,
+the side you have always fought against.
+I am made of your own doubt. I am the voice that says:
+what if it is all true?
+I have come because you can no longer argue me away."
+Ivan pressed his hands to his eyes. The voice continued.`,[],[]),
+              col(`dost-bk-devil-mcduff`,`David McDuff`,2003,`Penguin version`,`mcduff-brothers`,['Prose','Contemporary'],
+                `"You don't exist! You are my sickness, an invention!
+You are my hallucination!"
+"If you like, but that is beside the point.
+I am everything in you that you cannot reconcile,
+the doubt that lives at the bottom of your mind
+which your fine intellect has never been able to dissolve.
+I come to you now not because you have summoned me —
+you never summoned me. You only stopped denying me.
+That is enough for a beginning."
+Ivan was silent. He could not look at the figure directly.`,[],[]),
+            ]
+          },
+          {
+            label:`Epilogue — At Ilyusha's Stone`,
+            cols:[
+              col(`dost-bk-stone-garnett`,`Constance Garnett`,1912,`Classic rendering`,`garnett-brothers`,['Prose','Classic'],
+                `"Karamazov," cried Kolya, "can it be true what religion says,
+that we shall all rise again from the dead and shall live and see each other again,
+all, Ilyusha too?"
+"Certainly we shall all rise again, certainly we shall see each other
+and shall tell each other with joy and gladness all that has happened to us,"
+Alyosha answered, half laughing, half enthusiastic.
+"Ah, how splendid it will be!" broke from Kolya.
+"Well, now we will go!" said Alyosha. "We go hand in hand."
+"And always so, all our lives hand in hand! Hurrah for Karamazov!" Kolya cried.`,[],[]),
+              col(`dost-bk-stone-pvk`,`Pevear & Volokhonsky`,1990,`Contemporary version`,`pvk-brothers`,['Prose','Contemporary'],
+                `"Karamazov!" Kolya called out. "Is it true what religion says,
+that we will all rise from the dead, and come to life,
+and see one another again — everyone, and Ilyushechka?"
+"Certainly we will rise, certainly we will see each other,
+and joyfully, gladly, we will tell one another everything that has been,"
+Alyosha answered, half laughing, half in rapture.
+"Ah, how good that will be!" Kolya said.
+"Well, let's go now, let's go!" Alyosha said. "We'll go hand in hand."
+"And always so, all our lives like that! Long live Karamazov!" Kolya cried in a rapture.`,[],[]),
             ]
           },
         ]
       },
       {
         id:'crime', title:`Crime and Punishment`, year:1866,
+        desc:`A student murders a pawnbroker to test his theory that extraordinary men stand beyond morality — and discovers he is not extraordinary.`,
         chips:[`Psychological`,`Crime`,`Redemption`],
         passages:[
           {
@@ -2266,6 +2343,72 @@ and meeting her filled him with an unpleasant, cowardly feeling.`,[],[]),
             ]
           },
           {
+            label:`Part IV — Sonya Reads Lazarus`,
+            cols:[
+              col(`dost-cp-laz-garnett`,`Constance Garnett`,1914,`Classic rendering`,`garnett-crime`,['Prose','Classic'],
+                `He asked Sonya to read him the story of the raising of Lazarus.
+She found the place and began to read, he listening without a word.
+By the time she reached the seventeenth verse of the eleventh chapter of St. John's Gospel,
+there was a candle burning low. The room was very still.
+Her voice shook; she had read the passage many times before and knew it by heart.
+But this time she read it as if for the first time,
+as if she herself did not yet know how it would end —
+as if the miracle were still uncertain, still possible,
+and she were holding her breath to see.`,[],[]),
+              col(`dost-cp-laz-pvk`,`Pevear & Volokhonsky`,1993,`Contemporary version`,`pvk-crime`,['Prose','Contemporary'],
+                `Raskolnikov asked her to read the Lazarus passage.
+She found the place. She had a little candle.
+She began to read. He listened without moving.
+At the thirty-fifth verse: "Jesus wept" — she stopped.
+She had read these words a hundred times and yet this time
+she could not go on. Something in the way he was listening,
+something in the stillness between them,
+made the words mean something they had not meant before.
+She went on. He did not look at her.
+When she finished, neither of them spoke for a long time.`,[],[]),
+              col(`dost-cp-laz-mcduff`,`David McDuff`,1991,`Penguin version`,`mcduff-crime`,['Prose','Contemporary'],
+                `He asked her to read him about Lazarus.
+She found the page without difficulty; she knew it by heart.
+The candle guttered. The room was silent.
+She began to read in a trembling voice, controlling herself.
+At the words "And Jesus wept" her throat caught.
+She read on anyway — read on to the end,
+where the stone is rolled away
+and the dead man walks out.
+Raskolnikov sat still through all of it.
+He did not look at her. He did not move.
+She had no idea what he was thinking.`,[],[]),
+            ]
+          },
+          {
+            label:`Part V — Raskolnikov Confesses to Sonya`,
+            cols:[
+              col(`dost-cp-conf-garnett`,`Constance Garnett`,1914,`Classic rendering`,`garnett-crime`,['Prose','Classic'],
+                `"I wanted to become a Napoleon, that is why I killed her....
+Do you understand now?"
+"N-no," Sonya whispered naively and timidly. "Only speak, speak, I shall understand,
+I shall understand in myself," she kept repeating in entreaty.
+"You'll understand afterwards.
+I wanted to have the daring... that was the whole cause of it!
+You know now?" said Raskolnikov, turning to her, his face pale and distorted.
+"I wanted to find out then and quickly whether I was a louse like everybody else
+or a man. Whether I can step over barriers or not."
+"To kill? The right to kill?" Sonya clasped her hands.`,[],[]),
+              col(`dost-cp-conf-pvk`,`Pevear & Volokhonsky`,1993,`Contemporary standard`,`pvk-crime`,['Prose','Contemporary'],
+                `"I wanted to become a Napoleon — that is why I killed her.
+Now do you understand?"
+"N-no," Sonya whispered. "Speak, speak, I'll understand everything!"
+she implored, still scarcely audibly.
+"You'll understand later.
+I wanted to dare — that was the whole reason!
+I wanted to find out — was I a louse like all the rest, or was I a man?
+Can I step across, or can I not?
+Can I bend down and take it — or not?
+Am I a trembling creature, or do I have the right?"
+"To kill? The right to kill?" Sonya pressed her hands together.`,[],[]),
+            ]
+          },
+          {
             label:`Epilogue — Raskolnikov and Sonya`,
             cols:[
               col(`dost-cp-epi-garnett`,`Constance Garnett`,1914,`Classic rendering`,`garnett-crime`,['Prose','Classic'],
@@ -2289,12 +2432,25 @@ Then steps were heard behind him.
 It was Sonya. She came to meet him quietly and sat down beside him.
 He did not look at her.
 He took her hand and held it.`,[],[]),
+              col(`dost-cp-epi-mcduff`,`David McDuff`,1991,`Penguin version`,`mcduff-crime`,['Prose','Contemporary'],
+                `He had been in Siberia for two years.
+February was over. The thaw had set in.
+He sat by the river bank. The far bank was wide and flat.
+He had sat there a long time before he heard footsteps behind him.
+It was Sonya. She came each Sunday.
+He looked up. She sat down beside him without speaking.
+Then something happened that neither of them had expected.
+He reached for her hands, and she let him take them,
+and suddenly, in spite of all the distance between them,
+something began to diminish.
+It was not over. It was only beginning.`,[],[]),
             ]
           },
         ]
       },
       {
         id:'idiot', title:`The Idiot`, year:1869,
+        desc:`A genuinely good man — epileptic, guileless, Christ-like — is destroyed by the society he tries to love.`,
         chips:[`Novel`,`Psychology`,`Russian`],
         passages:[
           {
@@ -2317,12 +2473,85 @@ Among the passengers were some returning from abroad;
 but the third-class compartments were the most crowded,
 mainly with people of modest means on business.
 Two men were seated opposite each other by the window, both young, both travelling light.`,[],[]),
+              col(`dost-idiot-mcduff`,`David McDuff`,2004,`Penguin version`,`mcduff-idiot`,['Prose','Contemporary'],
+                `Towards the end of November, during a thaw, at around nine o'clock in the morning,
+the Warsaw train was approaching St Petersburg at full speed.
+It was so damp and foggy that dawn had barely broken;
+it was hard to see more than ten paces to either side of the train windows.
+Among the passengers returning from abroad, in one of the third-class carriages,
+two young men sat facing each other by the window.
+Both were travelling light, both were shabbily dressed,
+and the faces of both were remarkable enough to attract attention.`,[],[]),
+            ]
+          },
+          {
+            label:`Part I — On Seeing an Execution`,
+            cols:[
+              col(`dost-idiot-exec-garnett`,`Constance Garnett`,1913,`Victorian rendering`,`garnett-idiot`,['Prose','Classic'],
+                `"They led him out and all seemed to understand that it would happen in a few minutes.
+He began to look around with great attention. He looked at the people.
+He looked at the scaffold, the executioner, the priest.
+He counted the steps. One. Two. Three. Four.
+He kept thinking: there are still several minutes left.
+Several minutes, and then there will be nothing.
+Or there will be something. But what?
+Where?
+He was thinking all this in the last few seconds."`,[],[]),
+              col(`dost-idiot-exec-pvk`,`Pevear & Volokhonsky`,2001,`Contemporary version`,`pvk-idiot`,['Prose','Contemporary'],
+                `"The main thing is those five minutes.
+He was convinced he had five minutes left to live.
+He told me those five minutes seemed like an enormous time to him —
+an enormous wealth.
+He thought: in five minutes I can live through so much.
+I will sleep during the first two minutes.
+During the next two I will say goodbye to my neighbours.
+The last minute I will give to simply looking around.
+He actually carried out the plan. But then the pardon came.
+And he told me afterwards: those five minutes were the most alive of his life."`,[],[]),
+              col(`dost-idiot-exec-mcduff`,`David McDuff`,2004,`Penguin version`,`mcduff-idiot`,['Prose','Contemporary'],
+                `"He was twenty-seven then, healthy, strong.
+He stood on the scaffold and had perhaps three minutes left to live.
+He said that during those three minutes he lived through more
+than all the years before — more thought, more feeling.
+He divided the time: two minutes for farewell,
+one minute to look at the scaffold and the sky.
+He later told me the sky was very blue.
+He said it was strange to be looking at the sky
+and to know it would continue after him —
+that this particular blue would not stop for him."`,[],[]),
+            ]
+          },
+          {
+            label:`Part II — Nastasya and the Money`,
+            cols:[
+              col(`dost-idiot-money-garnett`,`Constance Garnett`,1913,`Victorian prose`,`garnett-idiot`,['Prose','Classic'],
+                `Nastasya Philipovna sat perfectly still, watching Rogozhin.
+She did not tremble. She was pale.
+Rogozhin had thrown the money into the fire.
+He stood looking at her.
+"If you take it out," he said, "it's yours. The lot of it."
+She sat still.
+The flames rose. The edges of the notes darkened.
+Then she laughed — a strange, ringing laugh — and plunged her bare arms
+into the fireplace and swept the burning bundle out onto the hearth.`,[],[]),
+              col(`dost-idiot-money-pvk`,`Pevear & Volokhonsky`,2001,`Contemporary version`,`pvk-idiot`,['Prose','Contemporary'],
+                `Nastasya Philipovna did not move. She was white as chalk.
+Rogozhin watched her. Nobody else in the room breathed.
+"Rake it out with your bare hands," he said, "and it's all yours.
+Every rouble. Go on."
+She did not look at the money. She looked at him.
+Then she laughed — a high, clear laugh, unlike anything the room had heard —
+and thrust both hands into the fire and pulled the bundle out,
+scattering burning notes across the floor,
+and stood there with her arms still smoking,
+looking at Ganya where he had fainted.`,[],[]),
             ]
           },
         ]
       },
       {
         id:'notes-underground', title:`Notes from Underground`, year:1864,
+        desc:`A bitter, hyper-conscious clerk rages at reason, progress, and other people — Dostoevsky's most radical and prophetic voice.`,
         chips:[`Novella`,`Philosophy`,`Psychology`],
         passages:[
           {
@@ -2352,6 +2581,130 @@ I'm not in treatment and never have been, although I have a lot of respect for m
 I'm also extremely superstitious, although there's no reason for me to be superstitious.
 (I'm perfectly capable of not being superstitious, but somehow I still am.)
 No, I refuse to be treated out of spite.`,[],[]),
+            ]
+          },
+          {
+            label:`Part I — Against the Crystal Palace`,
+            cols:[
+              col(`dost-notes-crystal-garnett`,`Constance Garnett`,1913,`Victorian rendering`,`garnett-notes`,['Prose','Classic'],
+                `Oh, tell me, who was it first announced, who was it first proclaimed,
+that man only does nasty things because he does not know his own interests;
+and that if he were enlightened, if his eyes were opened to his real normal interests,
+man would at once cease to do nasty things,
+would at once become good and noble because, being enlightened and understanding his real advantage,
+he would see his own advantage in the good and nothing else,
+and we all know that not one man can, consciously, act against his own interests.`,[],[]),
+              col(`dost-notes-crystal-pvk`,`Pevear & Volokhonsky`,1993,`Contemporary version`,`pvk-notes`,['Prose','Contemporary'],
+                `You say: science will teach men that they have no will of their own
+and have never had any, and that they themselves are nothing but a sort of piano key or organ stop,
+and that, over and above this, there are in the world the laws of nature;
+so that whatever he does is not done by his willing it,
+but is done of itself, by the laws of nature.
+Consequently we have only to discover these laws of nature, and man will no longer have to answer
+for his actions and life will become exceedingly easy for him.
+All human actions will then, of course, be tabulated according to these laws.`,[],[]),
+              col(`dost-notes-crystal-mcduff`,`David McDuff`,1991,`Penguin version`,`mcduff-notes`,['Prose','Contemporary'],
+                `Try to tell me this: suppose everything could be so arranged
+that it would be entirely reasonable, that everything would be bright,
+that life could have no disorder, no darkness, no confusion —
+would that be good?
+You are laughing? Very well. I will answer for you:
+yes, it would be very good.
+But I tell you: I would sooner smash my head against a wall
+than live in a crystal palace in which you cannot stick out your tongue.
+I do not want my desires satisfied. I want my desires — full stop.
+I want freedom. Even if it costs me everything. Even if it costs me reason itself.`,[],[]),
+            ]
+          },
+          {
+            label:`Part II — The Officer on Nevsky`,
+            cols:[
+              col(`dost-notes-officer-garnett`,`Constance Garnett`,1913,`Victorian prose`,`garnett-notes`,['Prose','Classic'],
+                `There was one officer at the billiards-room. He was a tall fellow,
+about six foot three or four, and he was fond of showing off his height.
+One day he moved me from where I was standing and simply passed by as though he had not noticed me.
+I could have forgiven blows, but I could not forgive his treating me as if I simply did not exist.
+The devil knows what I would have given for a real, a more regular quarrel —
+a more decent, a more literary one, so to speak.
+But this one treated me as though I were a fly.`,[],[]),
+              col(`dost-notes-officer-pvk`,`Pevear & Volokhonsky`,1993,`Contemporary version`,`pvk-notes`,['Prose','Contemporary'],
+                `There was an officer in the billiard room.
+He was a tall man, and a bully. Once, without any cause,
+he moved me aside by my shoulder so as to make room for himself —
+not even noticing me. I could have forgiven a blow.
+But he did not notice me. That was the wound.
+I brooded on it for two years.
+I wrote about it in my journal. I imagined encounters.
+I imagined saying to him: "How dare you?"
+I imagined him going pale.
+He did not go pale. He did not do anything.
+He did not know I existed.`,[],[]),
+            ]
+          },
+        ]
+      },
+      {
+        id:'demons', title:`Demons`, year:1872,
+        desc:`A provincial town is overrun by a revolutionary cell — Dostoevsky's furious prophecy of political violence and nihilism.`,
+        chips:[`Novel`,`Politics`,`Nihilism`],
+        passages:[
+          {
+            label:`Part I — Stavrogin's Entrance`,
+            cols:[
+              col(`dost-dem-garnett`,`Constance Garnett`,1916,`The foundational English version`,`garnett-demons`,['Prose','Classic'],
+                `Nikolai Vsevolodovich had the reputation of being a society man.
+He was remarkably handsome, well-built, taller than average, with very dark hair.
+His face was almost too regular — the kind of face found in portraits of ideal beauty —
+and yet people found it cold, even unpleasant.
+Some people said he was proud; others that he was simply reserved.
+But everyone, whether they liked him or not,
+agreed that he was quite unlike anyone else.`,[],[]),
+              col(`dost-dem-pvk`,`Pevear & Volokhonsky`,1994,`Contemporary standard`,`pvk-demons`,['Prose','Contemporary'],
+                `Nikolai Vsevolodovich Stavrogin had spent a long time abroad.
+He had returned, and his appearance in our town had the quality of an event.
+He was tall, with dark hair, handsome in a way that disturbed people.
+His face was somehow too regular — a face from a classical medal —
+and this regularity gave it a strangeness.
+No one liked him, exactly. But everyone felt him.
+The women watched him. The men kept track of where he stood in a room.
+He seemed to carry in him a history none of them knew,
+and which he showed no interest in sharing.`,[],[]),
+              col(`dost-dem-mcduff`,`David McDuff`,2008,`Penguin version`,`mcduff-demons`,['Prose','Contemporary'],
+                `Nikolai Vsevolodovich had a handsome face. Too handsome, some said.
+A face like an icon, but lacking the warmth of an icon.
+Something in it was missing — not expression, exactly,
+but the sense that expression connected to anything inside.
+His eyes were dark and direct. He looked at people as if they did not surprise him —
+as if he had already considered everything they could be
+and had found it no more than he expected.
+This is what frightened them, though they would not have said so.`,[],[]),
+            ]
+          },
+          {
+            label:`Part III — Stepan Verkhovensky's Death`,
+            cols:[
+              col(`dost-dem-stepan-garnett`,`Constance Garnett`,1916,`Victorian rendering`,`garnett-demons`,['Prose','Classic'],
+                `He lay dying on a strange bed in a stranger's house.
+He had spent his life talking about Russia and had never known it.
+He had spent his life imagining a liberal utopia and had produced instead a son
+who was burning the country down.
+He felt this clearly now. The fever had stripped away everything else.
+"I have been telling lies all my life," he said to Sofya Matveyevna.
+"Not in words. In how I lived.
+I have never once been what I said I believed in.
+And now I am dying, and I believe for the first time —
+and there is no time left to do anything about it."`,  [],[]),
+              col(`dost-dem-stepan-pvk`,`Pevear & Volokhonsky`,1994,`Contemporary version`,`pvk-demons`,['Prose','Contemporary'],
+                `He asked to have the Gospel read to him — the passage about the Gadarene swine.
+Sofya Matveyevna found it and read it.
+He listened with his eyes closed.
+When she finished he was quiet for a while.
+Then he said: "Those swine — that is us. All of us.
+The devils have entered into us, into the whole of Russia.
+We are the swine. We rush headlong into the sea.
+But the sick man will be healed and will sit at the feet of Jesus
+and all will look at him in wonder.
+That is what I believe. That is what I believe at last."`,  [],[]),
             ]
           },
         ]
@@ -5044,6 +5397,8 @@ const COVER_WORKS = [
   {title:'Childhood', author:'Tolstoy', aId:'tolstoy', wId:'childhood', isbn:'9780140449600'},
   {title:'Crime and Punishment', author:'Dostoevsky', aId:'dostoevsky', wId:'crime', isbn:'9780140449136'},
   {title:'The Brothers Karamazov', author:'Dostoevsky', aId:'dostoevsky', wId:'brothers', isbn:'9780374528379'},
+  {title:'Demons', author:'Dostoevsky', aId:'dostoevsky', wId:'demons', isbn:'9780679734512'},
+  {title:'The Idiot', author:'Dostoevsky', aId:'dostoevsky', wId:'idiot', isbn:'9780140447927'},
   {title:'Dead Souls', author:'Gogol', aId:'gogol', wId:'dead-souls', isbn:'9780300060607'},
   {title:'The Trial', author:'Kafka', aId:'kafka', wId:'trial', isbn:'9780805209990'},
   {title:'The Metamorphosis', author:'Kafka', aId:'kafka', wId:'metamorphosis', isbn:'9780553213690'},
