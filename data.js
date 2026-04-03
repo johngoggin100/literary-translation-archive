@@ -622,6 +622,114 @@ of Lancelot, how love had overcome him.
 We were alone and without any doubt.
 That reading drew our eyes to meet, and made
 our faces pale. But one point overcame us.`,[],[]),
+              col(`dante-inf-v-hollander`,`Robert & Jean Hollander`,2000,`Scholarly verse`,`hollander-inferno`,['Verse','Scholarly'],
+                `There is no greater pain
+than to recall the happy time
+in misery — and this your teacher knows.
+But if you have such longing to understand
+the first root of our love,
+I will speak as one who weeps in the telling.
+One day, for our delight, we read
+of Lancelot and how love vanquished him.
+We were alone and had no thought of danger.
+More than once that reading made our glances meet.`,[],[]),
+            ]
+          },
+          {
+            label:`Canto XXVI — Ulysses' Final Voyage`,
+            cols:[
+              col(`dante-inf-xxvi-longfellow`,`Henry Wadsworth Longfellow`,1867,`Literal blank verse`,`longfellow-inferno`,['Verse','Victorian'],
+                `"Consider ye the seed from which ye sprang;
+Ye were not made to live like unto brutes,
+But for pursuit of virtue and of knowledge."
+So eager did I make them with this brief address
+To the voyage, that I then could hardly hold them.
+And turning to the stern towards the morning,
+We of the oars made wings for our mad flight,
+Evermore gaining on the larboard side.
+Already all the stars of the other pole
+The night beheld, and ours so very low
+That it rose not from the ocean-floor.`,[],[]),
+              col(`dante-inf-xxvi-ciardi`,`John Ciardi`,1954,`Vigorous verse`,`ciardi-inferno`,['Verse'],
+                `"Brothers," I said, "who through a hundred thousand
+perils have reached the West, do not deny
+to the brief remaining watch our senses stand
+experience of the world beyond the sun.
+Greeks! You were not made to live like brutes,
+but to press on toward manhood and recognition."
+With this brief exhortation I made my crew
+so eager for the voyage I could hardly
+have held them back from it when I was through.`,[],[]),
+              col(`dante-inf-xxvi-mandelbaum`,`Allen Mandelbaum`,1980,`Modern verse`,`mandelbaum-inferno`,['Verse'],
+                `"O brothers, who have reached the west," I began,
+"through a hundred thousand perils, surviving to this brief
+vigil of our senses that remains to us,
+do not deny yourselves the chance to know —
+following the sun — the world where no one lives.
+Consider how your souls were sown:
+you were not made to live as brutes,
+but to pursue virtue and knowledge."
+With this brief speech I had my crew
+so eager for the crossing that I then
+could hardly have restrained them.`,[],[]),
+              col(`dante-inf-xxvi-hollander`,`Robert & Jean Hollander`,2000,`Scholarly with notes`,`hollander-inferno`,['Verse','Scholarly'],
+                `"O brothers," I said, "who through a hundred
+thousand perils have come to the West,
+to this so brief vigil of your senses
+that remains — do not deny yourselves
+the chance to know, following the sun,
+a world where no one lives.
+Consider how your souls were sown:
+you were not made to live as brutes,
+but to follow virtue and knowledge."
+My little speech made my companions
+so keen for the journey that I could
+scarcely have held them back.`,[],[]),
+            ]
+          },
+          {
+            label:`Canto XXXIV — Lucifer in the Ice`,
+            cols:[
+              col(`dante-inf-xxxiv-longfellow`,`Henry Wadsworth Longfellow`,1867,`Literal verse`,`longfellow-inferno`,['Verse','Victorian'],
+                `The Emperor of the kingdom dolorous
+From his mid-breast forth issued from the ice;
+And better with a giant I compare
+Than do the giants with those arms of his;
+Consider now how great must be that whole,
+Which unto such a part conforms itself.
+Were he as fair once, as he now is foul,
+And lifted up his brow against his Maker,
+Well may proceed from him all tribulation.`,[],[]),
+              col(`dante-inf-xxxiv-ciardi`,`John Ciardi`,1954,`Vivid verse`,`ciardi-inferno`,['Verse'],
+                `How great a wonder it appeared to me
+When I beheld three faces on his head:
+The one in front — and that was a bright red;
+The other two, as weirdly wonderful,
+Merged with it from the middle of each shoulder
+To the point where all converged at the top of the skull.
+The right was of a hue between white and yellow.
+The left the color that prevails
+Where the Nile, running down, gives out.`,[],[]),
+              col(`dante-inf-xxxiv-mandelbaum`,`Allen Mandelbaum`,1980,`Modern verse`,`mandelbaum-inferno`,['Verse'],
+                `If he was once as handsome as he's ugly now,
+and raised his brows against his Maker — well,
+all sorrow has its source in him!
+What a wonder it seemed to me when I
+beheld three faces on his head: in front
+one face — and that was red; the other two,
+as weirdly wonderful, were joined to it
+above the middle of each shoulder, and all three
+merged at the top.`,[],[]),
+              col(`dante-inf-xxxiv-hollander`,`Robert & Jean Hollander`,2000,`Scholarly verse`,`hollander-inferno`,['Verse','Scholarly'],
+                `If once he was as beautiful as now he is hideous,
+and raised his brows against his maker,
+it is fitting that all grief has its source in him.
+Oh, what a wonder it seemed to me
+when I perceived three faces on his head!
+One was in front, and that was crimson.
+The other two were joined to this one
+above the midpoint of each shoulder,
+and all three merged at the crown.`,[],[]),
             ]
           },
         ]
@@ -676,6 +784,65 @@ Here let dead Poesy rise again,
 O holy Muses, since I am yours,
 and here let Calliope arise a little,
 following my song with the same strain that struck the ears of the wretched Magpies.`,[],[]),
+            ]
+          },
+          {
+            label:`Canto XXX — Beatrice Appears`,
+            cols:[
+              col(`dante-pur-xxx-longfellow`,`Henry Wadsworth Longfellow`,1867,`Literal verse`,`longfellow-purgatorio`,['Verse'],
+                `Even as the blessed, at the final summons,
+Shall rise up quickened each one from his cavern,
+Upclothing them anew with voice and flesh,
+So upon that celestial chariot
+A hundred rose ad vocem tanti senis,
+Ministers and messengers of life eternal.
+All of them said: "Benedictus qui venis!"
+And scattering flowers above and all around,
+"Manibus o date lilia plenis!"
+Often have I seen, at the approach of day,
+The orient sky all blushing red and gold.`,[],[]),
+              col(`dante-pur-xxx-ciardi`,`John Ciardi`,1961,`Vigorous verse`,`ciardi-purgatorio`,['Verse'],
+                `When the Great Wain of Heaven — which never sets
+nor rises, nor has known any cloud but sin —
+had brought the lady to me through those blessed nets
+of flowers cast by the angels, she began
+to address me, veiled and with a crown of olive,
+across the stream: "Look well. Yes, I am Beatrice.
+How did you deign to climb the Holy Mountain?
+Did you not know that man is happy here?"
+My eyes fell to the shining stream and there,
+catching my own reflection, I looked away
+and toward the grass, such shame weighed on me then.`,[],[]),
+              col(`dante-pur-xxx-mandelbaum`,`Allen Mandelbaum`,1982,`Modern verse`,`mandelbaum-purgatorio`,['Verse'],
+                `And my spirit — which so long a time
+had not been overcome with awe in his presence,
+trembling in her shadow — felt, without
+beholding her with eyes, through hidden power
+that went out from her, the mighty force
+of ancient love. As soon as that high power
+had smitten me, that I had felt already
+before my adolescence had gone past,
+I turned left with the confidence a child
+displays who runs to mother when afraid
+or when he's troubled, saying to Virgil: "Not one drachm
+of blood remains in me that does not tremble:
+I recognize the traces of the ancient flame."`,[],[]),
+              col(`dante-pur-xxx-hollander`,`Robert & Jean Hollander`,2003,`Scholarly verse`,`hollander-purgatorio`,['Verse','Scholarly'],
+                `My spirit, which for so long a time
+had trembled in her presence,
+feeling the mighty power of ancient love —
+before my eyes had even seen her —
+was smitten by that hidden force,
+as when a child runs to its mother
+in fear or suffering.
+I turned to Virgil with the words of Dido:
+"I recognize the signs of the ancient flame."
+But Virgil was gone. Virgil was gone.
+Virgil, dearest father, Virgil to whom I gave
+my safety — Virgil was gone.
+And even what was lost by ancient Eve
+was not enough to keep my cheeks,
+washed clean with dew, from darkening once again with tears.`,[],[]),
             ]
           },
         ]
@@ -809,6 +976,66 @@ she cannot sleep. The next morning's dawn
 was raking the earth with Phoebus' torch and sweeping
 the dew-drenched shadows from the sky
 when Dido, beside herself, appeals to her sister, Anna.`,[],[]),
+              col(`virgil-iv-day-lewis`,`C. Day Lewis`,1952,`Lyrical verse`,`day-lewis-aeneid`,['Verse','Lyrical'],
+                `But the queen — long since pierced to the core
+by a sharp flame — feeds the wound with her blood
+and is consumed by the hidden fire.
+The man's great worth, the glory of his race —
+these keep returning to her mind;
+his features and his voice are lodged within her breast
+and her longing gives her no calm sleep.
+Next morning's Dawn had cleared the damp dusk from the land
+with Phoebus' torch and dispersed the dewy shadows
+when Dido, beside herself, speaks to her sister.`,[],[]),
+            ]
+          },
+          {
+            label:`Book VI — Aeneas in the Underworld`,
+            cols:[
+              col(`virgil-vi-dryden`,`John Dryden`,1697,`Heroic verse`,`dryden-aeneid`,['Verse','Neoclassical'],
+                `And now the hero, drawing near the ground
+Of Pluto's realm, explores the dark profound.
+Here tribes of souls around the river stand,
+That wait to waft them to the farther strand.
+Matrons and men, and youths, and boys, and girls,
+Whose hands the age of infancy encurls:
+As leaves in autumn, when the first sharp cold
+Strips from the trees their pride of green and gold;
+Or like a flock of birds, that, chased with fear,
+Desert the boughs and hasten homeward here.`,[],[]),
+              col(`virgil-vi-day-lewis`,`C. Day Lewis`,1952,`Lyrical verse`,`day-lewis-aeneid`,['Verse','Lyrical'],
+                `Here a whole crowd was rushing to the banks —
+mothers and men, the bodies of heroes who had lived their lives out,
+boys and unmarried girls, and young men burned on pyres
+before their parents' eyes: as many as the leaves
+that fall in a forest when autumn's first cold snap
+sets them shedding, or as the birds that flock
+to land from ocean deep when the chill season
+sends them overseas to find a sunlit country.
+They stood there, begging to be first across,
+and reached out longing hands to the farther shore.`,[],[]),
+              col(`virgil-vi-mandelbaum`,`Allen Mandelbaum`,1971,`Standard verse`,`mandelbaum-aeneid`,['Verse'],
+                `A crowd was rushing to the banks —
+mothers and husbands, bodies of high-hearted
+heroes, their life-time done, and boys, unwedded
+girls, and young men burned before their parents'
+eyes: thick as the leaves that with the early
+frost of autumn drop and fall within the forest,
+thick as the birds that flock along the shoreline
+when the chill season of the year drives them
+across the seas to find a sunlit country.
+They stood and begged to be the first to cross.`,[],[]),
+              col(`virgil-vi-fagles`,`Robert Fagles`,2006,`Driving contemporary verse`,`fagles-aeneid`,['Verse','Contemporary'],
+                `A vast crowd was pressing to the banks —
+mothers and men, the lifeless bodies of great-hearted heroes,
+boys and unwed girls, young soldiers laid on pyres
+before their parents' eyes: thick as the leaves in autumn
+forests when the frost comes on and the leaves drop
+or the birds that flock from open sea to land
+when winter's chill drives them across the waves
+to countries touched by the warm winter sun.
+They stood there, begging to be the first to cross,
+their hands stretched out in longing for the far shore.`,[],[]),
             ]
           },
         ]
