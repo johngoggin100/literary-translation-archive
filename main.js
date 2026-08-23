@@ -1,4 +1,4 @@
-function makeCoverItem(work, imgUrl) {
+function makeCoverItem(work) {
   const div = document.createElement('div');
   div.className = 'cover-item';
   div.onclick = () => { showAuthor(work.aId); };
@@ -8,12 +8,12 @@ function makeCoverItem(work, imgUrl) {
   tooltip.textContent = work.title + ' · ' + work.author;
   div.appendChild(tooltip);
 
-  if (imgUrl) {
+  if (work.cover) {
     const img = document.createElement('img');
     img.alt = work.title;
     img.loading = 'lazy';
     img.onerror = () => { img.remove(); div.appendChild(makeFallback(work)); };
-    img.src = imgUrl;
+    img.src = `https://covers.openlibrary.org/b/id/${work.cover}-M.jpg`;
     div.appendChild(img);
   } else {
     div.appendChild(makeFallback(work));
@@ -28,7 +28,7 @@ function makeFallback(work) {
   return fb;
 }
 
-async function renderCoverStrip() {
+function renderCoverStrip() {
   const strip   = document.getElementById('cover-strip');
   const countEl = document.getElementById('cover-strip-count');
   if (!strip) return;
@@ -36,12 +36,8 @@ async function renderCoverStrip() {
   const totalWorks = Object.values(AUTHORS).flat().reduce((n, a) => n + (a.works?.length || 0), 0);
   if (countEl) countEl.textContent = totalWorks + ' works';
 
-  for (const work of COVER_WORKS) {
-    strip.appendChild(makeCoverItem(work, `https://covers.openlibrary.org/b/isbn/${work.isbn}-M.jpg`));
-  }
-  for (const work of COVER_WORKS) {
-    strip.appendChild(makeCoverItem(work, `https://covers.openlibrary.org/b/isbn/${work.isbn}-M.jpg`));
-  }
+  for (const work of COVER_WORKS) { strip.appendChild(makeCoverItem(work)); }
+  for (const work of COVER_WORKS) { strip.appendChild(makeCoverItem(work)); }
 }
 
 function renderBrowse() {
@@ -69,7 +65,7 @@ function renderBrowse() {
       continue;
     }
     el.innerHTML = filtered.map((a, i) => `
-      <div class="author-card" data-author-id="${a.id}" style="--card-acc:${a.acc};animation-delay:${i * 0.04}s" onclick="showAuthor('${a.id}')">
+      <div class="author-card" data-author-id="${a.id}" style="animation-delay:${i * 0.04}s" onclick="showAuthor('${a.id}')">
         <div class="author-name">${a.name}</div>
         <div class="author-dates">${a.dates} · ${a.lang}</div>
         <div class="author-works-count">${a.works.length} work${a.works.length > 1 ? 's' : ''}</div>
@@ -308,7 +304,7 @@ async function renderColumns(work) {
          </div>`
       : `<div class="comment-signin-prompt"><a onclick="openLogin()">Sign in</a> to join the discussion.</div>`;
 
-    return `<div class="t-col${c.src ? ' src' : ''}" style="--col-acc:${c.acc}">
+    return `<div class="t-col${c.src ? ' src' : ''}">
       <div class="t-col-top"></div>
       <div class="t-col-head">
         <div class="t-translator">${c.tr}</div>
