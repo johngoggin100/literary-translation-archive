@@ -214,8 +214,12 @@ button{cursor:pointer;font-family:inherit}
 
 /* — MOBILE ——————————————————————————————————————————————————————————————————— */
 @media(max-width:680px){
+  .topbar{padding:0 .8rem}
+  .topbar-nav{gap:.6rem}
+  .topbar-nav a{display:none}
+  .topbar-nav a:nth-child(-n+2){display:inline}
+  .site-name{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
   .search-wrap{display:none}
-  .topbar-nav{gap:.9rem}
   .topbar-username{display:none}
   .t-col{width:calc(100vw - 1.5rem);min-width:calc(100vw - 1.5rem)}
   .compare-subnav{gap:.4rem;padding:0 .6rem}

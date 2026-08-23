@@ -207,6 +207,7 @@ function showAuthor(id) {
       <div class="work-card-title">${w.title}</div>
       <div class="work-card-year">${w.year}</div>
       <div class="work-card-desc" id="wc-desc-${w.id}"></div>
+      ${(w.chips || []).length ? `<div class="work-card-meta">${w.chips.map(c => `<span class="chip">${c}</span>`).join('')}</div>` : ''}
     </div>`).join('');
 
   _browseScrollY = window.scrollY;

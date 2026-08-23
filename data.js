@@ -3370,7 +3370,22 @@ K. stopped. A man in a dark robe was standing in the pulpit, looking down at him
 K. looked up at the face in the pulpit.
 He could not see it clearly in the half-darkness.
 "What am I supposed to do?" K. asked.`,[],[]),
-              col(`kafka-met-corngold`,`Stanley Corngold`,1972,`Scholarly Bantam; important for 'vermin'`,`corngold-met`,['Prose','Scholarly'],
+            ]
+          },
+        ]
+      },
+      {
+        id:'metamorphosis', title:`The Metamorphosis`, year:1915,
+        desc:`Gregor Samsa wakes transformed into a monstrous insect — the most analysed opening in modern fiction, and a battleground for translators.`,
+        chips:[`Novella`,`Absurdism`,`Alienation`],
+        passages:[
+          {
+            label:`Section I — The Opening`,
+            cols:[
+              col(`kafka-met-muir`,`Willa & Edwin Muir`,1937,`The shaping English text; long the standard`,`muir-met`,['Prose','Classic'],
+                `As Gregor Samsa awoke one morning from uneasy dreams
+he found himself transformed in his bed into a gigantic insect.`,[],[]),
+              col(`kafka-met-corngold`,`Stanley Corngold`,1972,`Scholarly; renders 'Ungeziefer' as 'vermin'`,`corngold-met`,['Prose','Scholarly'],
                 `When Gregor Samsa woke up one morning from unsettling dreams,
 he found himself changed in his bed into a monstrous vermin.
 He was lying on his hard, armor-like back, and when he raised his head a little,
@@ -3379,7 +3394,7 @@ on top of which the blanket, ready to slip off altogether, was barely holding on
 His many legs, which were pitifully thin compared to the rest of his bulk,
 flickered helplessly before his eyes.
 "What has happened to me?" he thought. It was no dream.`,[],[]),
-              col(`kafka-met-hofmann`,`Michael Hofmann`,2007,`Penguin Modern Classics`,`hofmann-met`,['Prose','Contemporary'],
+              col(`kafka-met-hofmann`,`Michael Hofmann`,2007,`Penguin Modern Classics; colloquial and immediate`,`hofmann-met`,['Prose','Contemporary'],
                 `When Gregor Samsa woke one morning from troubled dreams,
 he found himself transformed right there in his bed into some kind of monstrous insect.
 He was lying on his hard, shell-like back, and when he raised his head a little,
@@ -3388,7 +3403,7 @@ on top of which the cover was just barely managing to stay in place.
 His many legs, pathetically thin compared to the rest of his bulk,
 flickered uncertainly before his eyes.
 "What's happened to me?" he thought. It was no dream.`,[],[]),
-              col(`kafka-met-bmitchell2014`,`Breon Mitchell`,2014,`Norton critical edition`,`bmitchell-met`,['Prose','Scholarly'],
+              col(`kafka-met-bmitchell2014`,`Breon Mitchell`,2014,`Norton critical edition; 'vermin' again, with scholarly care`,`bmitchell-met`,['Prose','Scholarly'],
                 `When Gregor Samsa woke one morning from uneasy dreams,
 he found himself transformed in his bed into a monstrous vermin.
 He lay on his hard, carapace-like back, and when he raised his head a little
@@ -3402,7 +3417,7 @@ quivered helplessly before his eyes.
           {
             label:`Section III — Gregor's Death`,
             cols:[
-              col(`kafka-met-death-muir`,`Willa & Edwin Muir`,1937,`Classic prose`,`muir-met`,['Prose','Classic'],
+              col(`kafka-met-death-muir`,`Willa & Edwin Muir`,1937,`The classic rendering`,`muir-met`,['Prose','Classic'],
                 `He thought back on his family with tenderness and love.
 His conviction that he would have to disappear was, if possible, even firmer than his sister's.
 He remained in this state of empty and peaceful meditation until the tower clock
@@ -3412,7 +3427,7 @@ Then his head sank down involuntarily, and from his nostrils streamed his last f
 When the charwoman arrived early in the morning — they had often asked her not to keep slamming the doors
 but with her strength and in her haste she could not avoid it —
 she found Gregor already quite still.`,[],[]),
-              col(`kafka-met-death-corngold`,`Stanley Corngold`,1972,`Scholarly precision`,`corngold-met`,['Prose','Scholarly'],
+              col(`kafka-met-death-corngold`,`Stanley Corngold`,1972,`Precise, slightly strange syntax`,`corngold-met`,['Prose','Scholarly'],
                 `He thought back on his family with tenderness and love.
 His conviction that he had to disappear was, if possible, even firmer than his sister's.
 He remained in this state of peaceful and empty meditation until the clock struck three in the morning.
