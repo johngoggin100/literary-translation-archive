@@ -1,6 +1,8 @@
 function makeCoverItem(work) {
   const div = document.createElement('div');
   div.className = 'cover-item';
+  div.setAttribute('role', 'button');
+  div.setAttribute('tabindex', '0');
   div.onclick = () => { showAuthor(work.aId); };
 
   const tooltip = document.createElement('div');
@@ -65,7 +67,7 @@ function renderBrowse() {
       continue;
     }
     el.innerHTML = filtered.map((a, i) => `
-      <div class="author-card" data-author-id="${a.id}" style="animation-delay:${i * 0.04}s" onclick="showAuthor('${a.id}')">
+      <div class="author-card" data-author-id="${a.id}" role="button" tabindex="0" style="animation-delay:${i * 0.04}s" onclick="showAuthor('${a.id}')">
         <div class="author-name">${a.name}</div>
         <div class="author-dates">${a.dates} · ${a.lang}</div>
         <div class="author-works-count">${a.works.length} work${a.works.length > 1 ? 's' : ''}</div>
@@ -140,11 +142,11 @@ function _renderSearchDrop(query) {
     drop.innerHTML = `<div class="search-empty">No results</div>`;
   } else {
     drop.innerHTML = results.map(r => r.type === 'author'
-      ? `<div class="search-result" onmousedown="showAuthor('${r.a.id}');closeSearch()">
+      ? `<div class="search-result" role="button" tabindex="0" onmousedown="_goSearch('author','${r.a.id}','')" onkeydown="_srKey(event,'author','${r.a.id}','')">
            <div class="sr-title">${r.a.name}</div>
            <div class="sr-sub">${r.a.dates} · ${r.a.lang}</div>
          </div>`
-      : `<div class="search-result" onmousedown="showCompare('${r.a.id}','${r.w.id}');closeSearch()">
+      : `<div class="search-result" role="button" tabindex="0" onmousedown="_goSearch('work','${r.a.id}','${r.w.id}')" onkeydown="_srKey(event,'work','${r.a.id}','${r.w.id}')">
            <div class="sr-title">${r.w.title}</div>
            <div class="sr-sub">${r.a.name} · ${r.w.year}</div>
          </div>`
@@ -158,6 +160,16 @@ function closeSearch() {
   const drop = document.getElementById('search-drop');
   if (inp)  inp.value = '';
   if (drop) drop.style.display = 'none';
+}
+
+function _goSearch(type, aId, wId) {
+  if (type === 'author') showAuthor(aId);
+  else                   showCompare(aId, wId);
+  closeSearch();
+}
+
+function _srKey(e, type, aId, wId) {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); _goSearch(type, aId, wId); }
 }
 
 function hideSearchDrop() {
@@ -198,7 +210,7 @@ function showAuthor(id) {
   };
 
   document.getElementById('a-works-grid').innerHTML = a.works.map((w, i) => `
-    <div class="work-card" style="animation-delay:${i * 0.06}s" onclick="showCompare('${id}','${w.id}')">
+    <div class="work-card" role="button" tabindex="0" style="animation-delay:${i * 0.06}s" onclick="showCompare('${id}','${w.id}')">
       ${w.cover ? `<div class="work-card-cover"><img src="${w.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>` : ''}
       <div class="work-card-title">${w.title}</div>
       <div class="work-card-year">${w.year}</div>
@@ -208,6 +220,7 @@ function showAuthor(id) {
 
   _browseScrollY = window.scrollY;
   showPage('author');
+  setRouteHash('#/author/' + encodeURIComponent(id));
 
   for (const w of a.works) {
     if (_workDescCache[w.id] !== undefined) {
@@ -224,10 +237,11 @@ function showAuthor(id) {
 
 
 // ── COMPARE ───────────────────────────────────────────────────────────────────
-function showCompare(aId, wId) {
-  curAuthorId = aId; curWorkId = wId; curPassIdx = 0;
+function showCompare(aId, wId, passIdx) {
+  curAuthorId = aId; curWorkId = wId; curPassIdx = passIdx || 0;
   const work = findWork(aId, wId);
-  if (!work) return;
+  if (!work) { showAuthor(aId); return; }
+  if (curPassIdx >= work.passages.length) curPassIdx = 0;
   document.getElementById('compare-work-title').textContent = work.title;
   document.getElementById('compare-back-btn').onclick = () => showAuthor(aId);
   renderPassPills(work);
@@ -235,6 +249,9 @@ function showCompare(aId, wId) {
   _browseScrollY = window.scrollY;
   showPage('compare');
   document.getElementById('compare-stage').scrollLeft = 0;
+  setRouteHash('#/work/' + encodeURIComponent(aId) + '/' + encodeURIComponent(wId) + '/' + curPassIdx);
+  const _stage = document.getElementById('compare-stage');
+  _stage.onscroll = _syncTimeline;
 }
 
 function renderPassPills(work) {
@@ -242,6 +259,17 @@ function renderPassPills(work) {
     work.passages.map((p, i) =>
       `<button class="pass-btn${i === curPassIdx ? ' active' : ''}" onclick="selectPass(${i})">${p.label}</button>`
     ).join('');
+  const prev = document.getElementById('pass-prev');
+  const next = document.getElementById('pass-next');
+  if (prev) prev.disabled = curPassIdx === 0;
+  if (next) next.disabled = curPassIdx >= work.passages.length - 1;
+}
+
+function prevPass() { if (curPassIdx > 0) selectPass(curPassIdx - 1); }
+
+function nextPass() {
+  const w = findWork(curAuthorId, curWorkId);
+  if (w && curPassIdx < w.passages.length - 1) selectPass(curPassIdx + 1);
 }
 
 function selectPass(i) {
@@ -250,90 +278,38 @@ function selectPass(i) {
   renderPassPills(w);
   renderColumns(w);
   document.getElementById('compare-stage').scrollLeft = 0;
+  setRouteHash('#/work/' + encodeURIComponent(curAuthorId) + '/' + encodeURIComponent(curWorkId) + '/' + curPassIdx);
 }
 
-async function renderColumns(work) {
+function renderColumns(work) {
   const passage = work.passages[curPassIdx];
-  const user    = LTA_Auth.currentUser();
   const stage   = document.getElementById('compare-stage');
 
-  // Fade while loading
-  stage.style.opacity        = '0.4';
-  stage.style.pointerEvents  = 'none';
-
-  const fetches = await Promise.all(passage.cols.map(async c => {
-    if (c.src) return { ur: 0, submitted: [], userComs: [] };
-    const [submitted, ur, userComs] = await Promise.all([
-      LTA_Storage.getAllRatings(c.id),
-      LTA_Storage.getUserRating(c.id, user?.id),
-      LTA_Storage.getComments(c.id)
-    ]);
-    return { submitted, ur, userComs };
-  }));
-
-  stage.innerHTML = passage.cols.map((c, idx) => {
-    const { submitted, ur, userComs } = fetches[idx];
-    const seeded     = c.ratings || [];
-    const allRatings = [...seeded, ...submitted];
-    const avg        = allRatings.length
-      ? (allRatings.reduce((a, b) => a + b, 0) / allRatings.length).toFixed(1)
-      : null;
-    const stars = [1,2,3,4,5].map(n =>
-      `<button class="star${n <= ur ? ' lit' : ''}" onclick="rateCol('${c.id}',${n},event)">&#9733;</button>`
-    ).join('');
-
-    const seededComs = c.comments || [];
-    const allComs    = [...seededComs, ...userComs];
-    const comsHtml   = allComs.length
-      ? allComs.map(cm => {
-          const isOwn = user && cm.user_id === user.id;
-          return `<div class="comment">
-            <div class="comment-meta">
-              ${_esc(cm.display_name || cm.user)}${(cm.created_at || cm.ts) ? ' &middot; ' + _fmtDate(cm.created_at || cm.ts) : ''}
-              ${isOwn ? `<button class="comment-delete" onclick="deleteComment('${cm.id}','${c.id}')" title="Delete">&#x2715;</button>` : ''}
-            </div>
-            <div class="comment-text">${_esc(cm.text)}</div>
-          </div>`;
-        }).join('')
-      : `<div class="comments-empty">No comments yet.</div>`;
-
-    const commentInput = user
-      ? `<div class="comment-input-row">
-           <textarea class="comment-input" id="ci-${c.id}" placeholder="Add a note on this translation\u2026" rows="2"></textarea>
-           <button class="comment-submit" onclick="submitComment('${c.id}')">Post</button>
-         </div>`
-      : `<div class="comment-signin-prompt"><a onclick="openLogin()">Sign in</a> to join the discussion.</div>`;
-
-    return `<div class="t-col${c.src ? ' src' : ''}">
+  stage.innerHTML = passage.cols.map(c => `
+    <div class="t-col${c.src ? ' src' : ''}">
       <div class="t-col-top"></div>
       <div class="t-col-head">
         <div class="t-translator">${c.tr}</div>
         <div class="t-year">${c.yr}</div>
         <div class="t-note">${c.note}</div>
-        ${!c.src ? `<div class="t-rating"><div class="stars" id="stars-${c.id}">${stars}</div><span class="rating-count">${avg ? avg + ' &middot; ' + allRatings.length + ' rating' + (allRatings.length !== 1 ? 's' : '') : 'Not yet rated'}</span></div>` : ''}
       </div>
       <div class="t-col-body">
-        <div class="passage-text">${c.text}</div>
-        ${!c.src ? `<div class="comments-section">
-          <div class="comments-label">Discussion</div>
-          ${comsHtml}
-          ${commentInput}
-        </div>` : ''}
+        <div class="passage-text"${_rtlAttrs(c.text)}>${c.text}</div>
       </div>
-      <div class="t-col-foot">${c.badges.map(b => `<span class="badge">${b}</span>`).join('')}</div>
-    </div>`;
-  }).join('');
+      <div class="t-col-foot">${c.badges.map(b => `<span class="badge">${b}</span>`).join('')}${!c.src ? `<a class="edition-link" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=${encodeURIComponent(work.title + ' ' + c.tr)}">Edition &#8599;</a>` : ''}</div>
+    </div>`).join('');
 
-  stage.style.opacity       = '';
-  stage.style.pointerEvents = '';
-}
-
-function _fmtDate(ts) {
-  return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  renderTimeline(work);
 }
 
 function _esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function _rtlAttrs(t) {
+  if (/[\u0590-\u05FF]/.test(t)) return ' dir="rtl" lang="he"';
+  if (/[\u0600-\u06FF]/.test(t)) return ' dir="rtl" lang="ar"';
+  return '';
 }
 
 function _filterWikiExtract(text) {
@@ -345,40 +321,127 @@ function _filterWikiExtract(text) {
     .trim();
 }
 
-async function rateCol(colId, n, e) {
-  e.stopPropagation();
-  const user = LTA_Auth.currentUser();
-  if (!user) { openLogin(); return; }
+// ── TRANSLATION TIMELINE ──────────────────────────────────────────────────────
+function parseYear(y) {
+  const m = String(y).match(/\d+/);
+  if (!m) return 0;
+  const n = parseInt(m[0], 10);
+  return /bce|bc\b/i.test(String(y)) ? -n : n;
+}
 
-  // Optimistic star update
-  const starsEl = document.getElementById('stars-' + colId);
-  if (starsEl) {
-    starsEl.querySelectorAll('.star').forEach((s, i) => {
-      s.classList.toggle('lit', i < n);
-    });
-    starsEl.classList.add('stars-pulse');
-    setTimeout(() => starsEl.classList.remove('stars-pulse'), 400);
+function renderTimeline(work) {
+  const tl = document.getElementById('timeline');
+  if (!tl) return;
+  const passage = work.passages[curPassIdx];
+  const items = passage.cols.map((c, idx) => ({ c, idx })).filter(x => !x.c.src);
+  items.sort((a, b) => (parseYear(a.c.yr) - parseYear(b.c.yr)) || (a.idx - b.idx));
+  tl.innerHTML = items.map(x => `
+    <button class="tl-item" data-colidx="${x.idx}" onclick="scrollColTo(${x.idx})" title="${_esc(x.c.tr)}">
+      <span class="tl-year">${_esc(x.c.yr)}</span>
+      <span class="tl-name">${_esc(x.c.tr)}</span>
+    </button>`).join('');
+  _syncTimeline();
+}
+
+function _syncTimeline() {
+  const tl = document.getElementById('timeline');
+  const stage = document.getElementById('compare-stage');
+  if (!tl || !stage) return;
+  const cols = stage.querySelectorAll('.t-col');
+  if (!cols.length) { tl.querySelectorAll('.tl-item').forEach(el => el.classList.remove('active')); return; }
+  const sRect = stage.getBoundingClientRect();
+  let active = 0;
+  for (let i = 0; i < cols.length; i++) {
+    if (cols[i].getBoundingClientRect().left - sRect.left <= sRect.width * 0.35) active = i;
   }
-
-  await LTA_Storage.setRating(colId, user.id, n);
-  renderColumns(findWork(curAuthorId, curWorkId));
+  tl.querySelectorAll('.tl-item').forEach(el => el.classList.toggle('active', parseInt(el.dataset.colidx, 10) === active));
 }
 
-async function submitComment(colId) {
-  const user = LTA_Auth.currentUser();
-  if (!user) { openLogin(); return; }
-  const ta   = document.getElementById('ci-' + colId);
-  const text = ta ? ta.value.trim() : '';
-  if (!text) return;
-  const btn  = ta.nextElementSibling;
-  if (btn) { btn.disabled = true; btn.textContent = '…'; }
-  await LTA_Storage.addComment(colId, user.id, user.displayName, text);
-  renderColumns(findWork(curAuthorId, curWorkId));
+function scrollColTo(idx) {
+  const stage = document.getElementById('compare-stage');
+  const col = stage.querySelectorAll('.t-col')[idx];
+  if (col) col.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
 }
 
-async function deleteComment(commentId, colId) {
-  await LTA_Storage.deleteComment(commentId);
-  renderColumns(findWork(curAuthorId, curWorkId));
+// ── HASH ROUTING (deep links + back/forward) ─────────────────────────────────
+function _safeDecode(s) { try { return decodeURIComponent(s); } catch(e) { return s; } }
+
+function parseHash() {
+  const h = window.location.hash.replace(/^#\/?/, '');
+  const parts = h.split('/').filter(Boolean);
+  if (!parts.length || parts[0] === 'home') return { page: 'home' };
+  if (parts[0] === 'browse') return { page: 'browse' };
+  if (parts[0] === 'translators') return { page: 'translators' };
+  if (parts[0] === 'about') return { page: 'about' };
+  if (parts[0] === 'author' && parts[1]) return { page: 'author', aId: _safeDecode(parts[1]) };
+  if (parts[0] === 'work' && parts[1] && parts[2]) {
+    const pass = parseInt(parts[3], 10);
+    return { page: 'work', aId: _safeDecode(parts[1]), wId: _safeDecode(parts[2]), pass: isNaN(pass) ? 0 : pass };
+  }
+  return { page: 'home' };
+}
+
+function onHashChange() {
+  const r = parseHash();
+  if (r.page === 'browse')      showPage('browse');
+  else if (r.page === 'translators') showPage('translators');
+  else if (r.page === 'about')  showPage('about');
+  else if (r.page === 'author') showAuthor(r.aId);
+  else if (r.page === 'work')   showCompare(r.aId, r.wId, r.pass);
+  else                          showPage('home');
+}
+
+function setRouteHash(h) {
+  try { if (window.location.hash !== h) window.location.hash = h; } catch(e) {}
+}
+
+// ── MOBILE SEARCH TOGGLE ─────────────────────────────────────────────────────
+function toggleMobileSearch() {
+  const tb = document.querySelector('.topbar');
+  const open = tb.classList.toggle('search-open');
+  if (open) {
+    const i = document.getElementById('search-input');
+    if (i) setTimeout(() => i.focus(), 50);
+  } else {
+    closeSearch();
+  }
+}
+
+// ── TRANSLATOR INDEX ─────────────────────────────────────────────────────────
+function renderTranslators() {
+  const map = {};
+  for (const list of Object.values(AUTHORS)) {
+    for (const a of list || []) {
+      for (const w of a.works || []) {
+        const key = a.id + '/' + w.id;
+        for (const p of w.passages || []) {
+          for (const c of p.cols || []) {
+            if (c.src) continue;
+            if (!map[c.tr]) map[c.tr] = [];
+            if (!map[c.tr].some(x => x.key === key)) {
+              map[c.tr].push({ key, aId: a.id, aName: a.name, wId: w.id, wTitle: w.title, wYear: w.year });
+            }
+          }
+        }
+      }
+    }
+  }
+  const wrap = document.getElementById('translator-index');
+  if (!wrap) return;
+  const names = Object.keys(map).sort((x, y) => x.localeCompare(y));
+  wrap.innerHTML = names.map(name => {
+    const works = map[name];
+    return `<div class="translator-card">
+      <div class="translator-card-name">${_esc(name)}</div>
+      <div class="translator-card-count">${works.length} work${works.length !== 1 ? 's' : ''}</div>
+      <div class="translator-card-works">${works.map(w =>
+        `<button class="translator-work" onclick="showCompare('${w.aId}','${w.wId}')">
+           <span class="tw-title">${_esc(w.wTitle)}</span>
+           <span class="tw-author">${_esc(w.aName)} &middot; ${_esc(w.wYear)}</span>
+         </button>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function stageScroll(d) {
@@ -399,7 +462,7 @@ function _renderRelatedWorks() {
   const others = a.works.filter(w => w.id !== curWorkId);
   document.getElementById('related-works-row').innerHTML = others.length
     ? others.map(w => `
-        <div class="related-card" onclick="showCompare('${a.id}','${w.id}');document.getElementById('related-panel').classList.remove('open')">
+        <div class="related-card" role="button" tabindex="0" onclick="showCompare('${a.id}','${w.id}');document.getElementById('related-panel').classList.remove('open')">
           <div class="related-card-title">${w.title}</div>
           <div class="related-card-year">${w.year}</div>
           <div class="related-card-count">${w.passages.length} passage${w.passages.length !== 1 ? 's' : ''}</div>
@@ -408,113 +471,26 @@ function _renderRelatedWorks() {
 }
 
 
-
-
-// ── AUTH UI ───────────────────────────────────────────────────────────────────
-let _authMode = 'signin';
-
-function openLogin() {
-  _authMode = 'signin';
-  _syncAuthModal();
-  document.getElementById('login-overlay').classList.add('open');
-}
-
-function closeLogin() {
-  document.getElementById('login-overlay').classList.remove('open');
-  _clearAuthForm();
-}
-
-function toggleAuthMode() {
-  _authMode = _authMode === 'signin' ? 'signup' : 'signin';
-  _syncAuthModal();
-}
-
-function _syncAuthModal() {
-  const isIn = _authMode === 'signin';
-  document.getElementById('auth-title').textContent      = isIn ? 'Sign in' : 'Create account';
-  document.getElementById('auth-submit-btn').textContent = isIn ? 'Sign in' : 'Create account';
-  document.getElementById('auth-switch-text').innerHTML  = isIn
-    ? 'No account? <a onclick="toggleAuthMode()">Create one</a>'
-    : 'Already have one? <a onclick="toggleAuthMode()">Sign in</a>';
-  const nameRow = document.getElementById('auth-name-row');
-  if (nameRow) nameRow.style.display = isIn ? 'none' : '';
-  _setAuthError('');
-}
-
-function _setAuthError(msg) {
-  const el = document.getElementById('auth-error');
-  if (!el) return;
-  el.textContent   = msg;
-  el.style.display = msg ? '' : 'none';
-}
-
-function _clearAuthForm() {
-  ['auth-email','auth-password','auth-name'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = '';
-  });
-  _setAuthError('');
-}
-
-async function submitAuth() {
-  const email    = document.getElementById('auth-email')?.value    || '';
-  const password = document.getElementById('auth-password')?.value || '';
-  const btn      = document.getElementById('auth-submit-btn');
-
-  _setAuthError('');
-  btn.disabled    = true;
-  btn.textContent = '…';
-
-  let result;
-  if (_authMode === 'signin') {
-    result = await LTA_Auth.signin(email, password);
-  } else {
-    const displayName = document.getElementById('auth-name')?.value || '';
-    result = await LTA_Auth.register(email, displayName, password);
-  }
-
-  btn.disabled = false;
-  if (result.ok) {
-    closeLogin();
-  } else {
-    _setAuthError(result.error);
-    btn.textContent = _authMode === 'signin' ? 'Sign in' : 'Create account';
-  }
-}
-
-function _updateTopbar(user) {
-  const wrap = document.getElementById('topbar-auth-wrap');
-  if (!wrap) return;
-  if (user) {
-    wrap.innerHTML = `<span class="topbar-username">${_esc(user.displayName)}</span><button class="signout-btn" onclick="LTA_Auth.signout()">Sign out</button>`;
-  } else {
-    wrap.innerHTML = `<button class="login-btn" onclick="openLogin()">Sign in</button>`;
-  }
-  if (curAuthorId && curWorkId) {
-    const pg = document.getElementById('page-compare');
-    if (pg && pg.classList.contains('active')) {
-      renderColumns(findWork(curAuthorId, curWorkId));
-    }
-  }
-}
-
-LTA_Auth.onAuthChange(_updateTopbar);
-
-document.getElementById('login-overlay').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeLogin();
-});
-
 document.addEventListener('keydown', e => {
-  if (e.key === 'Enter' && document.getElementById('login-overlay').classList.contains('open')) {
-    submitAuth();
+  const el = e.target;
+  if (el && el.getAttribute && el.getAttribute('role') === 'button' && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    el.click();
     return;
   }
   const comparePage = document.getElementById('page-compare');
   if (comparePage?.classList.contains('active')) {
     if (e.key === 'ArrowLeft')  stageScroll(-1);
     if (e.key === 'ArrowRight') stageScroll(1);
+    if (e.key === '[')          prevPass();
+    if (e.key === ']')          nextPass();
   }
 });
 
 renderBrowse();
 renderCoverStrip();
+
+// ── HASH ROUTING INIT ─────────────────────────────────────────────────────────
+if (!window.location.hash) { try { history.replaceState(null, '', '#/'); } catch(e) {} }
+window.addEventListener('hashchange', onHashChange);
+onHashChange();

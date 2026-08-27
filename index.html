@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Literary Translation Archive</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%230a0a0a'/><text x='32' y='45' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23ffffff' text-anchor='middle'>T</text></svg>">
+<meta name="description" content="Browse and compare different translations of over 39 authors, with side-by-side passages.">
+<meta property="og:title" content="The Literary Translation Archive">
+<meta property="og:description" content="Browse and compare different translations of over 39 authors, with side-by-side passages.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://johngoggin100.github.io/literary-translation-archive/">
+<meta property="og:image" content="https://covers.openlibrary.org/b/id/10876521-L.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -14,17 +22,19 @@
   <div class="topbar-nav">
     <a href="#" onclick="showPage('home')" id="nav-home">Home</a>
     <a href="#" onclick="showPage('browse')" id="nav-browse">Browse</a>
+    <a href="#" onclick="showPage('translators')" id="nav-translators">Translators</a>
+    <a href="#" onclick="showPage('about')" id="nav-about">About</a>
+    <button class="search-toggle" onclick="toggleMobileSearch()" aria-label="Search">⌕</button>
     <div class="search-wrap">
       <input type="text" class="search-input" id="search-input" placeholder="Search authors &amp; works…" oninput="onSearchInput(this.value)" onblur="hideSearchDrop()" autocomplete="off" spellcheck="false">
       <div class="search-drop" id="search-drop" style="display:none"></div>
     </div>
-    <div id="topbar-auth-wrap"><button class="login-btn" onclick="openLogin()">Sign in</button></div>
   </div>
 </div>
 <div class="page active" id="page-home">
   <div class="home-landing">
     <div class="home-landing-text">
-      <h1>Browse and compare different translations of over 43 authors, with side-by-side passages.</h1>
+      <h1>Browse and compare different translations of over 39 authors, with side-by-side passages.</h1>
       <button class="home-browse-btn" onclick="showPage('browse')">Browse the archive →</button>
     </div>
     <div class="cover-strip-label">
@@ -35,6 +45,7 @@
       <div class="cover-strip" id="cover-strip"></div>
     </div>
   </div>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-browse">
   <div class="browse-hero">
@@ -52,6 +63,7 @@
   <div class="browse-section"><div class="section-head"><span class="section-label">Scandinavian</span><div class="section-rule"></div></div><div class="author-grid" id="grid-nordic"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Portuguese</span><div class="section-rule"></div></div><div class="author-grid" id="grid-portuguese"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Classical Philosophy</span><div class="section-rule"></div></div><div class="author-grid" id="grid-philosophy"></div></div>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-author">
   <div style="padding:3.5rem 2rem 0"><button class="back-btn" id="author-back-btn">← All authors</button></div>
@@ -62,6 +74,7 @@
     <div id="a-wiki-extract" class="author-wiki-extract" style="display:none"></div>
   </div>
   <div class="works-grid-wrap"><div class="works-grid" id="a-works-grid"></div></div>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-compare">
   <div class="compare-subnav">
@@ -70,9 +83,12 @@
     <span class="compare-work-title" id="compare-work-title"></span>
     <span class="subnav-sep">|</span>
     <div id="compare-pass-pills" style="display:flex"></div>
+    <button class="pass-nav-btn" id="pass-prev" onclick="prevPass()" aria-label="Previous passage">&#8592;</button>
+    <button class="pass-nav-btn" id="pass-next" onclick="nextPass()" aria-label="Next passage">&#8594;</button>
     <span class="subnav-sep">|</span>
     <button class="related-btn" id="related-btn" onclick="toggleRelated()">Related works</button>
   </div>
+  <div class="timeline" id="timeline"></div>
   <div class="compare-stage" id="compare-stage"></div>
   <div class="stage-arrows">
     <button class="arr" onclick="stageScroll(-1)">&#8592;</button>
@@ -86,25 +102,39 @@
     <div class="related-works-row" id="related-works-row"></div>
   </div>
 </div>
-<div class="modal-overlay" id="login-overlay">
-  <div class="modal-box">
-    <div class="modal-title" id="auth-title">Sign in</div>
-    <div class="modal-sub">Literary Translation Archive</div>
-    <div class="form-row" id="auth-name-row" style="display:none"><label>Display name</label><input type="text" id="auth-name" placeholder="Your name" autocomplete="name"></div>
-    <div class="form-row"><label>Email</label><input type="email" id="auth-email" placeholder="you@example.com" autocomplete="email"></div>
-    <div class="form-row"><label>Password</label><input type="password" id="auth-password" placeholder="••••••••" autocomplete="current-password"></div>
-    <div class="auth-error" id="auth-error" style="display:none"></div>
-    <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeLogin()">Cancel</button>
-      <button class="btn-primary" id="auth-submit-btn" onclick="submitAuth()">Sign in</button>
-    </div>
-    <div class="modal-switch" id="auth-switch-text">No account? <a onclick="toggleAuthMode()">Create one</a></div>
+<div class="page" id="page-translators">
+  <div class="browse-hero"><h2>Translators</h2></div>
+  <div class="translators-wrap"><div class="translator-index" id="translator-index"></div></div>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
+</div>
+<div class="page" id="page-about">
+  <div class="browse-hero"><h2>About</h2></div>
+  <div class="about-wrap">
+    <section class="about-block">
+      <h3>What this is</h3>
+      <p>The Literary Translation Archive sets different English translations of the same passages side by side, so the choices a translator makes — in register, diction, and meaning — are visible at a glance. It is a reading and teaching tool, not a publisher of full texts.</p>
+    </section>
+    <section class="about-block">
+      <h3>Copyright</h3>
+      <p>Translations published before 1930, and other works whose copyright has expired, are in the public domain. Later translations are protected by copyright; this archive shows only short excerpts of those works for the purpose of noncommercial commentary, comparison, and scholarship — a use generally permitted by fair use (US) and fair dealing (UK/EU). No full-length texts are reproduced, and excerpts are kept as short as possible.</p>
+    </section>
+    <section class="about-block">
+      <h3>Rights holders</h3>
+      <p>If you are a translator or publisher and would like a passage removed or a credit corrected, please open an issue on the <a href="https://github.com/johngoggin100/literary-translation-archive" target="_blank" rel="noopener">project repository</a> or contact the maintainer there. We will respond promptly.</p>
+    </section>
+    <section class="about-block">
+      <h3>Sources</h3>
+      <p>The catalogue is informed by Boyd Tonkin, <em>The 100 Best Novels in Translation</em> (2018). Each comparison column notes the translator, the year of publication, and, where known, the publisher.</p>
+    </section>
+    <section class="about-block">
+      <h3>Third-party data</h3>
+      <p>Book covers and work descriptions come from <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>, whose data is public domain (CC0). Author portraits and biographical summaries come from Wikipedia and are used under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> license.</p>
+    </section>
   </div>
+  <footer class="site-footer"><div class="sf-inner">The Literary Translation Archive &mdash; <a href="https://github.com/johngoggin100/literary-translation-archive" target="_blank" rel="noopener">repository</a></div></footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="data.js"></script>
-<script src="auth.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

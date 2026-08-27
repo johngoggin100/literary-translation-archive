@@ -3577,93 +3577,6 @@ She wept for herself.`,[],[]),
       },
     ]
   },
-  {
-    id:'sebald', name:'W.G. Sebald', dates:'1944–2001', lang:'German',
-    desc:`Sebald's melancholy prose-picture essays defy genre. *The Emigrants* and *The Rings of Saturn* are considered the most original German-language works of the late 20th century.`,
-    acc:`sebald`, tonkin:false,
-    photo:`https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/W.G._Sebald.jpg/440px-W.G._Sebald.jpg`,
-    works:[
-      {
-        id:'emigrants', title:`The Emigrants`, year:1992,
-        desc:`Four accounts of uprooted lives — a meditation on memory, loss, and the Holocaust's long shadow.`,
-        chips:[`Prose`,`Memory`,`Holocaust`],
-        passages:[
-          {
-            label:`Paul Bereyter — The Teacher`,
-            cols:[
-              col(`sebald-em-hulse`,`Michael Hulse`,1996,`The standard English translation`,`hulse-emigrants`,['Prose','Contemporary'],
-                `In January 1984, some years after Paul Bereyter had retired from teaching,
-I heard through a distant relation that he had taken his own life.
-The news came to me at a time when I too was finding it difficult to write,
-and it took me a long while to set out what little I knew about Paul Bereyter
-and what he had meant to me.
-He was my teacher during my first four years at school.
-At the time I knew nothing of his history.
-Only later did I learn that he came from a family in which there had always been teachers,
-that his father had been a teacher, and his father's father too.
-He never spoke of this. He spoke of almost nothing personal.`,[],[]),
-            ]
-          },
-          {
-            label:`Paul Bereyter — The Railway`,
-            cols:[
-              col(`sebald-em-railway-hulse`,`Michael Hulse`,1996,`Only existing English translation`,`hulse-emigrants`,['Prose','Contemporary'],
-                `There are places — Bereyter knew of them —
-that exist at the intersection of what is remembered and what cannot be spoken.
-He had grown up in S. He had left S. and come back.
-He had been a teacher in S. for thirty years.
-But there had always been something that S. could not contain:
-a history that he carried with him, a wound,
-the origin of which he had tried to keep from his pupils and colleagues
-and perhaps even from himself.
-The local paper had carried a brief notice about his death.
-It said that he had gone to the railway line at night
-and laid himself down to wait for the morning train.`,[],[]),
-            ]
-          },
-        ]
-      },
-      {
-        id:'rings-saturn', title:`The Rings of Saturn`, year:1995,
-        desc:`A walking tour of Suffolk unfolds into meditations on history, ruins, and the passage of empire.`,
-        chips:[`Prose`,`History`,`Memory`],
-        passages:[
-          {
-            label:`Chapter I — The Walk Begins`,
-            cols:[
-              col(`sebald-rs-hulse`,`Michael Hulse`,1998,`Standard English translation`,`hulse-rings`,['Prose','Contemporary'],
-                `On the seventeenth of August 1992, when the dog days were drawing to an end,
-I set out to walk the county of Suffolk,
-in the hope of dispelling the emptiness that takes hold of me
-whenever I have completed a long stint of work.
-And in fact my hope was realized, up to a point;
-for I have seldom felt so carefree as I did then, walking for hours in the tidal air,
-unshadowed by anything except the aerial roots of the elder trees
-and the weirs of the river.
-The very name of the county — Suffolk — seemed to me consoling.`,[],[]),
-            ]
-          },
-          {
-            label:`Chapter VIII — The Herring Industry`,
-            cols:[
-              col(`sebald-rs-herring-hulse`,`Michael Hulse`,1998,`Melancholy prose`,`hulse-rings`,['Prose','Contemporary'],
-                `The herring are far older than we are.
-The seas they swim in were old before the first human voice cried out.
-They have their own purposes and their own directions,
-and these purposes and directions take no account of us.
-The fishermen of Lowestoft knew this.
-They knew that the sea gives and takes according to its own logic,
-that you can read the signs and still be wrong,
-that the most experienced fisherman can be surprised by the sea in the end.
-There had been a time when the herring came in such numbers
-that the boats could barely hold them.
-That time had gone. Where the herring had gone, no one could say.`,[],[]),
-            ]
-          },
-        ]
-      },
-    ]
-  },
 
   {
     id:'goethe', name:'Johann Wolfgang von Goethe', dates:'1749–1832', lang:'German',
@@ -3992,46 +3905,6 @@ that shook the ghost of José Arcadio Buendía beneath the chestnut tree.`,[],[]
           },
         ]
       },
-      {
-        id:'love-cholera', title:`Love in the Time of Cholera`, year:1985,
-        desc:`Florentino Ariza waits fifty-three years for the woman he loves. An epic meditation on aging, desire, and fidelity.`,
-        chips:[`Novel`,`Love`,`Latin America`],
-        passages:[
-          {
-            label:`Opening — The Smell of Almonds`,
-            cols:[
-              col(`gm-ltc-grossman1988`,`Edith Grossman`,1988,`The standard English translation`,`grossman-cholera`,['Prose','Contemporary'],
-                `It was inevitable: the scent of bitter almonds always reminded him of the fate of unrequited love.
-Dr. Juvenal Urbino noticed it as soon as he entered the still-darkened house
-where he had hurried on an urgent call
-to attend a case that for him had lost all urgency many years before.
-The Antillean refugee Jeremiah de Saint-Amour, disabled war veteran, photographer of children,
-and his most sympathetic opponent in chess,
-had escaped the torments of memory with the aromatic fumes of gold cyanide.
-He found him on the floor of his dark photography studio,
-lying on a cot, with an expression on his face of someone who had been given excellent news.`,[],[]),
-            ]
-          },
-          {
-            label:`Final Chapter — Forever`,
-            cols:[
-              col(`gm-ltc-end-grossman`,`Edith Grossman`,1988,`Contemporary prose`,`grossman-cholera`,['Prose','Contemporary'],
-                `Old Florentino Ariza stood at the prow of the ship,
-watching the river bank slide past in the darkness.
-He had been on this boat before, many years ago,
-when Fermina Daza was still alive to him in a different way.
-He thought about the passage of time.
-He thought about the cholera flag that flew above the ship,
-keeping the world at bay.
-Captain de Saint-Amour came to stand beside him.
-"So?" said the captain. "How long do you think we can keep this up —
-going up and down the river like this, just the two of us?"
-Florentino Ariza thought for a moment.
-"Forever," he said.`,[],[]),
-            ]
-          },
-        ]
-      },
     ]
   },
   {
@@ -4182,90 +4055,6 @@ The first two pages of the document are missing.`,[],[]),
 ],
 
 italian: [
-  {
-    id:'calvino', name:'Italo Calvino', dates:'1923–1985', lang:'Italian',
-    desc:`Calvino — fabulist, postmodernist, cosmicomic — is among the most translated Italian writers. His playful experiments with form have inspired writers worldwide.`,
-    acc:`calvino`, tonkin:true,
-    photo:`https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Italo-Calvino.jpg/440px-Italo-Calvino.jpg`,
-    works:[
-      {
-        id:'winters-night', title:`If on a winter's night a traveler`, year:1979,
-        desc:`A novel about a Reader trying to read a novel — ten different opening chapters, none continuing, and a story about reading itself.`,
-        chips:[`Postmodern`,`Metafiction`,`Novel`],
-        passages:[
-          {
-            label:`Chapter 1 — You Are About to Begin`,
-            cols:[
-              col(`calvino-wn-weaver`,`William Weaver`,1981,`The standard English translation`,`weaver-winters`,['Prose','Contemporary'],
-                `You are about to begin reading Italo Calvino's new novel,
-If on a winter's night a traveler.
-Relax. Concentrate. Dispel every other thought.
-Let the world around you fade.
-Best to close the door; the TV is always on in the next room.
-Tell the others right away, "No, I don't want to watch TV!"
-Raise your voice — they won't hear you otherwise —
-"I'm reading! I don't want to be disturbed!"
-Maybe they haven't heard you, with all that racket;
-speak louder, yell: "I'm beginning to read Italo Calvino's new novel!" `,[],[]),
-            ]
-          },
-          {
-            label:`Chapter 2 — The Reader Reads`,
-            cols:[
-              col(`calvino-wn-2-weaver`,`William Weaver`,1981,`Weaver's rendering`,`weaver-winters`,['Prose','Contemporary'],
-                `You are the Reader. The book begins. A train station. A man with a suitcase.
-He waits. He watches. He does not know what he is waiting for.
-Outside, the first autumn rain is falling.
-The station buffet is still open. The loudspeaker announces a delay.
-He orders a cup of something hot and thinks:
-this is the beginning of something. He does not know what.
-Only that it is beginning.
-The train will arrive or it won't. Either way something is starting.
-You, reading this, are part of it. You always were.`,[],[]),
-            ]
-          },
-        ]
-      },
-      {
-        id:'invisible-cities', title:`Invisible Cities`, year:1972,
-        desc:`Marco Polo describes fifty-five fantastical cities to Kublai Khan — each a meditation on memory, desire, or loss.`,
-        chips:[`Fable`,`Postmodern`,`Travel`],
-        passages:[
-          {
-            label:`Cities and Memory — Zora`,
-            cols:[
-              col(`calvino-ic-weaver`,`William Weaver`,1974,`Standard translation`,`weaver-invisible`,['Prose','Contemporary'],
-                `Beyond six rivers and three mountain ranges rises Zora, a city that no one, having seen it, can forget.
-But not because, like other memorable cities, it leaves an unusual image in your recollections.
-Zora has the quality of remaining in your memory point by point,
-in its succession of streets, of houses along the streets, and of doors and windows in the houses,
-though nothing in them possesses a special beauty or rarity.
-Zora's secret lies in the way your gaze runs over patterns following one another
-as in a musical score where not a single note can be altered.
-The man who knows by heart how Zora is made, if he is unable to sleep at night,
-can imagine he is walking along the streets and he remembers the order
-in which the copper clock, the barber's striped awning, the fountain, appear.`,[],[]),
-            ]
-          },
-          {
-            label:`Cities and Desire — Anastasia`,
-            cols:[
-              col(`calvino-ic-anastasia-weaver`,`William Weaver`,1974,`Lyrical rendering`,`weaver-invisible`,['Prose','Contemporary'],
-                `In the center of Anastasia, a city of canals that cross each other,
-is a square where merchants offer their wares.
-The desires which Anastasia produces — some say "feeds," others say "seduces" —
-wake the city to its full capacity to function.
-In the morning you wake to the sound of water and voices,
-you see through the window of the hotel a harbor jammed with boats,
-men loading and unloading crates, the fishermen hauling their nets.
-You lean out and in the distance you recognize the market.
-Anastasia, treacherous city, makes you believe that you have a future here.`,[],[]),
-            ]
-          },
-        ]
-      },
-    ]
-  },
   {
     id:'lampedusa', name:'Giuseppe Tomasi di Lampedusa', dates:'1896–1957', lang:'Italian',
     desc:`The reclusive Sicilian prince published only one novel, *The Leopard* — but it stands among the masterpieces of the 20th century.`,
@@ -4423,43 +4212,6 @@ The notebooks were proof that she had existed, that her love had been real.
 Without them she was nothing but a memory without a body,
 walking through a gray town toward an end
 she could not quite see.`,[],[]),
-            ]
-          },
-        ]
-      },
-      {
-        id:'unbearable-lightness', title:`The Unbearable Lightness of Being`, year:1984,
-        desc:`Four lives in Prague and after the 1968 Soviet invasion — a meditation on lightness, weight, love, and betrayal.`,
-        chips:[`Novel`,`Philosophy`,`Politics`],
-        passages:[
-          {
-            label:`Part I — Lightness and Weight`,
-            cols:[
-              col(`kundera-ulb-heim`,`Michael Henry Heim`,1984,`Defining English translation`,`heim-lightness`,['Prose','Contemporary'],
-                `The idea of eternal return is a mysterious one, and Nietzsche has often perplexed other philosophers with it:
-to think that everything recurs as we once experienced it,
-and that the recurrence itself recurs ad infinitum!
-What does this mad myth signify?
-Putting it negatively, the myth of eternal return states that a life which disappears once and for all,
-which does not return, is like a shadow, without weight, dead in advance,
-and whether it was horrible, beautiful, or sublime,
-its horror, sublimity, and beauty mean nothing.
-We need take no more note of it than of a war between two African kingdoms in the fourteenth century,
-a war that altered nothing in the destiny of the world.`,[],[]),
-            ]
-          },
-          {
-            label:`Part III — Tereza Arrives`,
-            cols:[
-              col(`kundera-ulb-iii-heim`,`Michael Henry Heim`,1984,`Standard translation`,`heim-lightness`,['Prose','Contemporary'],
-                `She came to him at last. She had come because she had no place to stay.
-She had come to him the way a bird falls into an open palm.
-She had come to him with her heavy suitcase and her body exhausted by the long night journey.
-He gave her his hand and she fell asleep,
-her hand in his, both of them forgetting the other's existence, yet joined the entire night.
-He did not let go of her hand until morning.
-The vertigo he felt was not the vertigo of falling,
-but the vertigo of reaching down to lift up something that has fallen.`,[],[]),
             ]
           },
         ]
@@ -4630,47 +4382,6 @@ though he was not certain of this as he had never been in this part of the count
     ]
   },
 
-  {
-    id:'beckett', name:'Samuel Beckett', dates:'1906–1989', lang:'French/English',
-    desc:`The Irish Nobel laureate who wrote his greatest prose in French, then translated it himself into English. The Molloy trilogy is the supreme achievement of post-war European fiction.`,
-    acc:`#4a5a6a`,
-    photo:`https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg/440px-Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg`,
-    works:[{
-      id:'molloy-trilogy', title:`Molloy / Malone Dies / The Unnamable`, year:`1951–1953`,
-      chips:[`Modernism`,`Absurdism`,`Self-Translated`],
-      passages:[
-        {
-          label:`Molloy — Opening`,
-          cols:[
-            col(`beckett-molloy-self`,`Samuel Beckett`,1955,`Author's own English translation from his French original`,`beckett-molloy`,['Prose','Self-Translated'],
-              `I am in my mother's room. It's I who live there now.
-I don't know how I got there. Perhaps in an ambulance, certainly a vehicle of some kind.
-I was helped. I'd never have got there alone.
-There's this man who comes every week. Perhaps I got here thanks to him.
-He says not. He gives me money and takes away the pages.
-So many pages, so much money. Yes, I work now, a little like I used to,
-except that I don't know how to work any more.
-That doesn't matter apparently.`,[],[]),
-          ]
-        },
-        {
-          label:`The Unnamable — Opening`,
-          cols:[
-            col(`beckett-unnamable-self`,`Samuel Beckett`,1958,`Author's self-translation; the trilogy's culmination`,`beckett-unnamable`,['Prose','Self-Translated'],
-              `Where now? Who now? When now?
-Unquestioning. I, say I. Unbelieving.
-Questions, hypotheses, call them that.
-Keep going, going on, call that going, call that on.
-Can it be that one day, off it goes on, that one day I simply stayed in, in where,
-instead of going out, in the old way, out to spend day and night as far away as possible,
-it wasn't far. Perhaps that is how it began.
-You think you are simply resting, the better to act when the time comes,
-or for no reason, and you soon find yourself powerless ever to do anything again.`,[],[]),
-          ]
-        },
-      ]
-    }]
-  },
 ],
 
 asian: [
@@ -4908,93 +4619,6 @@ These things were still true. She was still beautiful.
 She was still well-educated.
 But he had begun to want something older, quieter, more essentially Japanese.
 Something like his father-in-law's old puppet, O-hisa.`,[],[]),
-            ]
-          },
-        ]
-      },
-    ]
-  },
-  {
-    id:'murakami', name:'Haruki Murakami', dates:'1949–', lang:'Japanese',
-    desc:`Japan's most internationally celebrated living novelist. Murakami's dreamlike worlds blend jazz, loneliness, and magical realism.`,
-    acc:`murakami`, tonkin:false,
-    photo:`https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Murakami_Haruki_%282009%29.jpg/440px-Murakami_Haruki_%282009%29.jpg`,
-    works:[
-      {
-        id:'hard-boiled', title:`Hard-Boiled Wonderland and the End of the World`, year:1985,
-        desc:`Two interwoven narratives — a cyberpunk thriller and a dreamlike walled town — that converge in unexpected ways.`,
-        chips:[`Postmodern`,`Fantasy`,`Japan`],
-        passages:[
-          {
-            label:`Chapter 1 — The Elevator`,
-            cols:[
-              col(`murakami-hb-birnbaum`,`Alfred Birnbaum`,1991,`The first English translation`,`birnbaum-hb`,['Prose','Contemporary'],
-                `The elevator continued its impossibly slow ascent.
-Or at least I imagined it was ascent.
-There are elevators that go sideways, or in spirals.
-For all I knew, this elevator might be subterranean, heading down.
-I had been in the elevator for what felt like a very long time.
-I was wearing a good suit, because I was here on business.
-The elevator had no buttons, no floor indicators, no mirrors.
-It had no music. It had me, and a faint smell of something
-I could not identify — not quite flowers, not quite metal.
-I waited, because there was nothing else to do.`,[],[]),
-            ]
-          },
-          {
-            label:`Chapter 15 — The Library`,
-            cols:[
-              col(`murakami-hb-lib-birnbaum`,`Alfred Birnbaum`,1991,`Standard translation`,`birnbaum-hb`,['Prose','Contemporary'],
-                `I walked to the Library every day.
-It was always the same. The same gate, the same path, the same Caretaker
-sitting by the entrance watching me.
-I never knew whether he was watching to keep me out or keep me in.
-I did not ask.
-The Library held the dreams of all the people who had ever lived in the Town.
-They lay sleeping in the stacks, row on row, silent and vast.
-My job was to read them.
-Or rather: to receive them.
-The dreams passed into me and I held them
-and then I gave them back, empty of their feeling.`,[],[]),
-            ]
-          },
-        ]
-      },
-      {
-        id:'kafka-shore', title:`Kafka on the Shore`, year:2002,
-        desc:`A boy who calls himself Kafka runs away from home; an old man who cannot read sees fish fall from the sky. Their stories converge.`,
-        chips:[`Magical Realism`,`Japan`,`Contemporary`],
-        passages:[
-          {
-            label:`Chapter 1 — The Boy Named Crow`,
-            cols:[
-              col(`murakami-ks-gabriel`,`Philip Gabriel`,2005,`The standard English translation`,`gabriel-kafka`,['Prose','Contemporary'],
-                `On my fifteenth birthday I'll run away from home,
-journey to a far-off town, and live in a corner of a small library.
-It'd be easier if I had a map, but I don't.
-I have a feeling, though. Not a very strong feeling, but a feeling.
-The boy called Crow grins at me from across the table.
-He reaches out and grabs the salt shaker.
-"You've got to be tougher than you think," he says.
-"That's the first thing I want you to know."
-"Tougher than I think?"
-"You're going to need it," says Crow.`,[],[]),
-            ]
-          },
-          {
-            label:`Chapter 4 — Fish Rain`,
-            cols:[
-              col(`murakami-ks-fish-gabriel`,`Philip Gabriel`,2005,`Contemporary prose`,`gabriel-kafka`,['Prose','Contemporary'],
-                `The mackerel began to fall shortly after ten in the morning.
-There were perhaps a hundred of them, raining down from a perfectly clear sky.
-Nobody in the neighborhood had ever seen anything like it.
-Nakata stood in the street and watched the fish land.
-They made a soft sound when they hit the pavement — not a thud, more like a sigh.
-Some were already dead. Others flapped for a while before going still.
-Children came running from nearby houses to look.
-Nakata bent down and picked one up.
-It was still warm. He turned it over in his hands, considering it.
-"Rain," he said.`,[],[]),
             ]
           },
         ]
@@ -5659,20 +5283,16 @@ const WIKI_MAP = {
   'goethe': 'Johann_Wolfgang_von_Goethe',
   'hesse': 'Hermann_Hesse',
   'nietzsche': 'Friedrich_Nietzsche',
-  'sebald': 'W._G._Sebald',
   'cervantes': 'Miguel_de_Cervantes',
   'garcia-marquez': 'Gabriel_Garc%C3%ADa_M%C3%A1rquez',
   'borges': 'Jorge_Luis_Borges',
   'rulfo': 'Juan_Rulfo',
-  'calvino': 'Italo_Calvino',
   'lampedusa': 'Giuseppe_Tomasi_di_Lampedusa',
   'kundera': 'Milan_Kundera',
   'musil': 'Robert_Musil',
   'hasek': 'Jaroslav_Ha%C5%A1ek',
-  'beckett': 'Samuel_Beckett',
   'soseki': 'Natsume_S%C5%8Dseki',
   'tanizaki': 'Jun%27ichir%C5%8D_Tanizaki',
-  'murakami': 'Haruki_Murakami',
   'dazai': 'Osamu_Dazai',
   'hamsun': 'Knut_Hamsun',
   'pessoa': 'Fernando_Pessoa',
@@ -5742,7 +5362,6 @@ async function loadAuthorPhotos(authorList) {
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let curAuthorId = null, curWorkId = null, curPassIdx = 0;
-const userRatings = {};
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 function findAuthor(id) {
@@ -5765,11 +5384,18 @@ function showPage(p) {
   if (p !== 'compare') window.scrollTo(0, 0);
   // Nav active state
   document.querySelectorAll('.topbar-nav a').forEach(a => a.classList.remove('nav-active'));
-  if (p === 'home') { const n = document.getElementById('nav-home'); if(n) n.classList.add('nav-active'); }
+  const navIds = { home:'nav-home', browse:'nav-browse', translators:'nav-translators', about:'nav-about' };
+  const nid = navIds[p];
+  if (nid) { const n = document.getElementById(nid); if (n) n.classList.add('nav-active'); }
   if (p === 'browse') {
-    const n = document.getElementById('nav-browse'); if(n) n.classList.add('nav-active');
     const allAuthors = Object.values(AUTHORS).flat();
     loadAuthorPhotos(allAuthors);
+  }
+  if (p === 'translators' && window.renderTranslators) window.renderTranslators();
+  // Top-level pages drive the URL hash; author/work pages set their own hash
+  const routeHash = { home:'#/', browse:'#/browse', translators:'#/translators', about:'#/about' }[p];
+  if (routeHash && window.location && window.location.hash !== routeHash) {
+    try { window.location.hash = routeHash; } catch(e) {}
   }
 }
 
@@ -5804,12 +5430,9 @@ const COVER_WORKS = [
   {title:'The Magic Mountain', author:'Mann', aId:'mann', wId:'magic-mountain', cover:15010225},
   {title:'One Hundred Years of Solitude', author:'García Márquez', aId:'garcia-marquez', wId:'solitude', cover:15185412},
   {title:'Pedro Páramo', author:'Rulfo', aId:'rulfo', wId:'pedro-paramo', cover:5419076},
-  {title:'Invisible Cities', author:'Calvino', aId:'calvino', wId:'invisible-cities', cover:963147},
   {title:'The Leopard', author:'Lampedusa', aId:'lampedusa', wId:'leopard', cover:420068},
-  {title:'The Unbearable Lightness of Being', author:'Kundera', aId:'kundera', wId:'unbearable-lightness', cover:13564112},
   {title:'The Good Soldier Švejk', author:'Hašek', aId:'hasek', wId:'svejk', cover:9314448},
   {title:'Kokoro', author:'Sōseki', aId:'soseki', wId:'kokoro', cover:11962280},
-  {title:'Kafka on the Shore', author:'Murakami', aId:'murakami', wId:'kafka-shore', cover:4982600},
   {title:'Hunger', author:'Hamsun', aId:'hamsun', wId:'hunger', cover:14634050},
   {title:'The Book of Disquiet', author:'Pessoa', aId:'pessoa', wId:'disquiet', cover:900685},
   {title:'Faust', author:'Goethe', aId:'goethe', wId:'faust', cover:6499459},

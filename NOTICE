@@ -1,0 +1,38 @@
+The Literary Translation Archive — NOTICE
+==========================================
+
+Copyright status of displayed excerpts
+--------------------------------------
+This archive displays short excerpts of literary translations side by side for the
+purpose of comparison, commentary, and scholarship.
+
+- Works published before 1930, and other works whose copyright has expired, are in
+  the public domain in the United States (and generally elsewhere).
+- Translations published from 1930 onward are protected by copyright. The excerpts
+  shown here are kept short (in practice under ~150 words each) and are included for
+  noncommercial scholarly comparison under the fair use doctrine (US) and fair
+  dealing (UK/EU). No full-length texts are reproduced.
+
+Attribution
+-----------
+Each comparison column identifies its translator and year of publication, and where
+known the publisher, in the accompanying note.
+
+Third-party data
+----------------
+- Book covers and work descriptions: Open Library (public domain / CC0).
+- Author portraits and biographical extracts: Wikipedia, used under the
+  Creative Commons Attribution-ShareAlike 4.0 International license
+  (https://creativecommons.org/licenses/by-sa/4.0/).
+
+Takedown
+--------
+If you are a rights holder and believe material on the site or in this repository
+infringes your copyright, please open an issue at
+https://github.com/johngoggin100/literary-translation-archive or contact the
+maintainer through that repository. Reported material will be reviewed and removed
+promptly.
+
+Site code
+---------
+The site code in this repository is provided without an explicit license.
