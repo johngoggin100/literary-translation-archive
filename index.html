@@ -20,10 +20,10 @@
 <div class="topbar">
   <div class="site-name" onclick="showPage('home')">The <em>Literary</em> Translation Archive</div>
   <div class="topbar-nav">
-    <a href="#" onclick="showPage('home')" id="nav-home">Home</a>
-    <a href="#" onclick="showPage('browse')" id="nav-browse">Browse</a>
-    <a href="#" onclick="showPage('translators')" id="nav-translators">Translators</a>
-    <a href="#" onclick="showPage('about')" id="nav-about">About</a>
+    <a href="#/" id="nav-home">Home</a>
+    <a href="#/browse" id="nav-browse">Browse</a>
+    <a href="#/translators" id="nav-translators">Translators</a>
+    <a href="#/about" id="nav-about">About</a>
     <button class="search-toggle" onclick="toggleMobileSearch()" aria-label="Search">⌕</button>
     <div class="search-wrap">
       <input type="text" class="search-input" id="search-input" placeholder="Search authors &amp; works…" oninput="onSearchInput(this.value)" onblur="hideSearchDrop()" autocomplete="off" spellcheck="false">
@@ -45,7 +45,7 @@
       <div class="cover-strip" id="cover-strip"></div>
     </div>
   </div>
-  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#/about">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-browse">
   <div class="browse-hero">
@@ -63,7 +63,7 @@
   <div class="browse-section"><div class="section-head"><span class="section-label">Scandinavian</span><div class="section-rule"></div></div><div class="author-grid" id="grid-nordic"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Portuguese</span><div class="section-rule"></div></div><div class="author-grid" id="grid-portuguese"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Classical Philosophy</span><div class="section-rule"></div></div><div class="author-grid" id="grid-philosophy"></div></div>
-  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#/about">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-author">
   <div style="padding:3.5rem 2rem 0"><button class="back-btn" id="author-back-btn">← All authors</button></div>
@@ -74,7 +74,7 @@
     <div id="a-wiki-extract" class="author-wiki-extract" style="display:none"></div>
   </div>
   <div class="works-grid-wrap"><div class="works-grid" id="a-works-grid"></div></div>
-  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#/about">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-compare">
   <div class="compare-subnav">
@@ -105,7 +105,7 @@
 <div class="page" id="page-translators">
   <div class="browse-hero"><h2>Translators</h2></div>
   <div class="translators-wrap"><div class="translator-index" id="translator-index"></div></div>
-  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#" onclick="showPage('about')">About &amp; takedown</a></div></footer>
+  <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#/about">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-about">
   <div class="browse-hero"><h2>About</h2></div>
