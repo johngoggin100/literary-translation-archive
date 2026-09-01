@@ -52,9 +52,11 @@ function renderBrowse() {
     'grid-italian':    AUTHORS.italian,
     'grid-euro20':     AUTHORS.euro20,
     'grid-asian':      AUTHORS.asian,
+    'grid-chinese':    AUTHORS.chinese    || [],
     'grid-sacred':     AUTHORS.sacred,
     'grid-nordic':     AUTHORS.nordic     || [],
     'grid-portuguese': AUTHORS.portuguese || [],
+    'grid-polish':     AUTHORS.polish     || [],
     'grid-philosophy': AUTHORS.philosophy || [],
   };
   for (const [id, list] of Object.entries(map)) {

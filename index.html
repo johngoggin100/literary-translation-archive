@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Literary Translation Archive</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%230a0a0a'/><text x='32' y='45' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23ffffff' text-anchor='middle'>T</text></svg>">
-<meta name="description" content="Browse and compare different translations of over 39 authors, with side-by-side passages.">
+<meta name="description" content="Browse and compare different translations of over 68 authors, with side-by-side passages.">
 <meta property="og:title" content="The Literary Translation Archive">
-<meta property="og:description" content="Browse and compare different translations of over 39 authors, with side-by-side passages.">
+<meta property="og:description" content="Browse and compare different translations of over 68 authors, with side-by-side passages.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://johngoggin100.github.io/literary-translation-archive/">
 <meta property="og:image" content="https://covers.openlibrary.org/b/id/10876521-L.jpg">
@@ -24,9 +24,9 @@
     <a href="#/browse" id="nav-browse">Browse</a>
     <a href="#/translators" id="nav-translators">Translators</a>
     <a href="#/about" id="nav-about">About</a>
-    <button class="search-toggle" onclick="toggleMobileSearch()" aria-label="Search">⌕</button>
+    <button class="search-toggle" onclick="toggleMobileSearch()" aria-label="Search">âŒ•</button>
     <div class="search-wrap">
-      <input type="text" class="search-input" id="search-input" placeholder="Search authors &amp; works…" oninput="onSearchInput(this.value)" onblur="hideSearchDrop()" autocomplete="off" spellcheck="false">
+      <input type="text" class="search-input" id="search-input" placeholder="Search authors &amp; worksâ€¦" oninput="onSearchInput(this.value)" onblur="hideSearchDrop()" autocomplete="off" spellcheck="false">
       <div class="search-drop" id="search-drop" style="display:none"></div>
     </div>
   </div>
@@ -34,8 +34,8 @@
 <div class="page active" id="page-home">
   <div class="home-landing">
     <div class="home-landing-text">
-      <h1>Browse and compare different translations of over 39 authors, with side-by-side passages.</h1>
-      <button class="home-browse-btn" onclick="showPage('browse')">Browse the archive →</button>
+      <h1>Browse and compare different translations of over 68 authors, with side-by-side passages.</h1>
+      <button class="home-browse-btn" onclick="showPage('browse')">Browse the archive â†’</button>
     </div>
     <div class="cover-strip-label">
       <span class="cover-strip-label-text">From the archive</span>
@@ -59,14 +59,16 @@
   <div class="browse-section"><div class="section-head"><span class="section-label">Italian Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-italian"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">20th-Century European</span><div class="section-rule"></div></div><div class="author-grid" id="grid-euro20"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Asian Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-asian"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Chinese Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-chinese"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Sacred &amp; Religious Texts</span><div class="section-rule"></div></div><div class="author-grid" id="grid-sacred"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Scandinavian</span><div class="section-rule"></div></div><div class="author-grid" id="grid-nordic"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Portuguese</span><div class="section-rule"></div></div><div class="author-grid" id="grid-portuguese"></div></div>
+  <div class="browse-section"><div class="section-head"><span class="section-label">Polish Literature</span><div class="section-rule"></div></div><div class="author-grid" id="grid-polish"></div></div>
   <div class="browse-section"><div class="section-head"><span class="section-label">Classical Philosophy</span><div class="section-rule"></div></div><div class="author-grid" id="grid-philosophy"></div></div>
   <footer class="site-footer"><div class="sf-inner">Excerpts of translations shown for scholarly comparison &mdash; in-copyright passages used under fair use / fair dealing. <a href="#/about">About &amp; takedown</a></div></footer>
 </div>
 <div class="page" id="page-author">
-  <div style="padding:3.5rem 2rem 0"><button class="back-btn" id="author-back-btn">← All authors</button></div>
+  <div style="padding:3.5rem 2rem 0"><button class="back-btn" id="author-back-btn">â† All authors</button></div>
   <div class="author-hero">
     <h1 id="a-name"></h1>
     <div class="author-hero-meta" id="a-meta"></div>
@@ -78,7 +80,7 @@
 </div>
 <div class="page" id="page-compare">
   <div class="compare-subnav">
-    <button class="nav-back-compare" id="compare-back-btn">← Back</button>
+    <button class="nav-back-compare" id="compare-back-btn">â† Back</button>
     <span class="subnav-sep">|</span>
     <span class="compare-work-title" id="compare-work-title"></span>
     <span class="subnav-sep">|</span>
@@ -112,11 +114,11 @@
   <div class="about-wrap">
     <section class="about-block">
       <h3>What this is</h3>
-      <p>The Literary Translation Archive sets different English translations of the same passages side by side, so the choices a translator makes — in register, diction, and meaning — are visible at a glance. It is a reading and teaching tool, not a publisher of full texts.</p>
+      <p>The Literary Translation Archive sets different English translations of the same passages side by side, so the choices a translator makes â€” in register, diction, and meaning â€” are visible at a glance. It is a reading and teaching tool, not a publisher of full texts.</p>
     </section>
     <section class="about-block">
       <h3>Copyright</h3>
-      <p>Translations published before 1930, and other works whose copyright has expired, are in the public domain. Later translations are protected by copyright; this archive shows only short excerpts of those works for the purpose of noncommercial commentary, comparison, and scholarship — a use generally permitted by fair use (US) and fair dealing (UK/EU). No full-length texts are reproduced, and excerpts are kept as short as possible.</p>
+      <p>Translations published before 1930, and other works whose copyright has expired, are in the public domain. Later translations are protected by copyright; this archive shows only short excerpts of those works for the purpose of noncommercial commentary, comparison, and scholarship â€” a use generally permitted by fair use (US) and fair dealing (UK/EU). No full-length texts are reproduced, and excerpts are kept as short as possible.</p>
     </section>
     <section class="about-block">
       <h3>Rights holders</h3>
@@ -135,6 +137,7 @@
 </div>
 
 <script src="data.js"></script>
+<script src="data-extra.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
