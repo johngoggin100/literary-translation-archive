@@ -4,9 +4,10 @@ Compiled as a bibliography for expansion. Covers every author currently in the a
 (68 authors). Short-story collections are generally omitted (per project direction);
 novels, novellas, epics, and major poetry/drama collections are listed.
 
-**ISBN conventions:** given for one or two of the most widely available current
-editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identified;
-**verify any ISBN before using it for cover mapping** (the site maps covers by ISBN).
+**ISBN conventions:** ISBNs shown were verified against Open Library's index (the
+same source the site uses for cover mapping). `—` = the edition's ISBN could not be
+confirmed and has been removed; `(unverified)` = the ISBN was not found in the
+index and should be checked before use.
 
 ---
 
@@ -29,13 +30,13 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 ### Virgil (70–19 BCE)
 - **Aeneid** — John Dryden 1697; James Rhoades 1907; C. Day Lewis 1952; Robert Fitzgerald 1983; Allen Mandelbaum 1971; David West 1990; Robert Fagles 2006; Sarah Ruden 2008; Shadi Bartsch 2020.
   - Fagles (Penguin): 978-0143106296
-  - Ruden (Yale): 978-0300119251
+  - Ruden (Yale): —
 - **Georgics** — Dryden 1697; C. Day Lewis 1940; L.P. Wilkinson 1982; Peter Fallon 2004; David Ferry 2005 (FSG).
 - **Eclogues** — C. Day Lewis 1963; Paul Alpers 1979; David Ferry 2005; Len Krisak 2010.
 
 ### Plato (c. 428–348 BCE)
 - **Republic** — Benjamin Jowett 1871; Paul Shorey 1930; F.M. Cornford 1941; G.M.A. Grube 1974; Robin Waterfield 1993; C.D.C. Reeve 2004; Tom Griffith 2000; Joe Sachs 2007.
-  - Grube/Reeve (Hackett): 978-0872207361
+  - Grube/Reeve (Hackett): 978-0872207361 *(unverified)*
   - Waterfield (OUP): 978-0199535767
 
 ### Marcus Aurelius (121–180 CE)
@@ -46,7 +47,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 ### Augustine of Hippo (354–430 CE)
 - **Confessions** — Edward Pusey 1838; J.G. Pilkington 1876; F.J. Sheed 1942; R.S. Pine-Coffin 1961; Henry Chadwick 1991; Garry Wills 2011; Sarah Ruden 2017.
   - Chadwick (OUP): 978-0199537822
-  - Ruden (Modern Library): 978-0375750014
+  - Ruden (Modern Library): —
 
 ---
 
@@ -72,7 +73,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 ### Marcel Proust (1871–1922)
 - **In Search of Lost Time (À la recherche du temps perdu)** — C.K. Scott Moncrieff 1922–30 (Remembrance of Things Past); Terence Kilmartin 1981 (rev.); D.J. Enright 1992 (rev.); Lydia Davis (vol 1, 2002), James Grieve (vol 1, 1982, ANU).
   - Scott Moncrieff/Kilmartin/Enright (Modern Library): 978-0375751547
-  - Davis (Penguin Swann's Way): 978-0143039570
+  - Davis (Penguin Swann's Way): —
 
 ### Albert Camus (1913–1960)
 - **The Stranger / The Outsider (L'Étranger)** — Stuart Gilbert 1946; Joseph Laredo 1982; Matthew Ward 1988; Sandra Smith 2012.
@@ -86,12 +87,12 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Victor Hugo (1802–1885)
 - **Les Misérables** — Charles Wilbour 1862; Isabel Hapgood 1887; Norman Denny 1976 (Penguin, abridged); Lee Fahnestock & Norman MacAfee 1987 (Signet); Julie Rose 2008 (Vintage); Christine Donougher 2013 (Penguin).
-  - Donougher (Penguin): 978-0141393599
+  - Donougher (Penguin): —
 - **The Hunchback of Notre-Dame** — Frederic Shoberl 1833; Isabel Hapgood 1888; Alban Krailsheimer 1978; John Sturrock 2004.
 
 ### Louis-Ferdinand Céline (1894–1961)
 - **Journey to the End of the Night** — John H.P. Marks 1934; Ralph Manheim 1983.
-  - Manheim (New Directions): 978-0811220880
+  - Manheim (New Directions): 978-0811220880 *(unverified)*
 - **Death on the Installment Plan** — Ralph Manheim 1966.
 - **Castle to Castle** — Ralph Manheim 1968.
 - **North** — Ralph Manheim 1972.
@@ -116,7 +117,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Honoré de Balzac (1799–1850)
 - **Père Goriot** — Ellen Marriage 1896; M.A. Crawford 1951; David Coward 1991; Burton Raffel 1994.
-  - Coward (OUP): 978-0199538768
+  - Coward (OUP): —
 - **Eugénie Grandet** — Ellen Marriage 1897; M.A. Crawford 1955; Sylvia Raphael 1990; M.A. Crawford/rev. 2012.
 - **Lost Illusions** — Ellen Marriage 1898; Herbert J. Hunt 1971 (Penguin); Raymond N. MacKenzie 2022.
 - **Cousin Bette** — Katharine Prescott Wormeley 1896; Marion Ayton Crawford 1965 (Penguin); Sylvia Raphael 1992; Olivia McCannon 2019.
@@ -125,7 +126,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Émile Zola (1840–1902)
 - **Germinal** — Havelock Ellis 1894; Leonard Tancock 1954; Peter Collier 1993; Roger Pearson 2004.
-  - Tancock (Penguin): 978-0140442762
+  - Tancock (Penguin): —
 - **Nana** — Victor Plarr 1895; George Holden 1972; Douglas Parmée 1992.
 - **L'Assommoir** — Arthur Symons 1894; Leonard Tancock 1970; Robin Buss 2000; Margaret Mauldon 2007.
 - **The Belly of Paris** — Ernest Alfred Vizetelly 1888; Brian Nelson 2007; Mark Kurlansky 2009.
@@ -160,7 +161,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 - **The Brothers Karamazov** — Constance Garnett 1912; David Magarshack 1958; Andrew MacAndrew 1970; Richard Pevear & Larissa Volokhonsky 1990; David McDuff 1993; Ignat Avsey 1994.
   - P&V (FSG): 978-0374528379
 - **The Idiot** — Constance Garnett 1913; David Magarshack 1955; Henry & Olga Carlisle 1969; Richard Pevear & Larissa Volokhonsky 2001; David McDuff 2004; Alan Myers 1992.
-  - P&V (Vintage): 978-0375702245
+  - P&V (Vintage): 978-0375702245 *(unverified)*
 - **Notes from Underground** — Constance Garnett 1913; David Magarshack 1968; Jessie Coulson 1972; Richard Pevear & Larissa Volokhonsky 1993; Ronald Meyer 1992; Michael R. Katz 2017.
 - **Demons (The Possessed / Devils)** — Constance Garnett 1914 (The Possessed); David Magarshack 1954; Richard Pevear & Larissa Volokhonsky 1994; Robert A. Maguire 2008.
 - **The Adolescent (A Raw Youth)** — Garnett 1916; Richard Pevear & Larissa Volokhonsky 2003.
@@ -169,7 +170,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Nikolai Gogol (1809–1852)
 - **Dead Souls** — Constance Garnett 1922; George Reavey 1948; Bernard Guilbert Guerney 1942/1961; Richard Pevear & Larissa Volokhonsky 1996; Robert Chandler 2012; Donald Rayfield 2008.
-  - P&V (Vintage): 978-0679776475
+  - P&V (Vintage): —
 - **The Government Inspector (Revizor)** — various; Donald Rayfield 2009; Richard Pevear 1998 (in Collected Plays).
 - **Taras Bulba** — George Tolstoy 1887; Peter Constantine 2003.
 - **The Diary of a Madman / Nevsky Prospekt / The Nose** — Garnett; Ronald Wilks 1972 (Penguin).
@@ -183,11 +184,11 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Mikhail Lermontov (1814–1841)
 - **A Hero of Our Time** — Vladimir Nabokov 1958; Paul Foote 1966; Philip Longworth 1967; Neil Cornwell 1995; Marian Schwartz 2004; Nicolas Pasternak Slater 2013.
-  - Nabokov (Anchor): 978-1400079599
+  - Nabokov (Anchor): —
 
 ### Alexander Solzhenitsyn (1918–2008)
 - **One Day in the Life of Ivan Denisovich** — Ralph Parker 1963; Max Hayward & Ronald Hingley 1963; Harry Willetts 1991; Gillon Aitken 1963.
-  - Willetts (FSG): 978-0374527993
+  - Willetts (FSG): 978-0374527993 *(unverified)*
 - **The First Circle** — Thomas Whitney 1968; Michael Guybon 1972; Harry Willetts 2009.
 - **Cancer Ward** — Nicholas Bethell & David Burg 1968; Rebecca Frank 1968.
 - **The Gulag Archipelago** — Thomas Whitney (vols 1–2) 1974–75; Harry Willetts 2003.
@@ -195,7 +196,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Varlam Shalamov (1907–1982)
 - **Kolyma Tales** — John Glad 1980; Robert Chandler et al. 2018 (NYRB).
-  - Chandler (NYRB): 978-1681372707
+  - Chandler (NYRB): 978-1681372707 *(unverified)*
 - **Kolyma: The Arctic Death Camps** — Robert Chandler (part of the above).
 
 ---
@@ -223,7 +224,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 ### Johann Wolfgang von Goethe (1749–1832)
 - **Faust, Part I** — Bayard Taylor 1870; Anna Swanwick 1850; Philip Wayne 1949; Walter Kaufmann 1961; David Luke 1987 (OUP); John R. Williams 1999; Zsuzsanna Ozsváth & Frederick Turner 2020.
   - Kaufmann (Anchor): 978-0385031141
-  - Luke (OUP): 978-0199538966
+  - Luke (OUP): —
 - **Faust, Part II** — Bayard Taylor 1871; David Luke 1994; John R. Williams 2009.
 - **The Sorrows of Young Werther** — Daniel Malthus 1779; R.D. Boylan 1854; Elizabeth Mayer & Louise Bogan 1971; Michael Hulse 1989 (Penguin).
 - **Wilhelm Meister's Apprenticeship** — Thomas Carlyle 1824; Eric Blackall 1995 (Princeton).
@@ -252,7 +253,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Stefan Zweig (1881–1942)
 - **Chess Story / The Royal Game (Schachnovelle)** — Paul Cedar & Eden Paul 1944; Anthea Bell 2011 (Pushkin); Joel Rotenberg 2013 (NYRB).
-  - Rotenberg (NYRB): 978-1590175219
+  - Rotenberg (NYRB): 978-1590175219 *(unverified)*
 - **The World of Yesterday** — Harry Zohn 1943; Anthea Bell 2009 (Pushkin); William Stone 2020 (Pushkin).
 - **Beware of Pity** — Phyllis & Trevor Blewitt 1939; Phyllis Blewitt 1982; Joel Rotenberg 2024.
 - **Momentos fatales / Sternstunden der Menschheit** — various (Decisive Moments in History).
@@ -260,7 +261,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Joseph Roth (1894–1939)
 - **The Radetzky March** — Geoffrey Dunlop 1933; Eva Tucker 1974; Michael Hofmann 1995 (Overlook).
-  - Hofmann (Granta): 978-1847087829
+  - Hofmann (Granta): 978-1847087829 *(unverified)*
 - **Job** — Dorothy Thompson 1931; Ross Benjamin 2010 (Overlook).
 - **The Emperor's Tomb** — John Hoare 1984; Michael Hofmann 1999.
 - **The Hotel Years / The Collected Stories** — Michael Hofmann 2015 (New Directions).
@@ -269,14 +270,14 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Robert Walser (1878–1956)
 - **Jakob von Gunten** — Christopher Middleton 1969; Susan Bernofsky 1999 (NYRB).
-  - Bernofsky (NYRB): 978-0940322945
+  - Bernofsky (NYRB): 978-0940322945 *(unverified)*
 - **The Assistant** — Susan Bernofsky 2007 (New Directions).
 - **The Tanners** — Susan Bernofsky 2009 (New Directions).
 - **Selected Stories / The Walk** — Christopher Middleton 1982; Susan Bernofsky 2005; Lydia Davis 2009.
 
 ### Günter Grass (1927–2015)
 - **The Tin Drum** — Ralph Manheim 1961; Breon Mitchell 2009 (Houghton Mifflin).
-  - Breon Mitchell (Mariner): 978-0547706847
+  - Breon Mitchell (Mariner): 978-0547706847 *(unverified)*
 - **Cat and Mouse** — Ralph Manheim 1963.
 - **Dog Years** — Ralph Manheim 1965.
 - **The Flounder** — Ralph Manheim 1978.
@@ -286,7 +287,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Alfred Döblin (1878–1957)
 - **Berlin Alexanderplatz** — Eugene Jolas 1931; Michael Hofmann 2018 (NYRB).
-  - Hofmann (NYRB): 978-1681372745
+  - Hofmann (NYRB): 978-1681372745 *(unverified)*
 - **Wallenstein** — various.
 - **Berge Meere und Giganten (Mountains, Seas, and Giants)** — no standard English.
 
@@ -343,7 +344,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Italo Svevo (1861–1928)
 - **Zeno's Conscience / Confessions of Zeno** — Beryl de Zoete 1930; William Weaver 2001 (Everyman).
-  - Weaver (Everyman): 978-0375412229
+  - Weaver (Everyman): 978-0375412229 *(unverified)*
 - **As a Man Grows Older (Senilità)** — Beryl de Zoete 1932; Beno Weiss 2011.
 - **A Life (Una Vita)** — Archibald Colquhoun 1963; John Gatt-Rutter 2017.
 
@@ -362,14 +363,14 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Natalia Ginzburg (1916–1991)
 - **Family Lexicon** — D.M. Low 1963; Jenny McPhee 2017 (NYRB).
-  - McPhee (NYRB): 978-1681372011
+  - McPhee (NYRB): 978-1681372011 *(unverified)*
 - **The Dry Heart** — Frances Frenaye 1952; Frances Frenaye/rev. 2019 (New Directions).
 - **Happiness, as Such** — Minna Zallman Proctor 2019.
 - **Voices in the Evening** — D.M. Low 1963; Jenny McPhee 2020.
 
 ### Elsa Morante (1912–1985)
 - **Arturo's Island** — Isabel Quigly 1959; Ann Goldstein 2019 (Liveright).
-  - Goldstein (Liveright): 978-1631492280
+  - Goldstein (Liveright): —
 - **History: A Novel** — William Weaver 1977.
 - **Lies and Sorcery (Menzogna e sortilegio)** — Jenny McPhee 2023.
 - **Aracoeli** — William Weaver 1984.
@@ -390,14 +391,14 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Robert Musil (1880–1942)
 - **The Man Without Qualities** — Eithne Wilkins & Ernst Kaiser 1953–60; Sophie Wilkins & Burton Pike 1995 (Knopf).
-  - Wilkins/Pike (Vintage): 978-0679766032
+  - Wilkins/Pike (Vintage): —
 - **The Confusions of Young Törless** — Eithne Wilkins & Ernst Kaiser 1955; Shaun Whiteside 2001 (Penguin); Joel Agee 2014.
 - **Three Women** — Eithne Wilkins & Ernst Kaiser 1965.
 - **The Posthumous Papers of a Living Author** — Peter Wortsman 2006.
 
 ### Jaroslav Hašek (1883–1923)
 - **The Good Soldier Švejk** — Paul Selver 1930 (abridged); Cecil Parrott 1973 (Penguin, unabridged); Zdeněk Sadlon 1986 (abridged).
-  - Parrott (Penguin): 978-0140440348
+  - Parrott (Penguin): —
 
 ---
 
@@ -405,7 +406,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Natsume Sōseki (1867–1916)
 - **Kokoro** — Edwin McClellan 1957; Meredith McKinney 2010 (Penguin).
-  - McKinney (Penguin): 978-0140455960
+  - McKinney (Penguin): 978-0140455960 *(unverified)*
 - **The Gate (Mon)** — Francis Mathy 1972; William Johnston 2004 (Tuttle); William F. Sibley 2013 (Columbia).
 - **Botchan** — Joel Cohn 2005 (Kodansha); Umeji Sasaki 1968.
 - **I Am a Cat** — Aiko Ito & Graeme Wilson 1972; Kan-ichi Ando 1982.
@@ -424,7 +425,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Osamu Dazai (1909–1948)
 - **No Longer Human** — Donald Keene 1958; Mark Gibeau 2021 (Penguin).
-  - Gibeau (Penguin): 978-0241382668
+  - Gibeau (Penguin): 978-0241382668 *(unverified)*
 - **The Setting Sun** — Donald Keene 1956.
 - **Run, Melos!** — various.
 
@@ -439,7 +440,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 ### Wu Cheng'en (c. 1500–1582)
 - **Journey to the West** — Arthur Waley (Monkey, 1942, abridged); Anthony C. Yu 1977–83 (rev. 2012, complete); W.J.F. Jenner 1982–86 (complete); John Minford 2012 (abridged); Julia Lovell 2021 (Monkey King, abridged).
   - Yu (Chicago): 978-0226971322 (vol. 1)
-  - Lovell (Penguin): 978-0241371105
+  - Lovell (Penguin): 978-0241371105 *(unverified)*
 
 ### Cao Xueqin (c. 1715–1763)
 - **Dream of the Red Chamber / The Story of the Stone** — David Hawkes & John Minford 1973–86 (Penguin, The Story of the Stone); Yang Hsien-yi & Gladys Yang 1978–80 (Foreign Languages Press, A Dream of Red Mansions).
@@ -447,7 +448,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Shi Nai'an & Luo Guanzhong (14th c.)
 - **Water Margin / Outlaws of the Marsh** — Pearl S. Buck (All Men Are Brothers, 1933, abridged); J.H. Jackson 1937 (Water Margin); Sidney Shapiro 1980 (Outlaws of the Marsh, FFLP).
-  - Shapiro (CFLAC): 978-7119014335
+  - Shapiro (CFLAC): 978-7119014335 *(unverified)*
 
 ### Luo Guanzhong (c. 1330–1400)
 - **Romance of the Three Kingdoms** — C.H. Brewitt-Taylor 1925 (abridged); Moss Roberts 1991 (UC Press, complete; abridged 1976).
@@ -455,7 +456,7 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Lanling Xiaoxiao Sheng (c. 1610)
 - **The Plum in the Golden Vase (Jin Ping Mei)** — Clement Egerton (The Golden Lotus, 1939); David Tod Roy 1993–2013 (Princeton, complete 5 vols).
-  - Roy (Princeton): 978-0691160148 (vol. 1)
+  - Roy (Princeton): 978-0691160148 *(unverified)* (vol. 1)
 
 ---
 
@@ -463,14 +464,14 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### The Bible
 - **Hebrew Bible / Tanakh** — Septuagint; Jerome's Vulgate (Latin); Tyndale 1530s; King James Version 1611; Rheims-Douai 1609; Revised Version 1881–85; ASV 1901; RSV 1952; NEB 1970; NIV 1978; Tanakh (JPS) 1985; NRSV 1989; Robert Alter 2004 (Pentateuch) / 2007 (Psalms); Everett Fox 1995 (Five Books); Martin Buber & Franz Rosenzweig (German) 1925–61; Jewish Publication Society.
-  - KJV (OUP): 978-0199543823
-  - NRSV (HarperOne): 978-0062358382
+  - KJV (OUP): 978-0199543823 *(unverified)*
+  - NRSV (HarperOne): 978-0062358382 *(unverified)*
 - **New Testament** — Tyndale 1526; KJV 1611; RSV 1946; NIV 1973; David Bentley Hart 2017; Sarah Ruden 2021.
 
 ### The Quran
 - Sale 1734; Rodwell 1861; Palmer 1880; Marmaduke Pickthall 1930; A.J. Arberry 1955; N.J. Dawood 1956 (Penguin); Muhammad Asad 1980; M.A.S. Abdel Haleem 2004 (OUP); Arthur Droge 2013; Seyyed Hossein Nasr et al. 2015.
   - Abdel Haleem (OUP): 978-0199535958
-  - Arberry (Touchstone): 978-0684825476
+  - Arberry (Touchstone): 978-0684825476 *(unverified)*
 
 ---
 
@@ -501,14 +502,14 @@ editions (Penguin/OUP/Vintage/FSG etc.). `—` = edition not confidently identif
 
 ### Machado de Assis (1839–1908)
 - **Dom Casmurro** — Helen Caldwell 1953; John Gledson 1997 (OUP); Margaret Jull Costa 2016 (Penguin).
-  - Jull Costa (Penguin): 978-0140455444
+  - Jull Costa (Penguin): 978-0140455444 *(unverified)*
 - **The Posthumous Memoirs of Brás Cubas** — William L. Grossman 1952; Gregory Rabassa 1997 (OUP); Flora Thomson-DeVeaux 2020 (Penguin).
 - **Quincas Borba** — Gregory Rabassa 1998 (OUP); Robin Patterson 2023 (Penguin).
 - **Epitaph of a Small Winner** — William L. Grossman 1952 (variant title).
 
 ### Clarice Lispector (1920–1977)
 - **The Hour of the Star** — Giovanni Pontiero 1986; Benjamin Moser 2011 (New Directions).
-  - Moser (New Directions): 978-0811219500
+  - Moser (New Directions): 978-0811219500 *(unverified)*
 - **Near to the Wild Heart** — Giovanni Pontiero 1990; Alison Entrekin 2012 (Penguin).
 - **The Passion According to G.H.** — Ronald W. Sousa 1988; Idra Novey 2012 (New Directions).
 - **Agua Viva** — Elizabeth Lowe & Earl Fitz 1989; Stefan Tobler 2012 (New Directions).
@@ -526,7 +527,7 @@ See Plato, Marcus Aurelius, Augustine above.
 
 ### Witold Gombrowicz (1904–1969)
 - **Ferdydurke** — Eric Mosbacher 1961; Danuta Borchardt 2000 (Yale).
-  - Borchardt (Yale): 978-0300082398
+  - Borchardt (Yale): 978-0300082398 *(unverified)*
 - **Cosmos** — Eric Mosbacher 1967; Danuta Borchardt 2005 (Grove).
 - **Pornografia** — Alastair Hamilton 1966; Danuta Borchardt 2009 (Grove).
 - **Trans-Atlantyk** — Carolyn French & Nina Karsov 1994 (Yale); Danuta Borchardt 2014.
@@ -538,7 +539,7 @@ See Plato, Marcus Aurelius, Augustine above.
 
 ### Stanisław Lem (1921–2006)
 - **Solaris** — Joanna Kilmartin & Steve Cox 1970 (from French); Bill Johnston 2011 (FSG, from Polish).
-  - Johnston (FSG): 978-0575083532
+  - Johnston (FSG): 978-0575083532 *(unverified)*
 - **The Cyberiad** — Michael Kandel 1974.
 - **His Master's Voice** — Michael Kandel 1983.
 - **Fiasco** — Michael Kandel 1987.
