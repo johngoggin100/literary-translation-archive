@@ -23,9 +23,9 @@ index and should be checked before use.
 
 ### Dante Alighieri (1265–1321)
 - **Divine Comedy** — Henry F. Cary 1814; H.W. Longfellow 1867; J.D. Sinclair 1939 (prose); John Ciardi 1954–70; Mark Musa 1971; Allen Mandelbaum 1980–82; Robert & Jean Hollander 2000–07; Robin Kirkpatrick 2006–07 (Penguin); Clive James 2013.
-- **Inferno** — Mandelbaum (Bantam): 978-0553213393
-- **Purgatorio** — Mandelbaum (Bantam): 978-0553213447
-- **Paradiso** — Mandelbaum (Bantam): 978-0553212044
+- **Inferno** — Henry F. Cary 1814; H.W. Longfellow 1867; J.D. Sinclair 1939 (prose); John Ciardi 1954; Mark Musa 1971; Allen Mandelbaum 1980; Robert & Jean Hollander 2000; Robin Kirkpatrick 2006 (Penguin); Clive James 2013.
+- **Purgatorio** — Henry F. Cary 1814; H.W. Longfellow 1867; J.D. Sinclair 1939 (prose); John Ciardi 1961; Mark Musa 1971; Allen Mandelbaum 1982; Robert & Jean Hollander 2003; Robin Kirkpatrick 2007 (Penguin).
+- **Paradiso** — Henry F. Cary 1814; H.W. Longfellow 1867; J.D. Sinclair 1939 (prose); John Ciardi 1970; Mark Musa 1971; Allen Mandelbaum 1984; Robert & Jean Hollander 2007; Robin Kirkpatrick 2007 (Penguin).
 
 ### Virgil (70–19 BCE)
 - **Aeneid** — John Dryden 1697; James Rhoades 1907; C. Day Lewis 1952; Robert Fitzgerald 1983; Allen Mandelbaum 1971; David West 1990; Robert Fagles 2006; Sarah Ruden 2008; Shadi Bartsch 2020.
@@ -58,7 +58,6 @@ index and should be checked before use.
   - Butt (Penguin): 978-0140440041
 - **Lettres philosophiques / Philosophical Letters** — Ernest Dilworth 1961; Leonard Tancock 1980.
 - **Zadig** — Tobias Smollett 1749; Robert Bruce Boswell 1901.
-- **Micromégas** — various.
 - **Dictionnaire philosophique** — Peter Gay 1965; Theodore Besterman 1971.
 
 ### Gustave Flaubert (1821–1880)
@@ -80,10 +79,6 @@ index and should be checked before use.
   - Ward (Vintage): 978-0679720201
   - Smith (Penguin): 978-0141198064
 - **The Plague** — Stuart Gilbert 1948; Robin Buss 2001; Laura Marris 2021.
-- **The Fall** — Justin O'Brien 1956.
-- **The Myth of Sisyphus** — Justin O'Brien 1955.
-- **A Happy Death** — Richard Howard 1972.
-- **The First Man** — David Hapgood 1995.
 
 ### Victor Hugo (1802–1885)
 - **Les Misérables** — Charles Wilbour 1862; Isabel Hapgood 1887; Norman Denny 1976 (Penguin, abridged); Lee Fahnestock & Norman MacAfee 1987 (Signet); Julie Rose 2008 (Vintage); Christine Donougher 2013 (Penguin).
@@ -93,9 +88,6 @@ index and should be checked before use.
 ### Louis-Ferdinand Céline (1894–1961)
 - **Journey to the End of the Night** — John H.P. Marks 1934; Ralph Manheim 1983.
   - Manheim (New Directions): 978-0811220880 *(unverified)*
-- **Death on the Installment Plan** — Ralph Manheim 1966.
-- **Castle to Castle** — Ralph Manheim 1968.
-- **North** — Ralph Manheim 1972.
 
 ### Jean-Paul Sartre (1905–1980)
 - **Nausea (La Nausée)** — Lloyd Alexander 1949; Robert Baldick 1965.
@@ -107,7 +99,6 @@ index and should be checked before use.
   - Buss (Penguin): 978-0140449266
 - **The Three Musketeers** — William Robson 1846; Richard Pevear 2006 (Penguin); Lawrence Ellsworth 2018 (Pegasus).
 - **Twenty Years After** — William Robson 1846; Richard Pevear 2019 (Pegasus).
-- **The Vicomte de Bragelonne** — William Robson 1847; several abridgements.
 
 ### Stendhal (1783–1842)
 - **The Red and the Black** — Horace B. Samuel 1898; C.K. Scott Moncrieff 1926; M.R.B. Shaw 1953; Robert M. Adams 1969; Burton Raffel 2000; Horace B. Porter 2008.
@@ -152,7 +143,6 @@ index and should be checked before use.
 - **Childhood / Boyhood / Youth** — C.J. Hogarth 1912; Michael Scammell 1986; Dora O'Brien 2013.
 - **The Cossacks** — Eugene Schuyler 1878; Peter Constantine 2006; P&V 2006.
 - **Sevastopol Sketches** — Frank Millet 1887; David McDuff 1986.
-- **The Kingdom of God Is Within You** — Constance Garnett 1894.
 
 ### Fyodor Dostoevsky (1821–1881)
 - **Crime and Punishment** — Constance Garnett 1914; David Magarshack 1951; Jessie Coulson 1953; Sidney Monas 1968; Richard Pevear & Larissa Volokhonsky 1993; David McDuff 1991; Oliver Ready 2014.
@@ -180,7 +170,6 @@ index and should be checked before use.
   - P&V (Penguin): 978-0141180144
 - **The Heart of a Dog** — Michael Glenny 1968; Andrew Bromfield 2007.
 - **The White Guard** — Michael Glenny 1971; Roger Cockrell 2008; Marian Schwartz 2012.
-- **A Country Doctor's Notebook** — Michael Glenny 1975.
 
 ### Mikhail Lermontov (1814–1841)
 - **A Hero of Our Time** — Vladimir Nabokov 1958; Paul Foote 1966; Philip Longworth 1967; Neil Cornwell 1995; Marian Schwartz 2004; Nicolas Pasternak Slater 2013.
@@ -197,7 +186,6 @@ index and should be checked before use.
 ### Varlam Shalamov (1907–1982)
 - **Kolyma Tales** — John Glad 1980; Robert Chandler et al. 2018 (NYRB).
   - Chandler (NYRB): 978-1681372707 *(unverified)*
-- **Kolyma: The Arctic Death Camps** — Robert Chandler (part of the above).
 
 ---
 
@@ -210,7 +198,6 @@ index and should be checked before use.
 - **The Metamorphosis** — Willa & Edwin Muir 1937; Stanley Corngold 1972; Joachim Neugroschel 1993; Michael Hofmann 2007; Breon Mitchell 2014.
 - **The Castle** — Willa & Edwin Muir 1930; Mark Harman 1998; J.A. Underwood 1997.
 - **Amerika** — Willa & Edwin Muir 1938; Mark Harman 2008.
-- **The Zürau Aphorisms / Diaries** — various.
 
 ### Thomas Mann (1875–1955)
 - **Buddenbrooks** — H.T. Lowe-Porter 1924; John E. Woods 1994 (Everyman).
@@ -219,7 +206,6 @@ index and should be checked before use.
 - **Death in Venice** — H.T. Lowe-Porter 1930; David Luke 1988; Michael Henry Heim 2004.
 - **Doctor Faustus** — H.T. Lowe-Porter 1948; John E. Woods 1997.
 - **Joseph and His Brothers** — H.T. Lowe-Porter 1934–44; John E. Woods 2005.
-- **The Confessions of Felix Krull** — Denver Lindley 1955.
 
 ### Johann Wolfgang von Goethe (1749–1832)
 - **Faust, Part I** — Bayard Taylor 1870; Anna Swanwick 1850; Philip Wayne 1949; Walter Kaufmann 1961; David Luke 1987 (OUP); John R. Williams 1999; Zsuzsanna Ozsváth & Frederick Turner 2020.
@@ -256,48 +242,31 @@ index and should be checked before use.
   - Rotenberg (NYRB): 978-1590175219 *(unverified)*
 - **The World of Yesterday** — Harry Zohn 1943; Anthea Bell 2009 (Pushkin); William Stone 2020 (Pushkin).
 - **Beware of Pity** — Phyllis & Trevor Blewitt 1939; Phyllis Blewitt 1982; Joel Rotenberg 2024.
-- **Momentos fatales / Sternstunden der Menschheit** — various (Decisive Moments in History).
-- **Letter from an Unknown Woman** — various; Anthea Bell 2016 (Pushkin).
+- **Letter from an Unknown Woman** — Paul Cedar & Eden Paul 1944; Anthea Bell 2016 (Pushkin).
 
 ### Joseph Roth (1894–1939)
 - **The Radetzky March** — Geoffrey Dunlop 1933; Eva Tucker 1974; Michael Hofmann 1995 (Overlook).
   - Hofmann (Granta): 978-1847087829 *(unverified)*
 - **Job** — Dorothy Thompson 1931; Ross Benjamin 2010 (Overlook).
 - **The Emperor's Tomb** — John Hoare 1984; Michael Hofmann 1999.
-- **The Hotel Years / The Collected Stories** — Michael Hofmann 2015 (New Directions).
 - **Flight without End** — David Le Vay 1977; Michael Hofmann 2002.
-- **The Legend of the Holy Drinker** — Michael Hofmann 1989.
 
 ### Robert Walser (1878–1956)
 - **Jakob von Gunten** — Christopher Middleton 1969; Susan Bernofsky 1999 (NYRB).
   - Bernofsky (NYRB): 978-0940322945 *(unverified)*
-- **The Assistant** — Susan Bernofsky 2007 (New Directions).
-- **The Tanners** — Susan Bernofsky 2009 (New Directions).
 - **Selected Stories / The Walk** — Christopher Middleton 1982; Susan Bernofsky 2005; Lydia Davis 2009.
 
 ### Günter Grass (1927–2015)
 - **The Tin Drum** — Ralph Manheim 1961; Breon Mitchell 2009 (Houghton Mifflin).
   - Breon Mitchell (Mariner): 978-0547706847 *(unverified)*
-- **Cat and Mouse** — Ralph Manheim 1963.
-- **Dog Years** — Ralph Manheim 1965.
-- **The Flounder** — Ralph Manheim 1978.
-- **The Rat** — Ralph Manheim 1987.
-- **My Century** — Michael Henry Heim 1999.
-- **Crabwalk** — Krishna Winston 2003.
 
 ### Alfred Döblin (1878–1957)
 - **Berlin Alexanderplatz** — Eugene Jolas 1931; Michael Hofmann 2018 (NYRB).
   - Hofmann (NYRB): 978-1681372745 *(unverified)*
-- **Wallenstein** — various.
-- **Berge Meere und Giganten (Mountains, Seas, and Giants)** — no standard English.
 
 ### Erich Maria Remarque (1898–1970)
 - **All Quiet on the Western Front** — A.W. Wheen 1929; Brian Murdoch 1993 (Jonathan Cape).
   - Wheen (Ballantine): 978-0449213940
-- **The Road Back** — A.W. Wheen 1931.
-- **Three Comrades** — A.W. Wheen 1937.
-- **A Time to Love and a Time to Die** — Denver Lindley 1954.
-- **Arch of Triumph** — Walter Sorell & Denver Lindley 1945.
 
 ---
 
@@ -308,17 +277,10 @@ index and should be checked before use.
   - Grossman (Ecco): 978-0060934347
   - Rutherford (Penguin): 978-0142437230
 - **Exemplary Novels** — Lesley Lipson 1992; Michael & Jonathan Thacker 2013.
-- **The Trials of Persiles and Sigismunda** — Celia Richmond Weller & Clark A. Colahan 2009.
 
 ### Gabriel García Márquez (1927–2014)
 - **One Hundred Years of Solitude** — Gregory Rabassa 1970; Edith Grossman 2024 (post-Rabassa).
   - Rabassa (HarperPerennial): 978-0060883287
-- **Love in the Time of Cholera** — Edith Grossman 1988.
-- **Chronicle of a Death Foretold** — Gregory Rabassa 1982.
-- **The Autumn of the Patriarch** — Gregory Rabassa 1976.
-- **No One Writes to the Colonel** — J.S. Bernstein 1968.
-- **Of Love and Other Demons** — Edith Grossman 1995.
-- **Memories of My Melancholy Whores** — Edith Grossman 2005.
 
 ### Juan Rulfo (1917–1986)
 - **Pedro Páramo** — Lysander Kemp 1959; Margaret Sayers Peden 1994; Douglas J. Weatherford 2023 (UT Press).
@@ -329,10 +291,6 @@ index and should be checked before use.
 - **Ficciones** — Anthony Kerrigan et al. 1962; Andrew Hurley 1998 (Penguin Collected Fictions).
   - Hurley (Penguin): 978-0140286809
 - **The Aleph and Other Stories** — Norman Thomas di Giovanni 1970; Andrew Hurley 1998.
-- **Labyrinths** — Donald A. Yates & James E. Irby 1962.
-- **The Book of Sand** — Norman Thomas di Giovanni 1977.
-- **A Universal History of Infamy** — Norman Thomas di Giovanni 1972.
-- **Collected Fictions** — Andrew Hurley 1998.
 
 ---
 
@@ -353,48 +311,34 @@ index and should be checked before use.
 - **Henry IV** — Edward Storer 1922; Arthur Livingstone 1922; Frederick May 1987.
 - **The Late Mattia Pascal** — Arthur Livingston 1923; William Weaver 1964 (NYRB 2005).
 - **One, No One and One Hundred Thousand** — Samuel Putnam 1933; William Weaver 1990.
-- **Shoot! (Si gira...)** — C.K. Scott Moncrieff 1926.
 
 ### Cesare Pavese (1908–1950)
 - **The Moon and the Bonfires** — R.W. Flint 1950; Louise Sinclair 1953; T.G. Bergin 1953; R.W. Flint/rev. 1977.
-- **Among Women Only (Tra donne sole)** — R.W. Flint 1955.
-- **The House on the Hill** — W.J. Strachan 1956.
-- **The Beautiful Summer** — various.
 
 ### Natalia Ginzburg (1916–1991)
 - **Family Lexicon** — D.M. Low 1963; Jenny McPhee 2017 (NYRB).
   - McPhee (NYRB): 978-1681372011 *(unverified)*
 - **The Dry Heart** — Frances Frenaye 1952; Frances Frenaye/rev. 2019 (New Directions).
-- **Happiness, as Such** — Minna Zallman Proctor 2019.
 - **Voices in the Evening** — D.M. Low 1963; Jenny McPhee 2020.
 
 ### Elsa Morante (1912–1985)
 - **Arturo's Island** — Isabel Quigly 1959; Ann Goldstein 2019 (Liveright).
   - Goldstein (Liveright): —
-- **History: A Novel** — William Weaver 1977.
-- **Lies and Sorcery (Menzogna e sortilegio)** — Jenny McPhee 2023.
-- **Aracoeli** — William Weaver 1984.
 
 ---
 
 ## 20th-Century European
 
 ### Milan Kundera (1929–2023)
-- **The Unbearable Lightness of Being** — Michael Henry Heim 1984.
-  - Heim (Harper): 978-0060932138
 - **The Book of Laughter and Forgetting** — Michael Henry Heim 1980; Aaron Asher 1996 (rev.).
 - **The Joke** — David Hamblyn 1969; Michael Henry Heim 1982.
 - **Life Is Elsewhere** — Peter Kussi 1974; Aaron Asher 2000.
-- **Immortality** — Peter Kussi 1990.
 - **The Farewell Waltz** — Peter Kussi 1976; Aaron Asher 1998.
-- **Slowness / Identity / Ignorance** — Linda Asher 1995/1998/2002.
 
 ### Robert Musil (1880–1942)
 - **The Man Without Qualities** — Eithne Wilkins & Ernst Kaiser 1953–60; Sophie Wilkins & Burton Pike 1995 (Knopf).
   - Wilkins/Pike (Vintage): —
 - **The Confusions of Young Törless** — Eithne Wilkins & Ernst Kaiser 1955; Shaun Whiteside 2001 (Penguin); Joel Agee 2014.
-- **Three Women** — Eithne Wilkins & Ernst Kaiser 1965.
-- **The Posthumous Papers of a Living Author** — Peter Wortsman 2006.
 
 ### Jaroslav Hašek (1883–1923)
 - **The Good Soldier Švejk** — Paul Selver 1930 (abridged); Cecil Parrott 1973 (Penguin, unabridged); Zdeněk Sadlon 1986 (abridged).
@@ -410,24 +354,14 @@ index and should be checked before use.
 - **The Gate (Mon)** — Francis Mathy 1972; William Johnston 2004 (Tuttle); William F. Sibley 2013 (Columbia).
 - **Botchan** — Joel Cohn 2005 (Kodansha); Umeji Sasaki 1968.
 - **I Am a Cat** — Aiko Ito & Graeme Wilson 1972; Kan-ichi Ando 1982.
-- **Sanshirō** — Jay Rubin 1977 (Penguin 2009).
-- **And Then (Sorekara)** — Norma Moore Field 1978.
-- **The Miner** — Jay Rubin 2015.
 
 ### Jun'ichirō Tanizaki (1886–1965)
 - **The Makioka Sisters** — Edward G. Seidensticker 1957; Anthony H. Chambers 1995 (Knopf).
 - **Some Prefer Nettles** — Edward G. Seidensticker 1955; Anthony H. Chambers 2006 (Knopf).
-- **Naomi** — Anthony H. Chambers 1985.
-- **The Key** — Howard Hibbett 1960.
-- **The Diary of a Mad Old Man** — Howard Hibbett 1965.
-- **In Praise of Shadows** — Thomas J. Harper & Edward G. Seidensticker 1977.
-- **Quicksand** — Howard Hibbett 1994.
 
 ### Osamu Dazai (1909–1948)
 - **No Longer Human** — Donald Keene 1958; Mark Gibeau 2021 (Penguin).
   - Gibeau (Penguin): 978-0241382668 *(unverified)*
-- **The Setting Sun** — Donald Keene 1956.
-- **Run, Melos!** — various.
 
 ### Ryūnosuke Akutagawa (1892–1927)
 - **Rashomon and Other Stories** — Takashi Kojima 1952; Jay Rubin 2006 (Penguin, Rashomon and Seventeen Other Stories).
@@ -484,7 +418,6 @@ index and should be checked before use.
 - **Pan** — W.W. Worster 1920; Sverre Lyngstad 2003.
 - **Mysteries** — Arthur G. Chater 1927; Gerry Bothmer 1971; Sverre Lyngstad 2001.
 - **Victoria** — Arthur G. Chater 1923; Sverre Lyngstad 2009.
-- **The Wanderer** — W.W. Worster 1930.
 
 ### Jens Peter Jacobsen (1847–1885)
 - **Niels Lyhne** — Hanna Astrup Larsen 1919; Tiina Nunnally 1990 (Fjord).
@@ -497,7 +430,6 @@ index and should be checked before use.
 ### Fernando Pessoa (1888–1935)
 - **The Book of Disquiet** — Richard Zenith 2001 (Penguin); Alfred Mac Adam 2015 (New Directions); Margaret Jull Costa 2017 (Penguin).
   - Zenith (Penguin): 978-0141183046
-- **The Education of the Stoic** — Richard Zenith 2004.
 - **The Keeper of Sheep (Alberto Caeiro)** — Edwin Honig & Susan Brown 1971; Zenith 2012.
 
 ### Machado de Assis (1839–1908)
@@ -505,7 +437,6 @@ index and should be checked before use.
   - Jull Costa (Penguin): 978-0140455444 *(unverified)*
 - **The Posthumous Memoirs of Brás Cubas** — William L. Grossman 1952; Gregory Rabassa 1997 (OUP); Flora Thomson-DeVeaux 2020 (Penguin).
 - **Quincas Borba** — Gregory Rabassa 1998 (OUP); Robin Patterson 2023 (Penguin).
-- **Epitaph of a Small Winner** — William L. Grossman 1952 (variant title).
 
 ### Clarice Lispector (1920–1977)
 - **The Hour of the Star** — Giovanni Pontiero 1986; Benjamin Moser 2011 (New Directions).
@@ -513,7 +444,6 @@ index and should be checked before use.
 - **Near to the Wild Heart** — Giovanni Pontiero 1990; Alison Entrekin 2012 (Penguin).
 - **The Passion According to G.H.** — Ronald W. Sousa 1988; Idra Novey 2012 (New Directions).
 - **Agua Viva** — Elizabeth Lowe & Earl Fitz 1989; Stefan Tobler 2012 (New Directions).
-- **The Complete Stories** — Katrina Dodson 2015.
 
 ---
 
@@ -531,7 +461,6 @@ See Plato, Marcus Aurelius, Augustine above.
 - **Cosmos** — Eric Mosbacher 1967; Danuta Borchardt 2005 (Grove).
 - **Pornografia** — Alastair Hamilton 1966; Danuta Borchardt 2009 (Grove).
 - **Trans-Atlantyk** — Carolyn French & Nina Karsov 1994 (Yale); Danuta Borchardt 2014.
-- **Polish Memories** — Bill Johnston 2004.
 
 ### Bruno Schulz (1892–1942)
 - **The Street of Crocodiles (Cinnamon Shops)** — Celina Wieniewska 1963; John Curran Davis 2008 (Archipelago).
@@ -540,10 +469,3 @@ See Plato, Marcus Aurelius, Augustine above.
 ### Stanisław Lem (1921–2006)
 - **Solaris** — Joanna Kilmartin & Steve Cox 1970 (from French); Bill Johnston 2011 (FSG, from Polish).
   - Johnston (FSG): 978-0575083532 *(unverified)*
-- **The Cyberiad** — Michael Kandel 1974.
-- **His Master's Voice** — Michael Kandel 1983.
-- **Fiasco** — Michael Kandel 1987.
-- **Memoirs Found in a Bathtub** — Michael Kandel 1973.
-- **The Star Diaries** — Michael Kandel 1976.
-- **Eden** — Marc E. Heine 1989.
-- **The Invincible** — Wendayne Ackerman 1973.
